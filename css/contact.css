@@ -10,7 +10,7 @@ body{
     margin-left: auto;
     border-radius: 2%;
     width: 80%;
-    height: 80%;
+    height: 50%;
     background-color: #a1a1a148 ;
     padding-bottom: 80%;
     
@@ -26,4 +26,74 @@ body{
     padding-top: 4%;
     padding-bottom: 6%;
     font-size: 30px;
+}
+
+#fenti{
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+
+
+
+}
+#veznevinput{
+    font-size: 20px;
+    height: 75px;
+    width: 500px;
+    border-radius: 150px 150px 150px 150px;
+    border: none;
+    padding-left: 20px;
+
+    margin-bottom: 2.5%;
+}
+#kernevinput{
+    font-size: 20px;
+    height: 75px;
+    width: 500px;
+    border-radius: 150px 150px 150px 150px;
+    border: none;
+    padding-left: 20px;
+    margin-bottom: 2.5%;
+    float: right;
+}
+
+
+#lenti{
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+}
+#emailinput{
+    font-size: 20px;
+    height: 75px;
+    width: 500px;
+    border-radius: 150px 150px 150px 150px;
+    border: none;
+    padding-left: 20px;
+
+    margin-bottom: 2.5%;
+}
+#lakciminput{
+    font-size: 20px;
+    height: 75px;
+    width: 500px;
+    border-radius: 150px 150px 150px 150px;
+    border: none;
+    padding-left: 20px;
+    margin-bottom: 2.5%;
+    float: right;
+}
+
+
+#uzenetinput{
+    font-size: 20px;
+    height: 500px;
+    width: 80%;
+    border-radius: 50px 50px 50px 50px;
+    border: none;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    
 }
