@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register oldal</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Készíts egy fiókot!</h1>
+                <span>vagy használd az emailt, a bejelentkezéshez.</span>
+                <input type="text" 
+                placeholder="Name">
+                <input type="email" 
+                placeholder="Email">
+                <input type="password" 
+                placeholder="Password">
+                <button>Regisztrálok!</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Jelentkezz be!</h1>
+                <span>Használd az emailed és jelszavad.</span>
+                <input type="email" 
+                placeholder="Email">
+                <input type="password" 
+                placeholder="Password">
+                <a href="#">Elfelejtett jelszó?</a>
+                <button>Login</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Üdv újra!</h1>
+                    <p>A bejelentkezéshez kattints az alábbi gombra!</p>
+                    <button class="hidden" id="login">Login</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Üdvözlünk!</h1>
+                    <p>A regisztrációhoz kattints az alábbi gombra!</p>
+                    <button class="hidden" id="register">Regisztráció</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/global.js"></script>
+</body>
+</html>
