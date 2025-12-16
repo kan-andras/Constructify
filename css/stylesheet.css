@@ -5,8 +5,37 @@ body{
 nav{
     background-color: rgb(83, 83, 83);
     display: flex;
+    justify-content: space-between;
+}
+#nav_account{
+    width: 10%;
+    height: auto;
 }
 #feherlogo{
     width: 20%;
-    height: 50%;
+    height: auto;
+}
+#nav_jobboldal{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.nav_items{
+    margin: auto;
+    text-align: center;
+}
+#velemenyresz{
+    display: flex;
+    justify-content: space-between;
+}
+#nagyprojekt{
+    display: flex;
+    justify-content: space-between;
+}
+#munkatarsak{
+    display: flex;
+    justify-content: space-between;
+}
+.projektkep{
+    width: 40%;
+    height: auto;
 }
