@@ -7,14 +7,26 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/global.css">
 </head>
-<body>
+<body><style> 
+    textarea {
+        width: 100%;
+        height: 150px;
+        padding: 12px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+      }
+      </style>
     <section id="contact">
         <h1 id="cim">Lépj kapcsolatba velünk!</h1>
         <h3 id="szoveg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor
             ipsum, interdum nec egestas quis, varius in risus. Aliquam erat.</h3>
 
         <div id="fenti">
-            <input id="veznevinput" type="email"
+            <input id="veznevinput" type="email" 
             placeholder="Vezetéknév">
 
             <input id="kernevinput" type="email"
@@ -28,16 +40,61 @@
             <input id="lakciminput" type="email"
             placeholder="Lakcím">
         </div>
-        
-        <input id="uzenetinput" type="email"
+        <!--<input id="uzenetinput" type="email" size="300"
             placeholder="Üzenet">
 
 
+            <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Üzenet">
+        -->
+        
+        
+        
+        <textarea id="uzenetinput" placeholder="Üzenet" rows="5" maxlength="355"></textarea>
             
+        <!--
+        <input type="text" name="occasion" value="" maxLength="100">
+            
+        <div>
+            <textarea id="comment" name="comment" rows="5" maxlength="500"></textarea>
+            <div id="the-count_comment" style="">
+            <span id="current_comment">0</span>
+            <span id="maximum_comment"> / 500</span>
+            </div>-->
+        
         
 
     </section>
 
-    <script src="css/global.css"></script>
+    <!--
+    <script>
+        $('#comment').keyup(function () {
+          var characterCount = $(this).val().length,
+          current = $('#current_comment'),
+          maximum = $('#maximum_comment'),
+          theCount = $('#the-count_comment');
+          var maxlength = $(this).attr('maxlength');
+          var changeColor = 0.75 * maxlength;
+          current.text(characterCount);
+        
+          if (characterCount > changeColor && characterCount < maxlength) {
+            current.css('color', '#FF4500');
+            current.css('fontWeight', 'bold');
+          }
+          else if (characterCount >= maxlength) {
+            current.css('color', '#B22222');
+            current.css('fontWeight', 'bold');
+          }
+          else {
+            var col = maximum.css('color');
+            var fontW = maximum.css('fontWeight');
+            current.css('color', col);
+            current.css('fontWeight', fontW);
+          }
+        });
+        </script>
+        
+        -->
+        <script src="js/global.js"></script>
+        
 </body>
 </html>
