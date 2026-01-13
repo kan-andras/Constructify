@@ -36,23 +36,9 @@ body{
     margin: 20px 0;
 }
 
+
 .container span{
     font-size: 12px;
-}
-
-.container a{
-    color: #000000;
-    font-size: 13px;
-    text-decoration: none;
-    margin: 15px 0 10px;
-}
-
-.container a:active{
-    color: red;
-}
-
-.container a:visited{
-    color: red;
 }
 
 .container button{
