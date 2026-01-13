@@ -2,6 +2,7 @@ body{
     background: #3D3D3D;
     background: linear-gradient(180deg, rgba(61, 61, 61, 1) 8%, rgba(71, 63, 40, 1) 32%, rgba(82, 71, 37, 1) 42%, rgba(137, 114, 44, 1) 74%, rgba(189, 153, 48, 1) 100%);
     color: white;
+   
 }
 
 #contact{
@@ -14,6 +15,8 @@ body{
     background-color: #a1a1a148 ;
     padding-bottom: 80%;
     align-items: center;
+    height:     5px;
+    
 }
 #cim{
     text-align: center;
@@ -107,10 +110,11 @@ body{
     font-size: 13pt;
     width: 8%;
 
-float: right;
+    float: right;
 
 
-    margin: 20px;
+    margin: 4% 4% 1% 1%;
+    
 }
 #uzKuldGomb:hover{
     border: #3D3D3D 3px solid;
