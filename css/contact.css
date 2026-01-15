@@ -40,8 +40,9 @@ body{
 
 }
 #veznevinput{
+    background-color: #D9D9D9;
     font-size: 20px;
-    height: 75px;
+    height: 55px;
     width: 36.5%;
     border-radius: 150px 150px 150px 150px;
     border: none;
@@ -50,8 +51,9 @@ body{
     margin-bottom: 2.5%;
 }
 #kernevinput{
+    background-color: #D9D9D9;
     font-size: 20px;
-    height: 75px;
+    height: 55px;
     width: 36.5%;
     border-radius: 150px 150px 150px 150px;
     border: none;
@@ -67,8 +69,9 @@ body{
     width: 90%;
 }
 #emailinput{
+    background-color: #D9D9D9;
     font-size: 20px;
-    height: 75px;
+    height: 55px;
     width: 36.5%;
     border-radius: 150px 150px 150px 150px;
     border: none;
@@ -77,8 +80,9 @@ body{
     margin-bottom: 2.5%;
 }
 #lakciminput{
+    background-color: #D9D9D9;
     font-size: 20px;
-    height: 75px;
+    height: 55px;
     width: 36.5%;
     border-radius: 150px 150px 150px 150px;
     border: none;
@@ -90,6 +94,7 @@ body{
 
 #uzenetinput{
     font-size: 20px;
+    background-color: #D9D9D9;
     float: none;
     height: 350px;
     width: 70%;
@@ -100,6 +105,7 @@ body{
     padding-left: 4%;
     padding-right: 4%;
     padding-top: 2.75%;
+
 }
 #uzKuldGomb{
     border-radius: 35px  35px 35px 35px;
