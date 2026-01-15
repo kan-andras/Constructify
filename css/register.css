@@ -36,6 +36,12 @@ body{
     margin: 20px 0;
 }
 
+.helytelenadatok{
+    color: red;
+    font-size: smaller;
+    margin-top: -4%;
+    margin-right: 95%;
+}
 
 .container span{
     font-size: 12px;

@@ -2,18 +2,23 @@ const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
 
-registerBtn.addEventListener('click', () => {
+function register(){
     container.classList.add("active");
-});
-
-loginBtn.addEventListener('click', () => {
+}
+function login(){
     container.classList.remove("active");
-});
+}
+
 
 function registerbutton(){
+    container.classList.add("active");
     const nev = document.getElementById('neve');
     const email = document.getElementById('emailja');
     const jelszo = document.getElementById('jelszava');
     const jelszoagain = document.getElementById('jelszoujra');
 
+    if (nev.contains(Number) && nev.contains(Symbol) && nev == ""){
+        document.getElementById("wrongnev").innerText = "Helytelen név adatok!";
+    }
+    
 }

@@ -14,14 +14,17 @@
                 <span>vagy használd az emailt, a bejelentkezéshez.</span>
                 <input type="text" 
                 placeholder="Név" id="neve">
-                <label for="text">assdaasfafadf</label>
+                <label for="text" class="helytelenadatok" id="wrongnev"></label>
                 <input type="email" 
                 placeholder="Email" id="emailja">
+                <label for="text" class="helytelenadatok" id="wrongemail"></label>
                 <input type="password" 
                 placeholder="Jelszó" id="jelszava">
+                <label for="text" class="helytelenadatok" id="wrongpassword"></label>
                 <input type="password" 
                 placeholder="Jelszó újra" id="jelszavaujra">
-                <button id="reg" onclick="registerbutton()">Regisztrálok!</button>
+                <label for="text" class="helytelenadatok" id="wrongpasswordagain"></label>
+                <button onclick="registerbutton()">Regisztrálok!</button>
             </form>
         </div>
         <div class="form-container bejelentkezes">
@@ -41,17 +44,17 @@
                     <img src="/images/Logo_fekete.png" alt="Logo">
                     <h1>Üdv újra!</h1>
                     <p>A bejelentkezéshez kattints az alábbi gombra!</p>
-                    <button class="eltuntetett" id="login">Login</button>
+                    <button class="eltuntetett" id="login" onclick="login()">Login</button>
                 </div>
                 <div class="kapcsolt-panel kapcsolt-right">
                     <img src="/images/Logo_fekete.png" alt="Logo">
                     <h1>Üdvözlünk!</h1>
                     <p>A regisztrációhoz kattints az alábbi gombra!</p>
-                    <button class="eltuntetett" id="register">Regisztráció</button>
+                    <button class="eltuntetett" id="register" onclick="register()">Regisztráció</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="/js/global.js"></script>
+    <script src="/js/login.js"></script>
 </body>
 </html>
