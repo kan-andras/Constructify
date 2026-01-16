@@ -2,10 +2,12 @@ body{
     background: #3D3D3D;
     background: linear-gradient(180deg, rgba(61, 61, 61, 1) 8%, rgba(71, 63, 40, 1) 32%, rgba(82, 71, 37, 1) 42%, rgba(137, 114, 44, 1) 74%, rgba(189, 153, 48, 1) 100%);
 }
+
 body:has(#switch:checked) {
     background: #DEDEF0;
     background: linear-gradient(0deg,rgba(222, 222, 240, 1) 2%, rgba(173, 172, 247, 1) 100%);
 }
+
 nav{
     background-color: rgb(83, 83, 83);
     display: flex;
@@ -19,12 +21,14 @@ nav{
     width: 40px;
     height: auto;
 }
+
 #feherlogo{
     width: 90px;
     height: auto;
-        margin-right: 0;
+    margin-right: 0;
     padding-right: 0;
 }
+
 #nav_baloldalt{
     display: flex;
     align-items: center;
@@ -37,9 +41,10 @@ nav{
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-right: 0;
+    padding-right: 10px;
     justify-content: flex-end;
 }
+
 .nav_items{
     margin: auto;
     text-align: center;
@@ -48,25 +53,11 @@ nav{
     font-size: large;
     white-space: nowrap;
 }
-#velemenyresz{
-    display: flex;
-    justify-content: space-between;
-}
-#nagyprojekt{
-    display: flex;
-    justify-content: space-between;
-}
-#munkatarsak{
-    display: flex;
-    justify-content: space-between;
-}
-.projektkep{
-    width: 40%;
-    height: auto;
-}
+
 .nav_items:hover{
     text-decoration: underline;
 }
+
 .toggle {
     padding-left: 1.5%;
     position: relative;
@@ -89,7 +80,6 @@ nav{
     height: 36px;
 }
 
-
 .toggle label:before {
     content: "";
     width: 72px;
@@ -104,10 +94,6 @@ nav{
     background-size: cover;
     background-position: center;
 }
-.toggle label:before body{
-    background: #3D3D3D;
-    background: linear-gradient(180deg, rgba(61, 61, 61, 1) 8%, rgba(71, 63, 40, 1) 32%, rgba(82, 71, 37, 1) 42%, rgba(137, 114, 44, 1) 74%, rgba(189, 153, 48, 1) 100%);
-}
 
 #ikon {
     position: absolute;
@@ -118,7 +104,6 @@ nav{
     transition: 0.25s ease;
 }
 
-
 .toggle input:checked + label:before {
     background-color: transparent;
     background-image: url("../images/nap_hatter.png");
@@ -127,9 +112,107 @@ nav{
     background-repeat: no-repeat;
 }
 
-
-
 .toggle input:checked + label #ikon {
     transform: translateX(-36px);
     content: url("../images/nap.png");
+}
+
+#hamburger{
+    display: none;
+}
+#checkbox {
+    display: none;
+}
+
+.toggle1 {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .3s;
+}
+
+.bars {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+
+#checkbox:checked + .toggle1 .bars {
+    margin-left: 13px;
+}
+
+#checkbox:checked + .toggle1 #bar2 {
+    transform: rotate(135deg);
+    margin-left: 0;
+    transform-origin: center;
+    transition-duration: 0.3s;
+}
+
+#checkbox:checked + .toggle1 #bar1 {
+    transform: rotate(45deg);
+    transition-duration: .3s;
+    transform-origin: left center;
+}
+
+#checkbox:checked + .toggle1 #bar3 {
+    transform: rotate(-45deg);
+    transition-duration: 0.3s;
+    transform-origin: left center;
+}
+#myLinks {
+
+    display: none;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    font-size: large;
+    white-space: nowrap;
+}
+
+#checkbox:checked ~ #myLinks {
+    display: flex;
+}
+
+#fokep:has(#switch:checked){
+    background-image: url("../images/FoOldal_hatterkepV.png");
+}
+#fokep{
+    width: 100%;
+    height: 90vh;
+}
+#velemenyresz{
+    display: flex;
+    justify-content: space-between;
+}
+#nagyprojekt{
+    display: flex;
+    justify-content: space-between;
+}
+#munkatarsak{
+    display: flex;
+    justify-content: space-between;
+}
+
+.projektkep{
+    width: 40%;
+    height: auto;
+}
+
+@media screen and (max-width:640px){
+    #hamburger{
+        display: inline;
+    }
+    .nav_items{
+        display: none;
+        text-decoration: none;
+        color: white;
+    }
 }
