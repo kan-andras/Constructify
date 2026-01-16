@@ -40,7 +40,7 @@ nav{
     margin-bottom: auto;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     padding-right: 10px;
     justify-content: flex-end;
 }
@@ -117,9 +117,11 @@ nav{
     content: url("../images/nap.png");
 }
 
-#hamburger{
+#hamburger_container {
     display: none;
+    position: relative;
 }
+
 #checkbox {
     display: none;
 }
@@ -140,7 +142,7 @@ nav{
 .bars {
     width: 100%;
     height: 4px;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     border-radius: 5px;
     transition-duration: .3s;
 }
@@ -153,32 +155,48 @@ nav{
     transform: rotate(135deg);
     margin-left: 0;
     transform-origin: center;
-    transition-duration: 0.3s;
 }
 
 #checkbox:checked + .toggle1 #bar1 {
     transform: rotate(45deg);
-    transition-duration: .3s;
     transform-origin: left center;
 }
 
 #checkbox:checked + .toggle1 #bar3 {
     transform: rotate(-45deg);
-    transition-duration: 0.3s;
     transform-origin: left center;
 }
-#myLinks {
 
+#myLinks {
     display: none;
-    padding: 10px;
-    margin: auto;
+    flex-direction: column;
     text-align: center;
+    padding: 10px;
     font-size: large;
-    white-space: nowrap;
 }
 
 #checkbox:checked ~ #myLinks {
     display: flex;
+}
+#myLinks {
+    display: none;
+    position: absolute;
+    top: 100%;          
+    right: 0;
+    background: rgb(83, 83, 83);
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    min-width: 160px;
+    flex-direction: column;
+    z-index: 100;
+}
+
+#myLinks a {
+    padding: 10px 16px;
+    display: block;
+    color: white;
+    text-decoration: none;
 }
 
 #fokep:has(#switch:checked){
@@ -206,13 +224,12 @@ nav{
     height: auto;
 }
 
-@media screen and (max-width:640px){
-    #hamburger{
-        display: inline;
-    }
-    .nav_items{
+@media screen and (max-width:690px){
+    .nav_items {
         display: none;
-        text-decoration: none;
-        color: white;
+    }
+
+    #hamburger_container {
+        display: block;
     }
 }
