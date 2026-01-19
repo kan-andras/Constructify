@@ -30,21 +30,26 @@ body{
 }
 
 .container p{
-    font-size: 14px;
+    font-size: clamp(0.5rem, 0.65vw + 0.45rem, 0.875rem);
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
+.container h1{
+    font-size: clamp(1.4rem,1.6vw + 0.9rem,2.2rem);
+}
+
 .helytelenadatok{
     color: red;
-    font-size: smaller;
-    margin-top: -4%;
-    margin-right: 95%;
+    font-size: clamp(0.35rem, 0.5vw + 0.45rem, 0.75rem);
+    margin-top: -3%;
+    margin-right: 50%;
+    width: 50%;
 }
 
 .container span{
-    font-size: 12px;
+    font-size: clamp(0.35rem, 0.5vw + 0.45rem, 0.75rem);
 }
 
 .container button{
@@ -81,7 +86,7 @@ body{
     border: none;
     margin: 8px 0;
     padding: 10px 15px;
-    font-size: 13px;
+    font-size: clamp(0.45rem ,0.62vw + 0.35rem,0.8125rem);
     border-radius: 8px;
     width: 100%;
     outline: none;

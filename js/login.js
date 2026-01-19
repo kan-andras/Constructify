@@ -2,27 +2,62 @@ const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
 
-function registerbutton(){
-    const nev = document.getElementById('neve');
-    const email = document.getElementById('emailja');
-    const jelszo = document.getElementById('jelszava');
-    const jelszoagain = document.getElementById('jelszoujra');
+function registerbutton() {
+    const nev = document.getElementById('neve').value;
+    const email = document.getElementById('emailja').value;
+    const jelszo = document.getElementById('jelszava').value;
+    const jelszoagain = document.getElementById('jelszavaujra').value;
+    var bool1 = false;
+    var bool2 = false;
+    var bool3 = false;
+    var bool4 = false;
+    var bool5 = false;
+    const joHossz = jelszo.length > 8;
+    const vanSzimbolum = /[!@#$%^&*]/.test(jelszo);
 
-    if (nev.contains(Number) && nev.contains(Symbol) && nev == ""){
+    if (nev === "" || /\d/.test(nev)) {
         document.getElementById("wrongnev").innerText = "Helytelen név adatok!";
-    }
-    else{
+    } else {
         document.getElementById("wrongnev").innerText = "Helyes adatok!";
         document.getElementById("wrongnev").style.color = "green";
+        bool1 = true;
     }
 
-
-    if(email.contains("@") && email.contains("gmail.com")){
-        document.getElementById("wronemail").innerText = "Helyes adatok!";
-        document.getElementById("wronemail").style.color = "green";
+    if (email.includes("@") && email.includes(".")) {
+        document.getElementById("wrongemail").innerText = "Helyes adatok!";
+        document.getElementById("wrongemail").style.color = "green";
+        bool2 = true;
+    } else {
+        document.getElementById("wrongemail").innerText = "Helytelen email cím adatok!";
     }
-    else{
-        document.getElementById("wronemail").innerText = "Helytelen adatok!";
+
+    if (!joHossz) {
+        document.getElementById("wrongpassword").innerText = "Nem elég hosszú a jelszó!";
+    }
+    else if (!vanSzimbolum){
+        document.getElementById("wrongpassword").innerText = "Nincs benne szimbólum.";
+    } else {
+        document.getElementById("wrongpassword").innerText = "Helyes jelszó!";
+        document.getElementById("wrongpassword").style.color = "green";
+        bool3 = true;
+    }
+
+    if (jelszo !== jelszoagain) {
+        document.getElementById("wrongpasswordagain").innerText = "Nem egyezik!";
+    } else {
+        document.getElementById("wrongpasswordagain").innerText = "Egyezik!";
+        document.getElementById("wrongpasswordagain").style.color = "green";
+        bool4 = true;
+    }
+    if(bool1 && bool2 && bool3 && bool4){
+        if (confirm("Minden adatot helyesen adtál meg. Folytatod ezekkel az adatokkal?")) {
+        bool5 = true;
+        } else {
+        bool5 = false;
+        }
+    }
+    if (bool1 && bool2 && bool3 && bool4 && bool5){
+        document.getElementById("regisztralokgomb").setAttribute('type', "submit");
     }
 }
 
