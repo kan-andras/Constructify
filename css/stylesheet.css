@@ -223,6 +223,20 @@ nav{
     width: 40%;
     height: auto;
 }
+footer{
+    background-color: rgb(158, 156, 156);
+    height: 95px;
+    text-align: center;
+}
+#footer_elerhetosegek{
+    padding-top: 1%;
+}
+#footer_dok{
+    text-decoration: none;
+    font-style: normal;
+    color: white;
+    margin-top: 10%;
+}
 
 @media screen and (max-width:690px){
     .nav_items {
