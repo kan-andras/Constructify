@@ -7,3 +7,33 @@
     font-family: "Noto Sans Thai Looped", sans-serif;
     font-optical-sizing: auto;
 }
+
+.main{
+
+}
+
+.imgdiv{
+    position: relative;
+}
+
+.textdiv{
+    position: absolute;
+    bottom: 55%;
+    right: 35%;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.imgdiv img{
+    width: 100%;
+    height: auto;
+    filter: brightness(0.65) saturate(0.9) blur(0.5px);
+    transition: filter 0.3s ease;
+}
+
+.imgdiv img:hover{
+    filter: brightness(0.8) saturate(1) blur(0);
+}
