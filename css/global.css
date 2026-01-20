@@ -8,6 +8,8 @@ h1{
     font-variation-settings:
     "wdth" 100;
 }
+
+/*navbar*/
 nav{
     background-color: rgb(83, 83, 83);
     display: flex;
@@ -207,4 +209,20 @@ nav{
     #hamburger_container {
         display: block;
     }
+}
+
+/*lábléc*/
+footer{
+    background-color: rgb(158, 156, 156);
+    height: 95px;
+    text-align: center;
+}
+#footer_elerhetosegek{
+    padding-top: 1%;
+}
+#footer_dok{
+    text-decoration: none;
+    font-style: normal;
+    color: white;
+    margin-top: 10%;
 }
