@@ -7,3 +7,78 @@
     font-family: "Noto Sans Thai Looped", sans-serif;
     font-optical-sizing: auto;
 }
+body{
+    background: #3D3D3D;
+    background: linear-gradient(180deg, rgba(61, 61, 61, 1) 8%, rgba(71, 63, 40, 1) 32%, rgba(82, 71, 37, 1) 42%, rgba(137, 114, 44, 1) 74%, rgba(189, 153, 48, 1) 100%);
+}
+
+body:has(#nav_switch:checked) {
+    background: #DEDEF0;
+    background: linear-gradient(0deg,rgba(222, 222, 240, 1) 2%, rgba(173, 172, 247, 1) 100%);
+}
+
+.main{
+    height: auto;
+}
+
+.imgdiv{
+    position: relative;
+}
+
+.textdiv{
+    font-size: clamp( 0.45rem ,0.8vw + 0.2rem, 1.5rem);
+    position: absolute;
+    bottom: 55%;
+    right: 34%;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.imgdiv img{
+    width: 100%;
+    height: auto;
+    filter: brightness(0.65) saturate(0.9) blur(0.5px);
+    transition: filter 0.3s ease;
+}
+
+.imgdiv img:hover{
+    filter: brightness(0.8) saturate(1) blur(0);
+}
+
+.main-container{
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
+    background-color: #595959;
+    border-radius: 15px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    }
+    
+    .div1 { grid-area: 1 / 2 / 2 / 15; }
+    .div2 { grid-area: 2 / 2 / 3 / 8; }
+    .div3 { grid-area: 2 / 9 / 3 / 15; }
+    .div4 { grid-area: 3 / 3 / 6 / 7; }
+    .div5 { grid-area: 6 / 3 / 9 / 7; }
+    .div6 { grid-area: 9 / 3 / 12 / 7; }
+    .div7 { grid-area: 3 / 8 / 5 / 10; }
+    .div8 { grid-area: 3 / 11 / 5 / 13; }
+    .div9 { grid-area: 3 / 14 / 5 / 16; }
+    .div10 { grid-area: 5 / 8 / 7 / 10; }
+    .div11 { grid-area: 5 / 11 / 7 / 13; }
+    .div12 { grid-area: 5 / 14 / 7 / 16; }
+    .div13 { grid-area: 7 / 8 / 9 / 10; }
+    .div14 { grid-area: 7 / 11 / 9 / 13; }
+    .div15 { grid-area: 7 / 14 / 9 / 16; }
+    .div16 { grid-area: 9 / 11 / 11 / 13; }
