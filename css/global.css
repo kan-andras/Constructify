@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@100..900&display=swap');
 
+body{
+    margin: 0px;
+}
+
 h1{
     font-family: "Noto Sans Thai Looped", sans-serif;
     font-optical-sizing: auto;
@@ -42,7 +46,7 @@ nav{
     margin-bottom: auto;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 2%;
     padding-right: 10px;
     justify-content: flex-end;
 }
@@ -54,10 +58,13 @@ nav{
     color: white;
     font-size: large;
     white-space: nowrap;
+    padding: 10px;
 }
 
 .nav_items:hover{
-    text-decoration: underline;
+    background-color: #8b8b8b;
+    border: #ADAAAA 3px solid;
+    padding: 7px;
 }
 
 .nav_toggle {
@@ -192,6 +199,7 @@ nav{
     min-width: 160px;
     flex-direction: column;
     z-index: 100;
+    top: 146%; background: rgb(115 114 114); border-radius: 8px;
 }
 
 #nav_myLinks a {
@@ -214,7 +222,7 @@ nav{
 /*lábléc*/
 footer{
     background-color: rgb(158, 156, 156);
-    height: 95px;
+    height: auto;
     text-align: center;
 }
 #footer_elerhetosegek{
