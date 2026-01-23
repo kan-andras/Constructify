@@ -1,6 +1,7 @@
 body{
     background: #3D3D3D;
     background: linear-gradient(180deg, rgba(61, 61, 61, 1) 8%, rgba(71, 63, 40, 1) 32%, rgba(82, 71, 37, 1) 42%, rgba(137, 114, 44, 1) 74%, rgba(189, 153, 48, 1) 100%);
+    margin: 0;
 }
 
 body:has(#nav_switch:checked){
@@ -10,14 +11,20 @@ body:has(#nav_switch:checked){
 body:has(#nav_switch:checked) nav{
     background-color: rgb(224, 224, 224);
 }
+body:has(#nav_switch:checked) footer{
+    background-color: rgb(224, 224, 224);
+}
 body:has(#nav_switch:checked) .profilkep {
     background-color: rgb(195, 217, 242);
 }
 body:has(#nav_switch:checked) .velemeny {
     background-color: rgb(195, 217, 242);
 }
-body:has(#switch:checked) #fokep{
+body:has(#switch:checked) #nav_feherlogo{
     background-image: url("../images/Logo_fekete.png");
+}
+body:has(#switch:checked) #fokep{
+    background-image: url("../images/FoOldal_hatterkepV.png");
 }
 #fokep{
     width: 100%;
