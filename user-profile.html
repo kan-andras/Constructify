@@ -5,8 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felhasználói profil</title>
     <link rel="stylesheet" href="css/user-profile.css">
+    <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
+    <nav>
+        <div id="nav_baloldal">
+            <img src="images/Logo_feher.png" alt="ConstructifyLogo" id="nav_feherlogo">
+        </div>
+        <div id="nav_jobboldal">
+            <a href="order.html" class="nav_items">Rendelés</a>
+            <a href="booking.html" class="nav_items">Időpont foglalás</a>
+            <a href="contact.html" class="nav_items">Kapcsolatfelvétel</a>
+            <a href="gyik.html" class="nav_items">Gyik</a>
+            <a href="register.html"><img src="images/Account_feher.png" alt="accountlogo_Feher" id="nav_account"></a>
+            <div class="nav_toggle">
+                <input type="checkbox" id="nav_switch">
+                <label for="nav_switch">
+                <img id="nav_ikon" src="images/hold.png">
+                </label>
+            </div>
+            <div id="hamburger_container">
+                <input type="checkbox" id="nav_checkbox">
+                <label for="nav_checkbox" class="nav_toggle1">
+                    <div class="bars" id="bar1"></div>
+                    <div class="bars" id="bar2"></div>
+                    <div class="bars" id="bar3"></div>
+                </label>
+                <div id="nav_myLinks">
+                    <a href="order.html">Rendelés</a>
+                    <a href="booking.html">Időpont foglalás</a>
+                    <a href="contact.html">Kapcsolatfelvétel</a>
+                    <a href="gyik.html">Gyik</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
     <section class="adatok">
         
         <div id="inputok">
@@ -74,6 +109,6 @@
     </section>
 
 
-    <script src="js/global.js"></script>
+    
 </body>
 </html>

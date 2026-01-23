@@ -4,6 +4,8 @@ body{
     color: white;
     height: 1200px;
    background-repeat:no-repeat;
+   width: 100%;
+   margin: 0px;
 }
 .adatok{
     margin-top: 100px;
