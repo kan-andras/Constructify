@@ -222,7 +222,7 @@ nav{
 /*lábléc*/
 footer{
     background-color: rgb(158, 156, 156);
-    height: 95px;
+    height: auto;
     text-align: center;
 }
 #footer_elerhetosegek{
