@@ -54,7 +54,7 @@ body:has(#nav_switch:checked) {
     margin-right: auto;
     width: 80%;
     height: auto;
-    background-color: #595959;
+    background-color: #59595981;
     border-radius: 40px;
     margin-bottom: 5%;
 }
@@ -157,7 +157,7 @@ body:has(#nav_switch:checked) {
         color: white;
         font-size: 16px;
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
@@ -170,11 +170,13 @@ body:has(#nav_switch:checked) {
       }
 
       .buttons{
-        margin-top: 60%;
+        margin-top: 55%;
         margin-bottom: 5%;
         margin-left: 32%;
         margin-right: auto;
         width: 35%;
         height: 15%;
+        background-color:rgb(187, 187, 187);
+        border: none;
         position: absolute;
       }
