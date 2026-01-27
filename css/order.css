@@ -119,3 +119,62 @@ body:has(#nav_switch:checked) {
     .div14 { grid-area: 7 / 11 / 9 / 13; }
     .div15 { grid-area: 7 / 14 / 9 / 16; }
     .div16 { grid-area: 9 / 11 / 11 / 13; }
+      
+    .container {
+        position: relative;
+        width: 75%;
+      }
+      
+      .image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 89%;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        opacity: 0;
+        border-radius: 35px;
+        transition: .5s ease;
+        background-color: #85858580;
+      }
+      
+      .container:hover .overlay {
+        opacity: 1;
+      }
+      
+      .text {
+        color: white;
+        font-size: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .text h6{
+        margin-top: 10%;
+      }
+
+      .buttons{
+        margin-top: 60%;
+        margin-bottom: 5%;
+        margin-left: 32%;
+        margin-right: auto;
+        width: 35%;
+        height: 15%;
+        position: absolute;
+      }

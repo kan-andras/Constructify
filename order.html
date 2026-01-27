@@ -14,11 +14,11 @@
         </div>
         <div id="nav_jobboldal">
             <a href="index.html" class="nav_items">Főoldal</a>
-            <a href="order.html" class="nav_items">Rendelés</a>
+            <a href="order.html" class="nav_items" id="ittvagy">Rendelés</a>
             <a href="booking.html" class="nav_items">Időpont foglalás</a>
             <a href="contact.html" class="nav_items">Kapcsolatfelvétel</a>
             <a href="gyik.html" class="nav_items">Gyik</a>
-            <a href="register.html"><img src="images/Account_feher.png" alt="accountlogo_Feher" id="nav_account"></a>
+            <a href="register.html" class="nav_items"><img src="images/Account_feher.png" alt="accountlogo_Feher" id="nav_account"></a>
             <div class="nav_toggle">
                 <input type="checkbox" id="nav_switch">
                 <label for="nav_switch">
@@ -54,9 +54,32 @@
                     <div class="div1"> <h2>Válassz a lehetőségek közül!</h2></div>
                     <div class="div2"> <h2>Épületek</h2></div>
                     <div class="div3"> <h2>Építési munkák</h2></div>
-                    <div class="div4"> <img src="/images/epeuletekhaz.png" alt="Épületek Ház"></div>
-                    <div class="div5"> <img src="/images/epuletekcegepuletek.png" alt="Épületek Cégépületek"></div>
-                    <div class="div6"> <img src="/images/epuletektarsashazak.png" alt="Épületek Társasházak."></div>
+                    <div class="div4"> 
+                     <div class="container">
+                        <img src="/images/epeuletekhaz.png" alt="Épületek ház." class="image">
+                        <div class="overlay">
+                          <div class="text"><strong>Ház felépítés</strong> <br><h6>Házak rendelése, szobák elkészítése és egyéb munkák elvégzése.</h6></div>
+                          <button class="buttons">Megrendelés</button>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="div5"> 
+                     <div class="container">
+                        <img src="/images/epuletekcegepuletek.png" alt="Épületek cégeknek." class="image">
+                        <div class="overlay">
+                          <div class="text"><strong>Cég épület felépítés</strong> <br><h6>Cég épületek felépítése, szobák kialakítása.</h6></div>
+                          <button class="buttons">Megrendelés</button>
+                     </div>
+                     </div>
+                    </div>
+                    <div class="div6"> <div class="container">
+                        <img src="/images/epuletektarsashazak.png" alt="Épületek több ember számára." class="image">
+                        <div class="overlay">
+                          <div class="text"><strong>Tömb házak felépítése</strong> <br><h6>Tömb házak felépítése, szobák, szerkezet kialakítása.</h6></div>
+                          <button class="buttons">Megrendelés</button>
+                        </div>
+                     </div>
+                    </div>
                     <div class="div7"> </div>
                     <div class="div8"> </div>
                     <div class="div9"> </div>
