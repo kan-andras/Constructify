@@ -11,6 +11,15 @@ body:has(#nav_switch:checked){
 body:has(#nav_switch:checked) nav{
     background-color: rgb(224, 224, 224);
 }
+body:has(#nav_switch:checked) .nav_items{
+    color: black;
+}
+body:has(#nav_switch:checked) #nav_myLinks{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .nav_hamburgeritem{
+    color: black;
+}
 body:has(#nav_switch:checked) footer{
     background-color: rgb(224, 224, 224);
 }
@@ -19,6 +28,16 @@ body:has(#nav_switch:checked) .profilkep {
 }
 body:has(#nav_switch:checked) .velemeny {
     background-color: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) .projektek {
+    background-color: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) .munkas {
+    background-color: rgb(195, 217, 242);
+}
+body:has(#switch:checked) #nav_myLinks{
+    background: rgb(255, 255, 255);
+    color: black;
 }
 body:has(#switch:checked) #nav_feherlogo{
     background-image: url("../images/Logo_fekete.png");
@@ -50,32 +69,60 @@ body:has(#switch:checked) #fokep{
     display: flex;
     justify-content: space-between;
     text-align: center;
-    padding-top: 3%;
+    padding-top: 10%;
     gap: 20%;
     padding-left: 8%;
     padding-right: 8%;
 }
 .profilkep{
-    width: 40%;
+    width: 8%;
     height: auto;
     background-color: rgb(94, 85, 67);
     border-radius: 50%;
-    padding: 5%;
+    padding: 1%;
+    position: absolute;
+    margin-left: -5%;
+    margin-top: -7%;
 }
 .velemeny{
     background-color: rgb(94, 85, 67);
     padding-bottom: 3%;
+    padding-top: 15%;
 }
 #nagyprojekt{
     display: flex;
     justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: center;
+    gap: 3%;
+}
+#projekt{
+    padding-left: 1%;
+}
+.projektkep{
+    width: 60%;
+    height: auto;
+}
+.projektek{
+    background-color: rgb(94, 85, 67);
+    padding-bottom: 3%;
+}
+#tars{
+    padding-left: 1%;
 }
 #munkatarsak{
     display: flex;
     justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 8.5%;
 }
-
-.projektkep{
-    width: 40%;
-    height: auto;
+.munkas{
+    background-color: rgb(94, 85, 67);
+    padding: 2%;
+    border-radius: 50%;
+}
+#rendeles_gomb{
+    position: absolute;
 }
