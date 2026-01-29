@@ -87,11 +87,20 @@ body:has(#switch:checked) #fokep{
     width: 8%;
     height: auto;
     background-color: rgb(94, 85, 67);
-    border-radius: 45%;
+    border-radius: 100%;
     padding: 1%;
     position: absolute;
     margin-left: -5%;
     margin-top: -5%;
+}
+#velemeny1{
+    width: 90%;
+}
+#velemeny2{
+    width: 40%;
+}
+#velemeny2{
+    width: 90%;
 }
 .velemeny{
     background-color: rgb(94, 85, 67);

@@ -119,7 +119,61 @@ body:has(#nav_switch:checked) {
     .div14 { grid-area: 7 / 11 / 9 / 13; }
     .div15 { grid-area: 7 / 14 / 9 / 16; }
     .div16 { grid-area: 9 / 11 / 11 / 13; }
-      
+    
+    .rightimage{
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 35px;
+    }
+    
+    .rightoverlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        opacity: 0;
+        border-radius: 35px;
+        transition: .5s ease;
+        background-color: #85858580;
+    }
+
+    .container:hover .rightoverlay {
+        opacity: 1;
+      }
+    
+    .righttext{
+        color: white;
+        font-size: 14px;
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .rightbuttons{
+        margin-top: 55%;
+        margin-bottom: 5%;
+        margin-left: 20%;
+        margin-right: auto;
+        width: 60%;
+        height: 15%;
+        background-color:rgb(187, 187, 187);
+        border: none;
+        position: absolute;
+    }
+
     .container {
         position: relative;
         width: 75%;
