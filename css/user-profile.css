@@ -13,7 +13,7 @@ body{
     margin-left: auto;
     border-radius: 50px 50px 50px 50px; 
     width: 80%;
-    height: 250px;
+    height: 150px;
     background-color: #a1a1a148 ;
     padding-bottom: 65%;
     align-items: center;
@@ -45,8 +45,8 @@ margin-bottom: 3%;
     background-color: #8F8F8F;
     border: 1px rgba(137, 114, 44, 1) solid;
     padding: 1%;
-    font-size: clamp(0.1rem,0.7vw + 0.3rem,0.8rem);
-    width: 8%;
+    font-size: clamp(0.2rem,0.8vw + 0.4rem,0.9rem);
+    width: 8rem;
 
     float: right;
 
@@ -72,6 +72,7 @@ margin-bottom: 3%;
     float: left;
     margin: 0px;
     margin-left: 3%;
+    background-color: red;
 }
 #valtment{
     float: right;
@@ -82,6 +83,7 @@ margin-bottom: 3%;
 #kijel{
     float: right;
     margin: 0px;
+    color: rgb(219, 43, 43);
 }
 
 
@@ -90,30 +92,20 @@ margin-bottom: 3%;
 
 
 
-@media (max-width: 1700px){
-    #felnevgomb{
-        width: 10%;
+
+
+
+@media (max-width: 1119px){
+    
+    .inputmezo{
+        height: 45px;
     }
 }
-@media (max-width: 1347px){
-    .gomb{
-        width: 10%;
+
+@media (max-width: 900px){
+    .inputmezo{
+        height: 40px;
+        font-size:medium;
     }
-    #felnevgomb{
-        width: 12%;
-    }
-    #telszamgomb{
-        width: 11%; 
-    }
-}
-@media (max-width: 1043px){
-    .gomb{
-        width: 13%;
-    }
-    #felnevgomb{
-        width: 14%;
-    }
-    #telszamgomb{
-        width: 14%; 
-    }
+    
 }
