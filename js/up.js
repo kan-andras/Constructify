@@ -10,6 +10,7 @@ const H = document.getElementById('inputmezo');
 
 function syncHeight(){
     const height2 = A2.offsetHeight;
+    const widthA2 = A2.offsetWidth;
     A.style.height = height2 + 'px';
     C.style.height = height2 + 'px';
 
@@ -17,8 +18,9 @@ function syncHeight(){
     E.style.height = height2 + 'px';
     F.style.height = height2 + 'px';
     G.style.height = height2 + 'px';
-    B.style.height = height2 + 'px';
-    
+    B.style.height = height2 + 'px';/*
+    H.style.height = height2 + 'px';
+    H.style.width = widthA2*2 + 'px';*/
     
 }
 
