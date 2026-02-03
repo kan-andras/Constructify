@@ -38,17 +38,21 @@ body:has(#nav_switch:checked) .munkas {
 body:has(#nav_switch:checked) .szovegszin {
     color: black;
 }
-body:has(#switch:checked) #nav_myLinks{
+body:has(#nav_switch:checked) #nav_myLinks{
     background: rgb(255, 255, 255);
     color: black;
 }
-body:has(#switch:checked) .profilkep{
+body:has(#nav_switch:checked) .profilkep{
     background-image: url("../images/account_fekete.png");
 }
-body:has(#switch:checked) #nav_feherlogo{
+body:has(#nav_switch:checked) #nav_account{
+    background-image: url("../images/account_fekete.png");
+    width: 40px;
+}
+body:has(#nav_switch:checked) #nav_feherlogo{
     background-image: url("../images/Logo_fekete.png");
 }
-body:has(#switch:checked) #fokep{
+body:has(#nav_switch:checked) #fokep{
     background-image: url("../images/FoOldal_hatterkepV.png");
 }
 .szovegszin{
@@ -74,6 +78,11 @@ body:has(#switch:checked) #fokep{
     padding-left: 43%;
     padding-top: 390px;
 }
+.velemenyek {
+    width: 30%;
+    flex: 1 1 300px;
+    max-width: 32%;
+}
 #velemenyresz{
     display: flex;
     justify-content: space-between;
@@ -83,15 +92,21 @@ body:has(#switch:checked) #fokep{
     padding-left: 8%;
     padding-right: 8%;
 }
-.profilkep{
-    width: 8%;
-    height: auto;
-    background-color: rgb(94, 85, 67);
-    border-radius: 100%;
-    padding: 1%;
-    position: absolute;
-    margin-left: -5%;
-    margin-top: -5%;
+#velemenyresz {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 5%;
+    flex-wrap: wrap;
+}
+.profilkep {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: -40px;
 }
 #velemeny1{
     width: 90%;
@@ -102,10 +117,10 @@ body:has(#switch:checked) #fokep{
 #velemeny2{
     width: 90%;
 }
-.velemeny{
+.velemeny {
     background-color: rgb(94, 85, 67);
-    padding-bottom: 3%;
-    padding-top: 23%;
+    padding: 60px 20px 20px 20px;
+    border-radius: 10px;
 }
 #nagyprojekt{
     display: flex;
