@@ -48,7 +48,7 @@
                 </div>
             </div>
         <div>
-            <div class="main-container">
+            <div class="main-container" id="main-con">
                 <div class="parent">
                     <div class="div1"> <h2>Válassz a lehetőségek közül!</h2></div>
                     <div class="div2"> <h2>Épületek</h2></div>
@@ -58,7 +58,7 @@
                         <img src="/images/epeuletekhaz.png" alt="Épületek ház." class="image">
                         <div class="overlay">
                           <div class="text"><strong>Ház felépítés</strong> <br><h6>Házak rendelése, szobák elkészítése és egyéb munkák elvégzése.</h6></div>
-                          <button class="buttons" type="button"><p>Megrendelés</p></button>
+                          <button class="buttons" type="button" onclick="megrendeles()" id="housebuild"><p>Megrendelés</p></button>
                         </div>
                      </div>
                     </div>
@@ -67,7 +67,7 @@
                         <img src="/images/epuletekcegepuletek.png" alt="Épületek cégeknek." class="image">
                         <div class="overlay">
                           <div class="text"><strong>Cég épület felépítés</strong> <br><h6>Cég épületek felépítése, szobák kialakítása.</h6></div>
-                          <button class="buttons" type="button"><p>Megrendelés</p></button>
+                          <button class="buttons" type="button" onclick="megrendeles()" id="factorybuild"><p>Megrendelés</p></button>
                      </div>
                      </div>
                     </div>
@@ -76,7 +76,7 @@
                         <img src="/images/epuletektarsashazak.png" alt="Épületek több ember számára." class="image">
                         <div class="overlay">
                           <div class="text"><strong>Tömb házak felépítése</strong> <br><h6>Tömb házak felépítése, szobák, szerkezet kialakítása.</h6></div>
-                          <button class="buttons" type="button"><p>Megrendelés</p></button>
+                          <button class="buttons" type="button" onclick="megrendeles()" id="arrayhousebuild"><p>Megrendelés</p></button>
                      </div>
                      </div>
                     </div>
@@ -86,7 +86,7 @@
                                 <div class="middle">
                                     <div class="rightoverlay">
                                   <div class="righttext">Festés munkák <br>elvégzése</div>
-                                  <button class="rightbuttons" type="button"><p>Megrendelés</p></button>
+                                  <button class="rightbuttons" type="button" onclick="megrendeles()" id="paintwork"><p>Megrendelés</p></button>
                                 </div>
                                 </div>
                               </div>
@@ -97,7 +97,7 @@
                             <div class="middle">
                                 <div class="rightoverlay">
                               <div class="righttext">Burkolás <br>elvégzése</div>
-                              <button class="rightbuttons" type="button"><p>Megrendelés</p></button>
+                              <button class="rightbuttons" type="button" onclick="megrendeles()" id="poveringwork"><p>Megrendelés</p></button>
                             </div>
                             </div>
                           </div>
@@ -108,7 +108,7 @@
                             <div class="middle">
                                 <div class="rightoverlay">
                                 <div class="righttext">Tapétázás <br>elvégzése</div>
-                                <button class="rightbuttons" type="button"><p>Megrendelés</p></button>
+                                <button class="rightbuttons" type="button" onclick="megrendeles()" id="wallpaperingwork"><p>Megrendelés</p></button>
                             </div>
                             </div>
                           </div>
@@ -119,7 +119,7 @@
                             <div class="middle">
                                 <div class="rightoverlay">
                                 <div class="righttext">Nyílászáró <br>beépítése</div>
-                                <button class="rightbuttons" type="button"><p>Megrendelés</p></button>
+                                <button class="rightbuttons" type="button" onclick="megrendeles()" id="shutterwork"><p>Megrendelés</p></button>
                             </div>
                             </div>
                           </div>
@@ -130,7 +130,7 @@
                             <div class="middle">
                                 <div class="rightoverlay">
                                 <div class="righttext">Gipszkartonozás</div>
-                                <button class="rightbuttons" type="button"><p>Megrendelés</p></button>
+                                <button class="rightbuttons" type="button" onclick="megrendeles()" id="plasterboardingwork"><p>Megrendelés</p></button>
                             </div>
                             </div>
                           </div>
@@ -141,7 +141,7 @@
                             <div class="middle">
                                 <div class="rightoverlay">
                                 <div class="righttext">Szekezet felépítés</div>
-                                <button class="rightbuttons" type="button"><p>Megrendelés</p></button>
+                                <button class="rightbuttons" type="button" onclick="megrendeles()" id="structurework"><p>Megrendelés</p></button>
                             </div>
                             </div>
                           </div>
@@ -152,7 +152,7 @@
                             <div class="middle">
                                 <div class="rightoverlay">
                                 <div class="righttext">Falak bontása</div>
-                                <button class="rightbuttons" type="button"><p>Megrendelés</p></button>
+                                <button class="rightbuttons" type="button" onclick="megrendeles()" id="wallbreakingwork"><p>Megrendelés</p></button>
                             </div>
                             </div>
                           </div>
@@ -163,7 +163,7 @@
                             <div class="middle">
                                 <div class="rightoverlay">
                               <div class="righttext">Szigetelési munkák</div>
-                              <button class="rightbuttons" type="button"><p>Megrendelés</p></button>
+                              <button class="rightbuttons" type="button" onclick="megrendeles()" id="insulationwork"><p>Megrendelés</p></button>
                             </div>
                             </div>
                           </div>
@@ -174,7 +174,7 @@
                             <div class="middle">
                                 <div class="rightoverlay">
                                 <div class="righttext">Kerités építés</div>
-                                <button class="rightbuttons" type="button"><p>Megrendelés</p></button>
+                                <button class="rightbuttons" type="button" onclick="megrendeles()" id="fencework"><p>Megrendelés</p></button>
                             </div>
                             </div>
                           </div>
@@ -185,7 +185,7 @@
                             <div class="middle">
                                 <div class="rightoverlay">
                                 <div class="righttext">Tető szigetelési munkák</div>
-                                <button class="rightbuttons" type="button"><p>Megrendelés</p></button>
+                                <button class="rightbuttons" type="button" onclick="megrendeles()" id="roofinsulationwork"><p>Megrendelés</p></button>
                             </div>
                             </div>
                           </div>
