@@ -4,6 +4,9 @@ const mainblock = document.getElementById("main-con");
 const hazgomb = document.getElementById("housebuild");
 const ceggomb = document.getElementById("factorybuild");
 const tombhazgomb = document.getElementById("arrayhousebuild");
+const hazimg = document.getElementById("house");
+const cegimg = document.getElementById("factory");
+const tömbimg = document.getElementById("array");
 
 const festesgomb = document.getElementById("paintwork");
 const burkolasgomb = document.getElementById("poveringwork");
@@ -17,9 +20,10 @@ const keritesgomb = document.getElementById("fencework");
 const tetoszigetelesgomb = document.getElementById("roofinsulationwork");
 
 
+
 function megrendeles(){
     mainblock.style.height = "1050px";
     hazgomb.addEventListener("click", function() {
-        
-      });
+      hazimg.classList.toggle("glow");
+    });
 }
