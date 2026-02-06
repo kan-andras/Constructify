@@ -38,6 +38,9 @@ body:has(#nav_switch:checked) .munkas {
 body:has(#nav_switch:checked) .szovegszin {
     color: black;
 }
+body:has(#nav_switch:checked) .szovegszin1 {
+    color: black;
+}
 body:has(#nav_switch:checked) #nav_myLinks{
     background: rgb(255, 255, 255);
     color: black;
@@ -58,6 +61,9 @@ body:has(#nav_switch:checked) .munka_profilkep{
     content: url("../images/account_fekete.png");
 }
 .szovegszin{
+    color: white;
+}
+.szovegszin1{
     color: white;
 }
 #fokep{
@@ -140,7 +146,7 @@ body:has(#nav_switch:checked) .munka_profilkep{
     padding-left: 1%;
 }
 .projektkep{
-    width: 60%;
+    width: 90%;
     height: auto;
 }
 .projektek{
@@ -173,10 +179,43 @@ body:has(#nav_switch:checked) .munka_profilkep{
 #rendeles_kep{
     width: 100%;
 }
+
+@media screen and (max-width:1104px){
+    #velemenyresz{
+        gap: 10px;
+        padding: 3%;
+    }
+    .velemeny{
+        height: 77%;
+    }
+}
+@media screen and (max-width:900px){
+    .profilkep{
+        width: 40%;
+    }
+}   
+@media screen and (max-width:650px){
+    .profilkep{
+        top: 45px;
+    }
+}
 @media screen and (max-width:576px){
+    #velemenyresz{
+        display: block;
+    }
+    .velemeny{
+        width: 200%;
+        margin-left: 40%;
+    }
+    .profilkep{
+        top: 35px;
+        left: 110%;
+        width: 65%;
+    }
+    .szovegszin1{
+        display: none;
+    }
     #projekt2{
         display: none;
     }
-}
-@media screen and (max-width:1104px){
 }
