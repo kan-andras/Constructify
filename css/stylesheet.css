@@ -180,6 +180,78 @@ body:has(#nav_switch:checked) .munka_profilkep{
     width: 100%;
 }
 
+#footer_elerhetosegek{
+    min-height:  90hv;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.footer_items{
+    position: relative;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.footer_tool{
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-5px);
+    color: rgb(255, 255, 255);
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: all 0.15s ease;
+    pointer-events: none;
+    user-select: none;
+    z-index: 10;
+}
+.footer_items:hover .footer_tool{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-5px);
+}
+.footer_a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+}
+.footer_a i{
+    position: relative;
+    z-index: 10;
+    color: inherit;
+    transition: color 0.3s ease-in-out;
+}
+.footer_a:hover{
+    box-shadow: 3px 2px 45px 0 rgb(0 0 0/ 10%);
+    color: white;
+}
+.footer_a:hover i{
+    color: white;
+}
+
+
+
 @media screen and (max-width:1104px){
     #velemenyresz{
         gap: 10px;
