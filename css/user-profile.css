@@ -50,6 +50,12 @@ body.page {
     margin-bottom: 20%;
  
 }*/
+
+#focimkep{
+    height: 100px;
+    width: auto;
+}
+
 #adatok{
     margin-top: 100px;
     margin-right: auto;
@@ -118,6 +124,9 @@ margin-bottom: 3%;
 
 #alulsogombok{
     margin-top: 10%;
+   /* display: flex;
+    gap: 5%;
+    flex-direction: row;*/
 }
 #fioktorles{
     float: left;
@@ -135,6 +144,7 @@ margin-bottom: 3%;
     width: 7rem;
 }
 #kijel{
+    
     float: right;
     margin: 0px;
     color: rgb(219, 43, 43);
@@ -197,5 +207,31 @@ margin-bottom: 3%;
     }
 }*/
 @media screen and (max-width:512px){
-    
+    /*#alulsogombok{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }*/
+
+
+
+    #valtment{
+        float: right;
+        
+        
+        margin-right: 6%;
+        width: 7rem;
+    }
+    #kijel{
+        
+        float: right;
+       margin-top: 3%;
+        margin-right: 6%;
+        width: 7rem;
+    }
+}
+@media screen and (max-width:467px){
+    .gomb{
+        width: 27%;
+    }
 }

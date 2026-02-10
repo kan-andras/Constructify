@@ -32,12 +32,12 @@ function syncHeight(){
     G.style.height = height2 + 'px';
     B.style.height = height2 + 'px';
     J.style.height = height2 + 'px';
-    I.style.height = height2 + 'px';
-    I2.style.height = height4 + 'px';
-    I3.style.height = height4 + 'px';
-    I4.style.height = height4 + 'px';
-    I5.style.height = height4 + 'px';
-    I6.style.height = height4 + 'px';
+    I.style.height = height2 -2 + 'px';
+    I2.style.height = height2 -2 + 'px';
+    I3.style.height = height2 -2 + 'px';
+    I4.style.height = height2 -2 + 'px';
+    I5.style.height = height2 -2 + 'px';
+    I6.style.height = height2 -2 + 'px';
     
     /*
     H.style.height = height2 + 'px';
