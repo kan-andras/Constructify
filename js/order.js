@@ -28,7 +28,6 @@ var seged = false;
 var segedsecond = false;
 
 function megrendeles(){
-    mainblock.style.height = "1050px";
     if (segedsecond){
       kepek.forEach(kep => kep.classList.remove("glow"));
     }
@@ -41,6 +40,7 @@ function megrendeles(){
           // glow hozzáadása csak az aktuálishoz
           kepek[index].classList.add("glow");
           seged = true;
+          mainblock.style.height = "1150px";
         });
       });
     }
@@ -58,6 +58,7 @@ function megrendeles(){
           // glow hozzáadása csak az aktuálishoz
           jobbkepek[index].classList.add("glow");
           segedsecond = true;
+          mainblock.style.height = "1150px";
         });
       });
     }
