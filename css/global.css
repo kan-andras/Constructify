@@ -241,3 +241,10 @@ footer{
     background-color: #8b8b8b;
     border-radius: 8px 8px 8px 8px;
 }
+body:has(#nav_switch:checked) .ittvagy{
+    background-color: #cfcbcb;
+}
+body:has(#nav_switch:checked) .nav_items:hover{
+    background-color: #cfcbcb;
+    border: #ADAAAA 3px solid;
+}

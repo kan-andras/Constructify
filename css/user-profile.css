@@ -6,8 +6,6 @@ body{
    background-repeat:no-repeat;
    width: 100%;
    margin: 0px;
-}
-body{
     min-height: 100vh;
     height: auto;
     background-repeat: no-repeat;
@@ -22,6 +20,84 @@ body.page {
     display: flex;
     flex-direction: column;
 }
+
+
+body:has(#nav_switch:checked){
+    
+   
+    background: #DEDEF0;
+    background: linear-gradient(0deg,rgba(222, 222, 240, 1) 2%, rgba(173, 172, 247, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body:has(#nav_switch:checked) nav{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .nav_items{
+    color: black;
+}
+body:has(#nav_switch:checked) #nav_myLinks{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .nav_hamburgeritem{
+    color: black;
+}
+body:has(#nav_switch:checked) footer{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .profilkep {
+    background-color: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) .velemeny {
+    background-color: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) .projektek {
+    background-color: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) .munkas {
+    background-color: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) .szovegszin {
+    color: black;
+}
+body:has(#nav_switch:checked) .szovegszin1 {
+    color: black;
+}
+body:has(#nav_switch:checked) #nav_myLinks{
+    background: rgb(255, 255, 255);
+    color: black;
+}
+body:has(#nav_switch:checked) #nav_feherlogo{
+    content: url("../images/Logo_fekete.png");
+}
+body:has(#nav_switch:checked) #focimkep{
+    content: url("../images/Logo_fekete.png");
+}
+body:has(#nav_switch:checked) #nav_account{
+    content: url("../images/account_fekete.png");
+}
+body:has(#nav_switch:checked) .gomb{
+    background-color: #cfcbcb;
+    border: 1px rgba(173, 172, 247, 1) solid;
+}
+body:has(#nav_switch:checked) .gomb:hover{
+    border: #a0a0a0 3px solid;
+    padding: 0.75%
+}
+
+body:has(#nav_switch:checked) #fioktorles{
+    background-color: red;
+}
+body:has(#nav_switch:checked) #kijel{
+    background-color: #adacac;
+}
+body:has(#nav_switch:checked) #kijel{
+    background-color: #adacac;
+}
+
+
+
+
 
 /*
 #adatok{
@@ -50,10 +126,16 @@ body.page {
     margin-bottom: 20%;
  
 }*/
-
+.ittvagy{
+    background-color: #8b8b8b;
+    border-radius: 8px 8px 8px 8px;
+    padding: 10px;
+}
 #focimkep{
-    height: 100px;
-    width: auto;
+    height: 30%;
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #adatok{
@@ -161,7 +243,11 @@ margin-bottom: 3%;
 
 
 @media (max-width: 1119px){
-    
+    #focimkep{
+        height: 35%;
+        width: 35%;
+        
+    }
     
 }
 
@@ -173,7 +259,14 @@ margin-bottom: 3%;
     
 }
 @media screen and (max-width:768px){
-   
+    #focimkep{
+        height: 40%;
+        width: 40%;
+        
+    }
+    #adatok{
+        padding: 0.5rem 0 2rem 0;
+    }
     #footer_dok{
         
         margin-top: 20%;
@@ -212,8 +305,15 @@ margin-bottom: 3%;
         flex-direction: column-reverse;
         
     }*/
-
-
+    .inputmezo{
+      
+        font-size:x-small;
+    }
+    #focimkep{
+        height: 45%;
+        width: 45%;
+        
+    }
 
     #valtment{
         float: right;
@@ -231,7 +331,12 @@ margin-bottom: 3%;
     }
 }
 @media screen and (max-width:467px){
+    #focimkep{
+        height: 47%;
+        width: 47%;
+        
+    }
     .gomb{
-        width: 27%;
+        width: 30%;
     }
 }
