@@ -222,21 +222,73 @@ nav{
     }
 }
 
-/*lábléc*/
-footer{
+/*footer*/
+footer {
     background-color: rgb(158, 156, 156);
-    height: auto;
+    padding: 20px 0;
     text-align: center;
 }
-#footer_elerhetosegek{
-    padding-top: 1%;
+
+.footer_card {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
 }
-#footer_dok{
+
+.footer_card a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.footer_card img {
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+}
+
+.social-link1:hover {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    animation: bounce_613 0.4s linear;
+}
+
+.social-link2:hover {
+    background-color: #1f1f1f;
+    animation: bounce_613 0.4s linear;
+}
+
+.social-link3:hover {
+    background-color: #8B0000;
+    animation: bounce_613 0.4s linear;
+}
+
+.social-link4:hover {
+    background-color: #FFFFFF;
+    animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+    40% { transform: scale(1.4); }
+    60% { transform: scale(0.8); }
+    80% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+#footer_dok {
+    display: block;
+    margin-top: 10px;
     text-decoration: none;
-    font-style: normal;
     color: white;
-    margin-top: 10%;
+    font-size: 18px;
 }
+
 .ittvagy{
     background-color: #8b8b8b;
     border-radius: 8px 8px 8px 8px;

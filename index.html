@@ -58,6 +58,11 @@
                     ipsum, interdum nec egestas quis, varius in risus. Aliquam erat</p>
                 <p class="szovegszin">képek:</p>
                 <img src="images/fehérház.jpg" alt="termekkep" class="projektkep">
+                <button class="megnyitGomb" 
+                data-velemeny="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor ipsum, interdum nec egestas quis, varius in risus. Aliquam erat"
+                data-felkeres="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor ipsum, interdum nec egestas quis, varius in risus. Aliquam erat"
+                data-kep="images/fehérház.jpg"
+                >Részletek</button>
             </div>
         </div>
         <div class="velemenyek" id="velemeny2">
@@ -71,6 +76,11 @@
                     ipsum, interdum nec egestas quis, varius in risus. Aliquam erat</p>
                 <p class="szovegszin">képek:</p>
                 <img src="images/csaladihaz.jpg" alt="termekkep" class="projektkep" id="felkeres2">
+                <button class="megnyitGomb" 
+                data-velemeny="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor ipsum, interdum nec egestas quis, varius in risus. Aliquam erat"
+                data-felkeres="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor ipsum, interdum nec egestas quis, varius in risus. Aliquam erat"
+                data-kep="images/csaladihaz.jpg"
+                >Részletek</button>
             </div>
         </div>
         <div class="velemenyek" id="velemeny3">
@@ -84,6 +94,11 @@
                     ipsum, interdum nec egestas quis, varius in risus. Aliquam erat</p>
                 <p class="szovegszin">képek:</p>
                 <img src="images/csaladihaz1.jpg" alt="termekkep" class="projektkep">
+                <button class="megnyitGomb" 
+                data-velemeny="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor ipsum, interdum nec egestas quis, varius in risus. Aliquam erat"
+                data-felkeres="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor ipsum, interdum nec egestas quis, varius in risus. Aliquam erat"
+                data-kep="images/csaladihaz1.jpg"
+                >Részletek</button>
             </div>
         </div>
     </div>
@@ -104,24 +119,48 @@
     </div>
     <h1 id="tars" class="szovegszin">Munkatársaink:</h1>
     <div id="munkatarsak">
-        <div class="munkas"><img src="images/Account_feher.png" alt="accountlogo_Feher" class="munka_profilkep"></div>
-        <div class="munkas"><img src="images/Account_feher.png" alt="accountlogo_Feher" class="munka_profilkep"></div>
-        <div class="munkas"><img src="images/Account_feher.png" alt="accountlogo_Feher" class="munka_profilkep"></div>
+        <div class="munkas"><img src="images/Account_feher.png" alt="accountlogo_Feher" class="munka_profilkep modalKepTrigger" data-nev="Kiss Péter" data-leiras="Építészmérnök, 10 év tapasztalattal." data-kep="images/Account_feher.png"></div>
+        <div class="munkas"><img src="images/Account_feher.png" alt="accountlogo_Feher" class="munka_profilkep modalKepTrigger" data-nev="Kovács Elemér" data-leiras="Építészmérnök, 15 év tapasztalattal." data-kep="images/Account_feher.png"></div>
+        <div class="munkas"><img src="images/Account_feher.png" alt="accountlogo_Feher" class="munka_profilkep modalKepTrigger" data-nev="Nagy Áron" data-leiras="Építészmérnök, 32 év tapasztalattal." data-kep="images/Account_feher.png"></div>
     </div>
     <div id="rendeles">
-        <a href="order.html"><button id="rendeles_gomb">Rendelés/Árajánlat kérés</button></a>
-        <img src="images/FoOldal_rendeleshatterS.png" alt="sötétképrendeles" id="rendeles_kep">
+        <a href="order.html">
+            <button id="rendeles_gomb" class="szovegszin">Rendelés / Árajánlat kérés</button>
+        </a>
     </div>
     <footer>
-        <div id="footer_elerhetosegek">
-            <ul>
-                <a href="https://www.instagram.com/" class="footer_a"><i><img src="images/instagram.png" alt="instagram" class="footer_items"><p class="footer_tool">instagram</p></i></a>
-                <a href="https://www.facebook.com/" class="footer_a"><i><img src="images/facebook.png" alt="facebook" class="footer_items"><p class="footer_tool">facebook</p></i></a>
-                <a href="https://www.youtube.com/" class="footer_a"><i><img src="images/youtube.png" alt="youtube" class="footer_items"><p class="footer_tool">youtube</p></i></a>
-                <a href="https://x.com/" class="footer_a"><i><img src="images/twitter.png" alt="twitter" class="footer_items"><p class="footer_tool">twitter</p></i></a>
-            </ul>
-            <a href="" id="footer_dok">Dokomentumok</a>
+        <div id="footer_elerhetosegek" class="footer_card">
+            <a href="https://www.instagram.com" class="social-link1"><img src="images/instagram.png" alt="instagram"></a>
+            <a href="https://www.facebook.com" class="social-link2"><img src="images/facebook.png" alt="facebook"></a>
+            <a href="https://www.youtube.com" class="social-link3"><img src="images/youtube.png" alt="youtube"></a>
+            <a href="https://x.com/?lang=hu" class="social-link4"><img src="images/twitter.png" alt="twitter"></a>
         </div>
     </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-tartalom">
+            <span id="modalBezar" class="bezar">&times;</span>
+
+            <h3>Vélemény</h3>
+            <p id="modalVelemeny"></p>
+
+            <h3>Felkérés</h3>
+            <p id="modalFelkeres"></p>
+
+            <img id="modalKep" style="width:100%; border-radius:10px; margin-top:10px;">
+        </div>
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-tartalom">
+            <span id="modalBezar1" class="bezar">&times;</span>
+
+            <h3 id="modalNev"></h3>
+            <p id="modalLeiras"></p>
+            <img id="modalKep1" style="width:100%; border-radius:10px; margin-top:10px;">
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
