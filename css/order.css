@@ -262,3 +262,30 @@ body:has(#nav_switch:checked) {
               0 0 40px rgba(255,255,255,0.8);
           }
     }
+
+    .glowtwo {
+      animation: glowPulseTwo 1.5s infinite alternate;
+      border-radius: 37px;
+      width: 120%;
+      height: 110%;
+    }
+    
+    @keyframes glowPulseTwo {
+        0% {
+            box-shadow:
+              0 0 5px rgba(255,255,255,0.5),
+              0 0 10px rgba(255,255,255,0.4);
+          }
+          100% {
+            box-shadow:
+              0 0 20px rgba(255,255,255,1),
+              0 0 40px rgba(255,255,255,0.8);
+          }
+    }
+  #selecteditem{
+      color: white;
+      font-size: 16px;
+      float: left;
+      margin-left: 15%;
+      margin-top: 2%;
+  }
