@@ -1,9 +1,8 @@
 const mainblock = document.getElementById("main-con");
 
-
-//const hazgomb = document.getElementById("housebuild");
-//const ceggomb = document.getElementById("factorybuild");
-//const tombhazgomb = document.getElementById("arrayhousebuild");
+const hazgomb = document.getElementById("housebuild");
+const ceggomb = document.getElementById("factorybuild");
+const tombhazgomb = document.getElementById("arrayhousebuild");
 
 const hazimg = document.getElementById("house");
 const cegimg = document.getElementById("factory");
@@ -25,6 +24,30 @@ const jobbgombok = document.querySelectorAll(".rightbuttons");
 const kepek = document.querySelectorAll(".image");
 const jobbkepek = document.querySelectorAll(".rightimage");
 
+
+const div = document.createElement("div");
+  div.style.alignItems = "center";
+  div.style.gap = "20px";
+  div.style.marginTop = "2%";
+  div.style.marginLeft = "13%"
+
+const img = document.createElement("img");
+  img.src = "/images/epuletekhaz.svg";
+  img.alt = "Példa";
+  img.width = 50;
+  img.style.marginLeft = "1%";
+  img.style.borderRadius = "10px";
+
+const p = document.createElement("szoveg");
+  p.textContent = "Ezt választottad ki:";
+  p.style.color = "white";
+  p.style.float = "left";
+
+
+div.appendChild(p);
+div.appendChild(img);
+
+
 var seged = false;
 var segedsecond = false;
 
@@ -41,7 +64,7 @@ function megrendeles(){
           // glow hozzáadása csak az aktuálishoz
           kepek[index].classList.add("glow");
           seged = true;
-          mainblock.style.height = "1080px";
+          mainblock.style.height = "1160px";
         });
       });
     }
@@ -59,12 +82,12 @@ function megrendeles(){
           // glow hozzáadása csak az aktuálishoz
           jobbkepek[index].classList.add("glowtwo");
           segedsecond = true;
-          mainblock.style.height = "1080px";
+          mainblock.style.height = "1160px";
         });
       });
     }
 
-    festesgomb.addEventListener("click", () =>{
-      let kivalasztottkep = document.getElementById("selecteditem").innerText = "valami";
+    hazgomb.addEventListener("click", () =>{
+      document.getElementById("hely").appendChild(div);
     });
 }
