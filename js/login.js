@@ -1,7 +1,16 @@
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
-
+let newuser = {
+    name: "",
+    email: "",
+    pw: ""
+};
+let user = {
+    name: "John Doe",
+    email: "johndoedoesthings@gmail.com",
+    pw: "johndoeisthebest@1"
+};
 function registerbutton() {
     const nev = document.getElementById('neve').value;
     const email = document.getElementById('emailja').value;
@@ -49,15 +58,41 @@ function registerbutton() {
         document.getElementById("wrongpasswordagain").style.color = "green";
         bool4 = true;
     }
-    if(bool1 && bool2 && bool3 && bool4){
-        if (confirm("Minden adatot helyesen adtál meg. Folytatod ezekkel az adatokkal?")) {
-        bool5 = true;
-        } else {
-        bool5 = false;
+
+
+
+
+
+    if(bool2 && email === user.email){
+        alert("Ilyen emailel már van felhasználó regisztrálva!")
+
+        document.getElementById('neve').value = "";
+        document.getElementById('emailja').value = null;
+        document.getElementById('jelszava').value = null;
+        document.getElementById('jelszavaujra').value = "";
+    }
+    
+    
+    
+    
+    else{
+        if(bool1 && bool2 && bool3 && bool4){
+            if (confirm("Minden adatot helyesen adtál meg. Folytatod ezekkel az adatokkal?")) {
+            bool5 = true;
+            } else {
+            bool5 = false;
+            }
         }
     }
+    
     if (bool1 && bool2 && bool3 && bool4 && bool5){
         document.getElementById("regisztralokgomb").setAttribute('type', "submit");
+    }
+    
+
+
+    if (bool1 && bool2 && bool3 && bool4 && bool5){
+        
     }
 }
 
