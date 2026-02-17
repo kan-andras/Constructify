@@ -179,6 +179,11 @@ body:has(#nav_switch:checked) .munka_profilkep{
     font-size: 28px;
     cursor: pointer;
 }
+.projektsz{
+    padding-left: 3%;
+    padding-right: 3%;
+    color: white;
+}
 #nagyprojekt{
     display: flex;
     justify-content: space-between;
