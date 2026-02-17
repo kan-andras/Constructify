@@ -284,6 +284,7 @@ body:has(#nav_switch:checked) {
     }
   #hely{
     font-size: clamp(0.3rem, 0.4vw + 0.6rem, 1.5rem);
+    width: 40%;
   }
   .kivalasztott {
   opacity: 0;
@@ -294,4 +295,11 @@ body:has(#nav_switch:checked) {
 .kivalasztott.active {
   opacity: 1;
   transform: translateY(0);
+  width: 30%;
+}
+
+#step{
+  float: right;
+  margin-right: 2%;
+  margin-bottom: 2%;
 }
