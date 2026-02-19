@@ -79,7 +79,7 @@ function megrendeles(){
           div.style.gap = "20px";
           div.style.marginTop = "2%";
           div.style.marginLeft = "13%";
-          div.style.width = "30%";
+          div.style.width = "50%";
 
           const p = document.createElement("p");
           p.textContent = "Ezt választottad:";
@@ -102,7 +102,7 @@ function megrendeles(){
 
           seged = true;
           mainblock.style.height = "115%";
-          nextstep.style.display = "inline";
+          nextstep.style.display = "block";
         });
       });
     }
@@ -137,7 +137,7 @@ function megrendeles(){
           div.style.gap = "20px";
           div.style.marginTop = "2%";
           div.style.marginLeft = "13%";
-          div.style.width = "30%";
+          div.style.width = "50%";
 
           const p = document.createElement("p");
           p.textContent = "Ezt választottad:";
@@ -160,7 +160,7 @@ function megrendeles(){
 
           segedsecond = true;
           mainblock.style.height = "115%";
-          nextstep.style.display = "inline";
+          nextstep.style.display = "block";
         });
       });
     }
