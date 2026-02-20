@@ -6,6 +6,8 @@ let newuser = {
     email: "",
     pw: ""
 };
+let userMap = new Map([["name", "John Doe"],[ "email", "johndoedoesthings@gmail.com"],[ "pw", "johndoeisthebest@1"]]);
+userMap.forEach((value, key) => console.log(`${key} : ${value}`));
 let user = {
     name: "John Doe",
     email: "johndoedoesthings@gmail.com",
@@ -62,20 +64,15 @@ function registerbutton() {
 
 
 
-
-    if(bool2 && email === user.email){
+    
+    if(bool2 && email == userMap.get("email")){
         alert("Ilyen emailel már van felhasználó regisztrálva!")
 
         document.getElementById('neve').value = "";
         document.getElementById('emailja').value = null;
         document.getElementById('jelszava').value = null;
         document.getElementById('jelszavaujra').value = "";
-    }
-    
-    
-    
-    
-    else{
+    } else{
         if(bool1 && bool2 && bool3 && bool4){
             if (confirm("Minden adatot helyesen adtál meg. Folytatod ezekkel az adatokkal?")) {
             bool5 = true;
@@ -85,9 +82,9 @@ function registerbutton() {
         }
     }
     
-    if (bool1 && bool2 && bool3 && bool4 && bool5){
-        document.getElementById("regisztralokgomb").setAttribute('type', "submit");
-    }
+   /* if (bool1 && bool2 && bool3 && bool4 && bool5){
+       
+    }*/
     
 
 

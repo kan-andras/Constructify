@@ -17,12 +17,15 @@ body{
     flex-direction: column;
     height: 100vh;
 }
-
+nav{
+    position: absolute;
+    margin-bottom: 53rem;
+}
 .container{
     background-color: #91bae7;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    position: relative;
+    position: fixed;
     overflow: hidden;
     width: 768px;
     max-width: 100%;
