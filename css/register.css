@@ -17,6 +17,71 @@ body{
     flex-direction: column;
     height: 100vh;
 }
+body:has(#nav_switch:checked){
+    background: #4E4EFE;
+    background: linear-gradient(132deg, rgba(78, 78, 254, 1) 5%, rgba(118, 118, 254, 1) 32%, rgba(148, 148, 254, 1) 53%, rgba(255, 255, 255, 1) 100%);
+}
+body:has(#nav_switch:checked) nav{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .nav_items{
+    color: black;
+}
+body:has(#nav_switch:checked) #nav_myLinks{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .nav_hamburgeritem{
+    color: black;
+}
+body:has(#nav_switch:checked) footer{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .profilkep {
+    background-color: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) .velemeny {
+    background-color: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) .projektek {
+    background-color: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) .munkas {
+    background-color: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) .szovegszin {
+    color: black;
+}
+body:has(#nav_switch:checked) .szovegszin1 {
+    color: black;
+}
+body:has(#nav_switch:checked) .megnyitGomb{
+    background: rgb(107, 134, 165);
+}
+body:has(#nav_switch:checked) #rendeles_gomb{
+    background: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) #nav_myLinks{
+    background: rgb(255, 255, 255);
+    color: black;
+}
+body:has(#nav_switch:checked) #nav_feherlogo{
+    content: url("../images/Logo_fekete.png");
+}
+body:has(#nav_switch:checked) .container{
+    background-color: rgb(132, 132, 240);
+    color: #000000;
+}
+body:has(#nav_switch:checked) .container form{
+    background-color: rgb(132, 132, 240);
+    
+}
+body:has(#nav_switch:checked) .kapcsolt-panel{
+    background-color: #E4E4E4;
+    background: linear-gradient(to right, #b3aeae, #E4E4E4);
+    color: #000000;
+    
+}
+
 nav{
     position: fixed;
     top: 0;
@@ -25,8 +90,8 @@ nav{
     z-index: 2000;
 }
 .container{
-    background: linear-gradient(135deg, #9A8F6E 0%, #7C786B 74%,#777671 100%);
-    
+   /* background: linear-gradient(135deg, #9A8F6E 0%, #7C786B 74%,#777671 100%);*/
+    background-color: #9A8F6E;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);     
     position: fixed;
@@ -80,6 +145,7 @@ nav{
 
 .container form{
     /*background: linear-gradient(90deg, #9A8F6E 0%, #7C786B 74%,#777671 100%);*/
+    background-color: #9A8F6E;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,7 +195,7 @@ nav{
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
-    animation: move 0.6s;
+    animation: move 0.6s;   
 }
 
 @keyframes move{
@@ -167,8 +233,8 @@ nav{
 
 .kapcsolt{
     background-color: #747272;
-    height: 100%;
     background: linear-gradient(to right, #9b9999, #747272);
+    height: 100%;
     color: #ffffff;
     position: relative;
     left: -100%;
