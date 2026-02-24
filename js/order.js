@@ -77,9 +77,6 @@ function megrendeles(){
           div.style.display = "flex";
           div.style.alignItems = "center";
           div.style.gap = "20px";
-          div.style.marginTop = "2%";
-          div.style.marginLeft = "13%";
-          div.style.marginBottom = "1%";
           div.style.width = "50%";
 
           const p = document.createElement("p");
@@ -88,7 +85,7 @@ function megrendeles(){
 
           const img = document.createElement("img");
           img.src = kepek[index].src;
-          img.width = 65;
+          img.width = 60;
           img.style.borderRadius = "10px";
           img.style.marginBottom = "1%";
 
@@ -137,9 +134,6 @@ function megrendeles(){
           div.style.display = "flex";
           div.style.alignItems = "center";
           div.style.gap = "20px";
-          div.style.marginTop = "2%";
-          div.style.marginLeft = "13%";
-          div.style.marginBottom = "1%";
           div.style.width = "50%";
 
           const p = document.createElement("p");
@@ -148,7 +142,7 @@ function megrendeles(){
 
           const img = document.createElement("img");
           img.src = jobbkepek[index].src;
-          img.width = 55;
+          img.width = 50;
           img.style.borderRadius = "10px";
           img.style.marginBottom = "1%";
 
