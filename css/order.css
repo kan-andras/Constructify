@@ -123,7 +123,7 @@ body:has(#nav_switch:checked) {
     
     .rightimage{
         display: block;
-        width: 120%;
+        width: 130%;
         height: auto;
         border-radius: 35px;
     }
@@ -135,7 +135,7 @@ body:has(#nav_switch:checked) {
         left: 0;
         right: 0;
         height: 100%;
-        width: 120%;
+        width: 130%;
         margin-left: auto;
         margin-right: auto;
         margin-top: auto;
@@ -152,7 +152,7 @@ body:has(#nav_switch:checked) {
     
     .righttext{
         color: white;
-        font-size: 14px;
+        font-size: clamp(0.2rem, 0.35vw + 0.45rem, 0.9rem);
         width: 100%;
         position: absolute;
         top: 40%;
@@ -177,7 +177,7 @@ body:has(#nav_switch:checked) {
     }
 
     .rightbuttontext{
-      font-size: clamp(0.2rem, 0.4vw + 0.3rem, 0.8rem);
+      font-size: clamp(0.2rem, 0.4vw + 0.35rem, 1rem);
     }
 
     .container {
@@ -216,7 +216,7 @@ body:has(#nav_switch:checked) {
       
       .text {
         color: white;
-        font-size: 18px;
+        font-size: clamp(0.1rem, 0.3vw + 0.7rem, 1.5rem);
         position: absolute;
         top: 40%;
         left: 50%;
@@ -231,7 +231,7 @@ body:has(#nav_switch:checked) {
       }
 
       .buttons{
-        margin-top: 55%;
+        margin-top: 50%;
         margin-bottom: 5%;
         margin-left: 32%;
         margin-right: auto;
@@ -241,6 +241,7 @@ body:has(#nav_switch:checked) {
         border: none;
         border-radius: 8px 8px 8px 8px;
         position: absolute;
+        font-size: clamp(0.1rem, 0.2vw + 0.5rem, 1rem);
       }
 
     .glow {
@@ -290,6 +291,13 @@ body:has(#nav_switch:checked) {
   opacity: 0;
   transform: translateY(-40px);
   transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  margin-left: 14%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+.kivalasztott p{
+  margin-bottom: 3%;
 }
 
 .kivalasztott.active {
@@ -303,8 +311,58 @@ body:has(#nav_switch:checked) {
   margin-right: 7%;
   border-radius: 8px;
   width: 8%;
-  border: none;
 }
 #bottomcontainer{
   width: 100%;
+}
+
+/* TOVÁBB GOMB */
+.btn-border-reveal {
+  background-color: transparent;
+  color: #ebebeb;
+  border: 2px solid #312a34;
+  position: relative;
+}
+
+.btn-border-reveal::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #c8b1d1;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-border-reveal:hover::after {
+  width: 100%;
+}
+
+.btn-border-reveal:hover {
+  color: white;
+}
+/* TOVÁBB GOMB KÓDJÁNAK VÉGE!!!!*/
+
+@media screen and (max-width:768px){
+  .container {
+    position: relative;
+    width: 97%;
+    height: auto;
+    margin-left: -17%;
+  }
+  .kivalasztott {
+    margin-left: 9%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+  }
+  #step{
+    width: 12%;
+  }
+  .buttons{
+    width: 40%;
+    height: 18%;
+    border-radius: 6px 6px 6px 6px;
+  }
 }
