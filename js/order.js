@@ -70,35 +70,6 @@ function megrendeles(){
           // glow hozzáadása csak az aktuálishoz
           kepek[index].classList.add("glow");
 
-          const hely = document.getElementById("hely");
-          hely.innerHTML = "";
-
-          const div = document.createElement("div");
-          div.style.display = "flex";
-          div.style.alignItems = "center";
-          div.style.gap = "20px";
-          div.style.width = "50%";
-
-          const p = document.createElement("p");
-          p.textContent = "Ezt választottad:";
-          p.style.color = "white";
-
-          const img = document.createElement("img");
-          img.src = kepek[index].src;
-          img.width = 60;
-          img.style.borderRadius = "10px";
-          img.style.marginBottom = "1%";
-
-          div.appendChild(p);
-          div.appendChild(img);
-          
-          div.classList.add("kivalasztott");
-          hely.appendChild(div);
-
-          setTimeout(() => {
-            div.classList.add("active");
-          }, 10);
-
           seged = true;
           mainblock.style.height = "115%";
           nextstep.style.display = "block";
@@ -125,36 +96,6 @@ function megrendeles(){
 
           // glow hozzáadása csak az aktuálishoz
           jobbkepek[index].classList.add("glowtwo");
-
-
-          const hely = document.getElementById("hely");
-          hely.innerHTML = "";
-
-          const div = document.createElement("div");
-          div.style.display = "flex";
-          div.style.alignItems = "center";
-          div.style.gap = "20px";
-          div.style.width = "50%";
-
-          const p = document.createElement("p");
-          p.textContent = "Ezt választottad:";
-          p.style.color = "white";
-
-          const img = document.createElement("img");
-          img.src = jobbkepek[index].src;
-          img.width = 50;
-          img.style.borderRadius = "10px";
-          img.style.marginBottom = "1%";
-
-          div.appendChild(p);
-          div.appendChild(img);
-
-          div.classList.add("kivalasztott");
-          hely.appendChild(div);
-
-          setTimeout(() => {
-            div.classList.add("active");
-          }, 10);
 
           segedsecond = true;
           mainblock.style.height = "115%";

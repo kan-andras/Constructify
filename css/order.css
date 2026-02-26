@@ -283,67 +283,6 @@ body:has(#nav_switch:checked) {
               0 0 40px rgba(255,255,255,0.8);
           }
     }
-  #hely{
-    font-size: clamp(0.3rem, 0.4vw + 0.6rem, 1.5rem);
-    width: 100%;
-  }
-  .kivalasztott {
-  opacity: 0;
-  transform: translateY(-40px);
-  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-  margin-left: 14%;
-  margin-top: 2%;
-  margin-bottom: 3%;
-}
-
-.kivalasztott p{
-  margin-bottom: 3%;
-}
-
-.kivalasztott.active {
-  opacity: 1;
-  transform: translateY(0);
-  width: 30%;
-}
-
-#step{
-  float: right;
-  margin-right: 7%;
-  border-radius: 8px;
-  width: 8%;
-}
-#bottomcontainer{
-  width: 100%;
-}
-
-/* TOVÁBB GOMB */
-.btn-border-reveal {
-  background-color: transparent;
-  color: #ebebeb;
-  border: 2px solid #312a34;
-  position: relative;
-}
-
-.btn-border-reveal::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #c8b1d1;
-  transition: width 0.3s ease;
-  z-index: -1;
-}
-
-.btn-border-reveal:hover::after {
-  width: 100%;
-}
-
-.btn-border-reveal:hover {
-  color: white;
-}
-/* TOVÁBB GOMB KÓDJÁNAK VÉGE!!!!*/
 
 @media screen and (max-width:768px){
   .container {
