@@ -1,23 +1,37 @@
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
-let newuser = {
-    name: "",
-    email: "",
-    pw: ""
-};
+
 let userMap = new Map([["name", "John Doe"],[ "email", "johndoedoesthings@gmail.com"],[ "pw", "johndoeisthebest@1"]]);
 userMap.forEach((value, key) => console.log(`${key} : ${value}`));
-let user = {
-    name: "John Doe",
-    email: "johndoedoesthings@gmail.com",
-    pw: "johndoeisthebest@1"
-};
+
+function login(){
+    const logEmail = document.getElementById('loginEmail').value;
+    const logPw = document.getElementById('loginPw').value;
+    //logEmail
+    //logPw
+    let storedUn
+    return new Promise((resolve, reject) => {
+        if(userMap.has(logEmail)){
+            storedUn = userMap.get(logEmail)
+            resolve()
+            console.log(storedUn)
+        }else{
+            reject()
+        }
+    })
+    
+    
+
+
+}
+
 function registerbutton() {
-    const nev = document.getElementById('neve').value;
-    const email = document.getElementById('emailja').value;
-    const jelszo = document.getElementById('jelszava').value;
-    const jelszoagain = document.getElementById('jelszavaujra').value;
+    const nev = document.getElementById('regName').value;
+    const email = document.getElementById('regEmail').value;
+    const jelszo = document.getElementById('regPw').value;
+    const jelszoagain = document.getElementById('regPwAgain').value;
+    
     var bool1 = false;
     var bool2 = false;
     var bool3 = false;
