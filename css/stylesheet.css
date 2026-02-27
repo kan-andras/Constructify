@@ -67,8 +67,8 @@ body:has(#nav_switch:checked) #rendeles{
     background: url("../images/FoOldal_rendeleshatterV.png");
     background-size: cover;
 }
-body:has(#nav_switch:checked) .munka_profilkep{
-    content: url("../images/account_fekete.png");
+body:has(#nav_switch:checked) .projektsz{
+    color: black;
 }
 .szovegszin{
     color: white;
@@ -93,12 +93,13 @@ body:has(#nav_switch:checked) .munka_profilkep{
 }
 #cim1 {
     top: 40%;
-    font-size: 50px;
+    font-size: 40px;
+    font-style: italic;
 }
 
 #cim2 {
     top: 50%;
-    font-size: 20px;
+    font-size: xx-large;
 }
 .velemenyek {
     width: 30%;
@@ -210,15 +211,14 @@ body:has(#nav_switch:checked) .munka_profilkep{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px; 
+    gap: 200px; 
     padding: 6%;
 }
 .munkas{
     background-color: rgb(94, 85, 67);
-    padding: 2%;
     border-radius: 50%;
-    width: 150px; 
-    height: 150px; 
+    width: 200px; 
+    height: 200px; 
     display: flex; 
     justify-content: center; 
     align-items: center;
@@ -252,7 +252,7 @@ body:has(#nav_switch:checked) .munka_profilkep{
     transition: 0.2s;
 }
 
-@media screen and (max-width:1104px){
+@media screen and (max-width:1204px){
     #velemenyresz{
         gap: 10px;
         padding: 3%;
@@ -260,12 +260,34 @@ body:has(#nav_switch:checked) .munka_profilkep{
     .velemeny{
         height: 77%;
     }
+    #munkatarsak{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 100px; 
+        padding: 6%;
+    }
 }
 @media screen and (max-width:900px){
     .profilkep{
         width: 40%;
     }
-}   
+}  
+@media screen and (max-width:950px){
+    .munkas{
+        width: 180px; 
+        height: 180px;
+    }
+} 
+@media screen and (max-width:760px){
+    #munkatarsak{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px; 
+        padding: 6%;
+    }
+}
 @media screen and (max-width:650px){
     .profilkep{
         top: 45px;
@@ -311,8 +333,8 @@ body:has(#nav_switch:checked) .munka_profilkep{
         gap: 20px; 
     }
     .munkas{ 
-        width: 120px; 
-        height: 120px; 
+        width: 160px; 
+        height: 160px; 
     }
     .szovegszin1{
         display: none;
