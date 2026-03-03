@@ -3,7 +3,7 @@ body{
     background: #3D3D3D;
     background: linear-gradient(180deg, rgba(61, 61, 61, 1) 8%, rgba(71, 63, 40, 1) 32%, rgba(82, 71, 37, 1) 42%, rgba(137, 114, 44, 1) 74%, rgba(189, 153, 48, 1) 100%);
     margin: 0;
-    height: auto;
+    height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -19,6 +19,43 @@ body:has(#nav_switch:checked) .wrapper{
 }
 body:has(#nav_switch:checked) #picture{
     content: url(../images/Rendeles_hatterV.png);
+}
+body:has(#nav_switch:checked) nav{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .nav_items{
+    color: black;
+}
+body:has(#nav_switch:checked) #nav_myLinks{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .nav_hamburgeritem{
+    color: black;
+}
+body:has(#nav_switch:checked) footer{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .szovegszin {
+    color: black;
+}
+body:has(#nav_switch:checked) .szovegszin1 {
+    color: black;
+}
+body:has(#nav_switch:checked) #nav_myLinks{
+    background: rgb(255, 255, 255);
+    color: black;
+}
+body:has(#nav_switch:checked) #nav_feherlogo{
+    content: url("../images/Logo_fekete.png");
+}
+body:has(#nav_switch:checked) #nav_account{
+    content: url("../images/account_fekete.png");
+}
+body:has(#nav_switch:checked) #fokep{
+    content: url("../images/FoOldal_hatterkepV.png");
+}
+body:has(#nav_switch:checked) #rendeles{
+    background: rgb(195, 217, 242);
 }
 
 *{
@@ -133,4 +170,26 @@ header .current-date{
 }
 #elrendezes{
     display: flex;
+}
+#blogo{
+    position: absolute;
+    width: 25%;
+    left: 62%;
+}
+#rendeles{
+    position: absolute;
+    top: 55%;
+    left: 68.4%;
+    padding: 2%;
+    padding: 15px 25px;
+    font-size: 1.3rem;
+    background-color: rgb(94, 85, 67);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 15%;
+    height: 6%;
+    font-size: medium;
 }
