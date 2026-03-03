@@ -5,19 +5,37 @@ const loginBtn = document.getElementById('login');
 let userMap = new Map([["name", "John Doe"],[ "email", "johndoedoesthings@gmail.com"],[ "pw", "johndoeisthebest@1"]]);
 userMap.forEach((value, key) => console.log(`${key} : ${value}`));
 
-function login(){
+
+
+
+
+
+
+
+
+console.log(userMap.get("johndoedoesthings@gmail.com"))
+
+
+
+function loginHTML(){
+    let storedUn
+    console.log(storedUn)
+    loginFunc(storedUn).then(uzenet => console.log(uzenet)).catch(hiba =>console.log(hiba))
+
+}
+
+function loginFunc(a){
     const logEmail = document.getElementById('loginEmail').value;
     const logPw = document.getElementById('loginPw').value;
     //logEmail
     //logPw
-    let storedUn
+    
     return new Promise((resolve, reject) => {
-        if(userMap.has(logEmail)){
-            storedUn = userMap.get(logEmail)
-            resolve()
-            console.log(storedUn)
-        }else{
-            reject()
+        if(userMap.get(String(logEmail))){
+            a = logEmail
+            console.log(a)
+            resolve(userMap.forEach((value, key) => (a)? console.log(`${key} : ${value}`):reject("hiba")))
+            
         }
     })
     
@@ -111,9 +129,9 @@ function register(){
     container.classList.add("active");
     
 }
-function login(){
+/*function login(){
     container.classList.remove("active");
 }
-
+*/
 
 
