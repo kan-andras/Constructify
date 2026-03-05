@@ -51,8 +51,17 @@ body:has(#nav_switch:checked) #nav_feherlogo{
 body:has(#nav_switch:checked) #nav_account{
     content: url("../images/account_fekete.png");
 }
-body:has(#nav_switch:checked) #fokep{
-    content: url("../images/FoOldal_hatterkepV.png");
+body:has(#nav_switch:checked) #right{
+    background: url("../images/Rendeles_hatterV.png");
+    width: 50%;
+    height: 777px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 body:has(#nav_switch:checked) #rendeles{
     background: rgb(195, 217, 242);
@@ -65,7 +74,8 @@ body:has(#nav_switch:checked) #rendeles{
     width: 450px;
     background: #B1B0B0;
     box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-    margin: 10%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .wrapper header{
     text-align: center;
@@ -160,9 +170,19 @@ header .current-date{
 #left{
     width: 50%;
     z-index: 1;
+    margin: auto;
 }
-#right{
+#right {
     width: 50%;
+    height: 777px;
+    background: url("../images/Rendeles_hatterS.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 #picture{
     width: 100%;
@@ -173,14 +193,11 @@ header .current-date{
 }
 #blogo{
     position: absolute;
-    width: 25%;
-    left: 62%;
+    top: 10%;
+    width: 300px;
 }
-#rendeles{
-    position: absolute;
-    top: 55%;
-    left: 68.4%;
-    padding: 2%;
+#rendeles {
+    position: initial;
     padding: 15px 25px;
     font-size: 1.3rem;
     background-color: rgb(94, 85, 67);
@@ -189,7 +206,7 @@ header .current-date{
     border-radius: 12px;
     cursor: pointer;
     transition: 0.2s;
-    width: 15%;
-    height: 6%;
-    font-size: medium;
+    text-align: center;
+    width: 100%;
+    margin-top: 110%;
 }
