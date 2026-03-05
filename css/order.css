@@ -367,31 +367,52 @@ body:has(#nav_switch:checked) {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(17, 1fr);
-    grid-column-gap: 8px;
+    grid-column-gap: 20px;
     grid-row-gap: 20px;
     }
     
-    .div1 { grid-area: 1 / 2 / 2 / 6; }
-    .div2 { grid-area: 2 / 3 / 3 / 5; }
+    .div1 { grid-area: 1 / 1 / 1 / 8; }
+    .div2 { grid-area: 2 / 2 / 3 / 6;
+            height: 90%;
+            width: 92%;
+            margin-left: 7%;
+            text-align: center; }
     .div6 { grid-area: 3 / 2 / 5 / 4; }
     .div4 { grid-area: 3 / 4 / 5 / 6; }
     .div5 { grid-area: 5 / 3 / 7 / 5; }
-    .div3 { grid-area: 7 / 3 / 8 / 5; }
-    .div7 { grid-area: 8 / 3 / 10 / 4; }
-    .div8 { grid-area: 10 / 3 / 12 / 4; }
-    .div9 { grid-area: 12 / 3 / 14 / 4; }
-    .div10 { grid-area: 14 / 3 / 16 / 4; }
-    .div11 { grid-area: 16 / 3 / 18 / 4; }
-    .div12 { grid-area: 8 / 4 / 10 / 5; }
-    .div13 { grid-area: 10 / 4 / 12 / 5; }
-    .div14 { grid-area: 12 / 4 / 14 / 5; }
-    .div15 { grid-area: 14 / 4 / 16 / 5; }
-    .div16 { grid-area: 16 / 4 / 18 / 5; }
+    .div3 { grid-area: 7 / 2 / 7 / 6;
+            width: 92%;
+            margin-left: 6%; }
+    .div7 { grid-area: 8 / 3 / 10 / 4;
+            margin-left: -50%;
+            width: 150%; }
+    .div8 { grid-area: 10 / 3 / 12 / 4;
+            margin-left: -50%;
+            width: 150%; }
+    .div9 { grid-area: 12 / 3 / 14 / 4;
+            margin-left: -50%;
+            width: 150%; }
+    .div10 { grid-area: 14 / 3 / 16 / 4;
+            margin-left: -50%;
+            width: 150%;}
+    .div11 { grid-area: 16 / 3 / 18 / 4;
+            margin-left: -50%;
+            width: 150%; }
+    .div12 { grid-area: 8 / 4 / 10 / 5;
+             width: 150%; }
+    .div13 { grid-area: 10 / 4 / 12 / 5;
+             width: 150%; }
+    .div14 { grid-area: 12 / 4 / 14 / 5;
+             width: 150%; }
+    .div15 { grid-area: 14 / 4 / 16 / 5;
+             width: 150%; }
+    .div16 { grid-area: 16 / 4 / 18 / 5;
+             width: 150%; }
 
   .container{
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
   }
   .image{
     width: 110%;
@@ -407,5 +428,17 @@ body:has(#nav_switch:checked) {
   }
   .text{
     font-size: 60%;
+  }
+  .main-container h2{
+    margin-top: 1.5%;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rightimage{
+    width: 120%;
+  }
+  .rightoverlay{
+    width: 120%;
   }
 }
