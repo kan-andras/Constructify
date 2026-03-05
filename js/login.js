@@ -8,19 +8,12 @@ userMap.forEach((value, key) => console.log(`${key} : ${value}`));
 
 
 
-
-
-
-
-
-console.log(userMap.get("johndoedoesthings@gmail.com"))
-
-
-
 function loginHTML(){
     let storedUn
     console.log(storedUn)
     loginFunc(storedUn).then(uzenet => console.log(uzenet)).catch(hiba =>console.log(hiba))
+
+
 
 }
 
@@ -29,14 +22,17 @@ function loginFunc(a){
     const logPw = document.getElementById('loginPw').value;
     //logEmail
     //logPw
+    let emailExists = false
+    let pwExists = false
+
+    
     
     return new Promise((resolve, reject) => {
-        if(userMap.get(String(logEmail))){
-            a = logEmail
-            console.log(a)
-            resolve(userMap.forEach((value, key) => (a)? console.log(`${key} : ${value}`):reject("hiba")))
-            
-        }
+        userMap.forEach((value) => {if(value == logEmail){emailExists=true}else{reject("rossz email")}})
+        userMap.forEach((value) => {if(value == logPw){pwExists=true}else{reject("rossz jelszó")}})
+
+        resolve()
+        
     })
     
     
