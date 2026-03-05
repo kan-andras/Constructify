@@ -44,8 +44,6 @@ const jobbgombok = document.querySelectorAll(".rightbuttons");
 const kepek = document.querySelectorAll(".image");
 const jobbkepek = document.querySelectorAll(".rightimage");
 
-const nextstep = document.getElementById("step");
-nextstep.style.display = "none";
 
 var seged = false;
 var segedsecond = false;
