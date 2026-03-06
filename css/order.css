@@ -178,7 +178,7 @@ body:has(#nav_switch:checked) {
     }
 
     .rightbuttontext{
-      font-size: clamp(0.2rem, 0.4vw + 0.35rem, 1rem);
+      font-size: clamp(0.1rem, 0.4vw + 0.35rem, 1rem);
     }
 
     .container {
@@ -342,6 +342,7 @@ body:has(#nav_switch:checked) {
   
   .rightbuttons{
     margin-left: 18%;
+    margin-top: 62%;
   }
   .image{
     width: 160%;
@@ -353,6 +354,9 @@ body:has(#nav_switch:checked) {
   }
   .div2{
     margin-left: 10%;
+  }
+  .righttext{
+    margin-top: -10%;
   }
   .rightimage{
     padding-bottom: 5%;
@@ -377,9 +381,12 @@ body:has(#nav_switch:checked) {
             width: 92%;
             margin-left: 7%;
             text-align: center; }
-    .div6 { grid-area: 3 / 2 / 5 / 4; }
-    .div4 { grid-area: 3 / 4 / 5 / 6; }
-    .div5 { grid-area: 5 / 3 / 7 / 5; }
+    .div6 { grid-area: 3 / 2 / 5 / 4;
+             }
+    .div4 { grid-area: 3 / 4 / 5 / 6;
+             }
+    .div5 { grid-area: 5 / 3 / 7 / 5;
+             }
     .div3 { grid-area: 7 / 2 / 7 / 6;
             width: 92%;
             margin-left: 6%; }
@@ -399,15 +406,20 @@ body:has(#nav_switch:checked) {
             margin-left: -50%;
             width: 150%; }
     .div12 { grid-area: 8 / 4 / 10 / 5;
-             width: 150%; }
+             width: 150%;
+             margin-left: 40%; }
     .div13 { grid-area: 10 / 4 / 12 / 5;
-             width: 150%; }
+             width: 150%;
+             margin-left: 40%; }
     .div14 { grid-area: 12 / 4 / 14 / 5;
-             width: 150%; }
+             width: 150%;
+             margin-left: 40%; }
     .div15 { grid-area: 14 / 4 / 16 / 5;
-             width: 150%; }
+             width: 150%;
+             margin-left: 40%; }
     .div16 { grid-area: 16 / 4 / 18 / 5;
-             width: 150%; }
+             width: 150%;
+             margin-left: 40%; }
 
   .container{
     margin-left: auto;
@@ -427,7 +439,7 @@ body:has(#nav_switch:checked) {
     border-radius: 20px;
   }
   .text{
-    font-size: 60%;
+    font-size: 55%;
   }
   .main-container h2{
     margin-top: 1.5%;
@@ -437,8 +449,90 @@ body:has(#nav_switch:checked) {
   }
   .rightimage{
     width: 120%;
+    border-radius: 15px;
+  }
+  .righttext{
+    margin-top: -10%;
+    font-size: 55%;
   }
   .rightoverlay{
     width: 120%;
+    border-radius: 15px;
+  }
+  .buttons{
+    width: 60%;
+    margin-left: 20%;
+  }
+  .rightbuttons{
+    margin-top: 60%;
+    width: 75%;
+    margin-left: 12%;
+  }
+}
+@media screen and (max-width:430px){
+  .div3{
+    margin-left: 10%;
+  }
+  .div2{
+    margin-left: 10%;
+  }
+  .div2 h2, .div3 h2, .div1 h2{
+    margin-top: 0%;
+  }
+  .container{
+    margin-left: 10%;
+  }
+    .rightimage{
+        width: 150%;
+        border-radius: 15px;
+      }
+    .rightoverlay{
+        width: 150%;
+        border-radius: 15px;
+      }
+  .div7, .div8, .div9, .div10, .div11{
+    margin-left: -80%;
+  }
+  .text{
+    font-size: 50%;
+    margin-top: -10%;
+  }
+  .rightbuttons{
+    margin-top: 65%;
+  }
+}
+@media screen and (max-width:350px){
+  .image{
+    width: 90%;
+  }
+  .overlay{
+    width: 90%;
+    margin-left: 0%;
+  }
+  .div2{
+    margin-left: 12%;
+  }
+  .div6, .div5{
+    margin-left: -30%;
+  }
+  .div4{
+    width: 130%;
+    margin-left: 10%;
+  }
+  .container{
+    width: 120%;
+  }
+  .rightimage{
+    width: 160%;
+  }
+  .rightoverlay{
+    width: 160%;
+  }
+  .div7, .div8, .div9, .div10, .div11{
+    margin-left: -140%;
+  }
+  .textdiv{
+    margin-left: 20%;
+    margin-bottom: -5%;
   }
 }

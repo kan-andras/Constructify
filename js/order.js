@@ -44,8 +44,6 @@ const jobbgombok = document.querySelectorAll(".rightbuttons");
 const kepek = document.querySelectorAll(".image");
 const jobbkepek = document.querySelectorAll(".rightimage");
 
-const nextstep = document.getElementById("step");
-nextstep.style.display = "none";
 
 var seged = false;
 var segedsecond = false;
@@ -72,7 +70,6 @@ function megrendeles(){
 
           seged = true;
           mainblock.style.height = "115%";
-          nextstep.style.display = "block";
         });
       });
     }
@@ -99,7 +96,6 @@ function megrendeles(){
 
           segedsecond = true;
           mainblock.style.height = "115%";
-          nextstep.style.display = "block";
         });
       });
     }
