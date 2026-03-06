@@ -70,7 +70,6 @@ function megrendeles(){
 
           seged = true;
           mainblock.style.height = "115%";
-          nextstep.style.display = "block";
         });
       });
     }
@@ -97,7 +96,6 @@ function megrendeles(){
 
           segedsecond = true;
           mainblock.style.height = "115%";
-          nextstep.style.display = "block";
         });
       });
     }
