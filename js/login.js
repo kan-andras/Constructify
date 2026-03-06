@@ -9,36 +9,37 @@ userMap.forEach((value, key) => console.log(`${key} : ${value}`));
 
 
 function loginHTML(){
-    let storedUn
-    console.log(storedUn)
-    loginFunc(storedUn).then(uzenet => console.log(uzenet)).catch(hiba =>console.log(hiba))
+
+    loginFunc().then(uzenet => console.log(uzenet)).catch(hiba =>console.log(hiba))
 
 
 
 }
 
-function loginFunc(a){
-    const logEmail = document.getElementById('loginEmail').value;
+function loginFunc(){
+    let logEmail = document.getElementById('loginEmail').value;
     const logPw = document.getElementById('loginPw').value;
     //logEmail
     //logPw
     let emailExists = false
     let pwExists = false
 
-    
+    userMap.forEach((value, key) => {if(value == logEmail){emailExists=true; console.log(key)}else{emailExists=false}})
+    userMap.forEach((value, key) => {if(value == logPw){pwExists=true}else{pwExists=false}})
     
     return new Promise((resolve, reject) => {
-        userMap.forEach((value) => {if(value == logEmail){emailExists=true}else{reject("rossz email")}})
-        userMap.forEach((value) => {if(value == logPw){pwExists=true}else{reject("rossz jelszó")}})
-
-        resolve()
         
+            if(emailExists){
+                reject("Email hibás")
+            } else if(emailExists && !pwExists){
+                reject("Jelszó hibás, email jó")
+            }else if(emailExists && pwExists){
+                resolve("bejelentkezés")
+            }        
     })
-    
-    
-
-
 }
+
+
 
 function registerbutton() {
     const nev = document.getElementById('regName').value;
