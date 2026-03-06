@@ -210,3 +210,30 @@ header .current-date{
     width: 100%;
     margin-top: 110%;
 }
+#masodik_naptar{
+    display: none;
+}
+@media screen and (max-width:768px){
+    #masodik_naptar{
+        display: inline;
+        position: absolute;
+    }
+    #elso_naptar{
+        display: none;
+    }
+    #right {
+        width: 100%;
+    }
+    #elrendezes{
+        display: block;
+    }
+    #rendeles{
+        margin-top: 210%;
+    }
+}
+@media screen and (max-width:950px){
+    .calendar{
+        padding-top: 0%;
+        height: 0%;
+    }
+}
