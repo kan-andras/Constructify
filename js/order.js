@@ -30,6 +30,7 @@
 //});
 
 const mainblock = document.getElementById("main-con");
+const secondmainblock = document.getElementById("secondmain-con");
 
 const hazgomb = document.getElementById("housebuild");
 const ceggomb = document.getElementById("factorybuild");
@@ -99,6 +100,10 @@ function megrendeles(){
         });
       });
     }
-
+    
+    setTimeout(() => {
+      mainblock.style.display = "none";
+      secondmainblock.style.display = "grid";
+    }, 6000);
 }
 

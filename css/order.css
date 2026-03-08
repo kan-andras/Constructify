@@ -122,6 +122,73 @@ body:has(#nav_switch:checked) {
     .div15 { grid-area: 7 / 14 / 9 / 16; }
     .div16 { grid-area: 9 / 11 / 11 / 13; }
     
+  .secondmain-container{
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
+    background-color: #59595981;
+    border-radius: 40px;
+    margin-bottom: 5%;
+  }
+  .secondmain-container h2{
+    font-size: clamp(0.5rem ,0.8vw + 0.5rem ,1.5rem);
+  }
+  
+  .secondparent {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 20px;
+    }
+
+    .sdiv1 { grid-area: 1 / 2 / 2 / 14;
+             color: #CDCDCD;
+             text-align: center;
+             width: 75%;
+             margin-top: 2%;
+             margin-left: auto;
+             margin-right: auto;
+             border-radius: 30px;
+             background-color: gray; }
+    .sdiv2 { grid-area: 2 / 6 / 3 / 10;
+             color: #CDCDCD;
+             text-align: center;
+             margin-left: auto;
+             margin-right: auto;
+             width: 70%;
+             height: 70%;
+             border-radius: 30px;
+             background-color: gray;
+            }
+    .sdiv3 { grid-area: 3 / 2 / 5 / 5;
+             background-color: gray;
+             border-radius: 15px; }
+    .sdiv4 { grid-area: 3 / 5 / 5 / 8;
+             background-color: gray;
+             border-radius: 15px; }
+    .sdiv5 { grid-area: 3 / 8 / 5 / 11; 
+             background-color: gray;
+             border-radius: 15px; }
+    .sdiv6 { grid-area: 3 / 11 / 5 / 14;
+             background-color: gray;
+             border-radius: 15px; }
+    .sdiv7 { grid-area: 5 / 2 / 7 / 5;
+             background-color: gray;
+             border-radius: 15px; }
+    .sdiv8 { grid-area: 5 / 5 / 7 / 8;
+             background-color: gray;
+             border-radius: 15px; }
+    .sdiv9 { grid-area: 5 / 8 / 7 / 11;
+             background-color: gray;
+             border-radius: 15px; }
+    .sdiv10 { grid-area: 5 / 11 / 7 / 14; 
+             background-color: gray;
+             border-radius: 15px; }
+    .sdiv11 { grid-area: 7 / 6 / 8 / 10; }
+
     .rightimage{
         display: block;
         width: 125%;
