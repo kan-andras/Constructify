@@ -7,6 +7,8 @@
     font-family: "Noto Sans Thai Looped", sans-serif;
     font-optical-sizing: auto;
 }
+
+
 body{
     background: #3D3D3D;
     background: linear-gradient(180deg, rgba(61, 61, 61, 1) 8%, rgba(71, 63, 40, 1) 32%, rgba(82, 71, 37, 1) 42%, rgba(137, 114, 44, 1) 74%, rgba(189, 153, 48, 1) 100%);
@@ -121,7 +123,10 @@ body:has(#nav_switch:checked) {
     .div14 { grid-area: 7 / 11 / 9 / 13; }
     .div15 { grid-area: 7 / 14 / 9 / 16; }
     .div16 { grid-area: 9 / 11 / 11 / 13; }
-    
+  
+  #secondmain{
+    height: auto;
+  }
   .secondmain-container{
     margin-top: 5%;
     margin-left: auto;
