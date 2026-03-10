@@ -213,6 +213,12 @@ header .current-date{
 #masodik_naptar{
     display: none;
 }
+.days1 li.active::before{
+    background: #59a8b6;
+}
+.days1 li:not(.active):hover::before{
+    background: #f2f2f2;
+}
 @media screen and (max-width:768px){
     #masodik_naptar{
         display: inline;
@@ -235,5 +241,13 @@ header .current-date{
     .calendar{
         padding-top: 0%;
         height: 0%;
+    }
+    .wrapper{
+        width: 350px;
+    }
+}
+@media screen and (max-width:400px){
+    .wrapper{
+        width: 270px;
     }
 }
