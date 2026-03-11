@@ -28,7 +28,6 @@
 //  }
 //
 //});
-
 const mainblock = document.getElementById("main-con");
 const secondmain = document.getElementById("secondmain");
 
@@ -109,3 +108,10 @@ function megrendeles(){
     }, 6000);
 }
 
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
