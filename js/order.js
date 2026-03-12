@@ -43,6 +43,7 @@ const gombok = document.querySelectorAll(".buttons");
 const jobbgombok = document.querySelectorAll(".rightbuttons");
 const kepek = document.querySelectorAll(".image");
 const jobbkepek = document.querySelectorAll(".rightimage");
+const egesz = document.getElementById("egesz");
 secondmain.style.display = "none";
 
 
@@ -70,7 +71,6 @@ function megrendeles(){
           kepek[index].classList.add("glow");
 
           seged = true;
-          mainblock.style.height = "115%";
         });
       });
     }
@@ -96,7 +96,7 @@ function megrendeles(){
           jobbkepek[index].classList.add("glowtwo");
 
           segedsecond = true;
-          mainblock.style.height = "115%";
+          
         });
       });
     }
@@ -104,7 +104,7 @@ function megrendeles(){
     setTimeout(() => {
       mainblock.style.display = "none";
       secondmain.style.display = "block";
-      secondmain.style.height = "115%";
+      egesz.style.height = "700px";
     }, 6000);
 }
 
