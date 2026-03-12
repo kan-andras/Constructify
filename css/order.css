@@ -8,6 +8,11 @@
     font-optical-sizing: auto;
 }
 body{
+  height: auto;
+  width: auto;
+}
+
+body{
     background: #3D3D3D;
     background: linear-gradient(180deg, rgba(61, 61, 61, 1) 8%, rgba(71, 63, 40, 1) 32%, rgba(82, 71, 37, 1) 42%, rgba(137, 114, 44, 1) 74%, rgba(189, 153, 48, 1) 100%);
 }
@@ -127,7 +132,7 @@ body:has(#nav_switch:checked) {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    height: auto;
+    height: 110%;
     background-color: #59595981;
     border-radius: 40px;
     margin-bottom: 5%;
@@ -311,6 +316,9 @@ body:has(#nav_switch:checked) {
         position: absolute;
         font-size: clamp(0.08rem, 0.2vw + 0.45rem, 1.20rem);
       }
+    #egesz{
+      height: auto;
+    }
 
     .glow {
       animation: glowPulse 1.5s infinite alternate;
@@ -398,9 +406,6 @@ body:has(#nav_switch:checked) {
 
 
 @media screen and (max-width: 845px){
-  *{
-    margin: 0;
-  }
   .rightimage{
     width: 140%;
     height: 110%;
