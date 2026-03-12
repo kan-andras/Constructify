@@ -28,9 +28,8 @@
 //  }
 //
 //});
-
 const mainblock = document.getElementById("main-con");
-const secondmainblock = document.getElementById("secondmain-con");
+const secondmain = document.getElementById("secondmain");
 
 const hazgomb = document.getElementById("housebuild");
 const ceggomb = document.getElementById("factorybuild");
@@ -44,6 +43,7 @@ const gombok = document.querySelectorAll(".buttons");
 const jobbgombok = document.querySelectorAll(".rightbuttons");
 const kepek = document.querySelectorAll(".image");
 const jobbkepek = document.querySelectorAll(".rightimage");
+secondmain.style.display = "none";
 
 
 var seged = false;
@@ -103,7 +103,15 @@ function megrendeles(){
     
     setTimeout(() => {
       mainblock.style.display = "none";
-      secondmainblock.style.display = "grid";
+      secondmain.style.display = "block";
+      secondmain.style.height = "115%";
     }, 6000);
 }
 
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
