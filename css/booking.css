@@ -85,6 +85,9 @@ body:has(#nav_switch:checked) #rendeles{
 header .icons{
   display: ruby;
 }
+header .icons1{
+    display: ruby;
+  }
 header .icons span{
     display: flex;
     height: 18px;
@@ -213,8 +216,92 @@ header .current-date{
 #masodik_naptar{
     display: none;
 }
+header .current-date1{
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+header .icons1 span{
+    display: flex;
+    height: 18px;
+    width: 12px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #878787;
+    text-align: center;
+    line-height: 38px;
+    user-select: none;
+    border-radius: 50%;
+}
+.wrapper1{
+    width: 350px;
+    background: #B1B0B0;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    margin-left: auto;
+    margin-right: auto;
+}
+.wrapper1 header{
+    text-align: center;
+    align-items: center;
+}
+.calendar1{
+    padding: 20px;
+    padding-top: 0%;
+}
+.calendar1 ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+}
+.calendar1 .days{
+    margin-bottom: 2px;
+}
+.calendar1 li{
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+}
+.calendar1 .weeks1 li{
+    font-weight: 500;
+    cursor: default;
+}
+.calendar1 .days1 li{
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+}
+.days1 li.inactive{
+    color: #aaa;
+}
+.days1 li.active{
+    color: #fff;
+}
+.days1 li::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
 .days1 li.active::before{
     background: #59a8b6;
+}
+.days1 li:not(.active):hover::before{
+    background: #f2f2f2;
+}
+.days1 li.active::before{
+    background: #59a8b6;
+}
+.days li.inactive {
+    color: #7b7b7b;
+}
+.days1 li.inactive {
+    color: #7b7b7b;
 }
 .days1 li:not(.active):hover::before{
     background: #f2f2f2;
@@ -247,7 +334,7 @@ header .current-date{
     }
 }
 @media screen and (max-width:400px){
-    .wrapper{
+    .wrapper1{
         width: 270px;
     }
 }
