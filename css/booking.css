@@ -16,6 +16,11 @@ body:has(#nav_switch:checked){
 }
 body:has(#nav_switch:checked) .wrapper{
     background: #D7D7D7;
+    box-shadow: 7px 7px 8px rgb(85, 85, 85); 
+}
+body:has(#nav_switch:checked) .wrapper1{
+    background: #D7D7D7;
+    box-shadow: 7px 7px 8px rgb(85, 85, 85); 
 }
 body:has(#nav_switch:checked) #picture{
     content: url(../images/Rendeles_hatterV.png);
@@ -73,14 +78,15 @@ body:has(#nav_switch:checked) #rendeles{
 .wrapper{
     width: 450px;
     background: #B1B0B0;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 7px 7px 8px rgb(22, 22, 22); 
 }
 .wrapper header{
     text-align: center;
     align-items: center;
     padding: 25px 30px 10px;
+    user-select: none;
 }
 header .icons{
   display: ruby;
@@ -118,6 +124,7 @@ header .current-date{
     flex-wrap: wrap;
     list-style: none;
     text-align: center;
+    user-select: none;
 }
 .calendar .days{
     margin-bottom: 20px;
@@ -233,15 +240,16 @@ header .icons1 span{
     border-radius: 50%;
 }
 .wrapper1{
-    width: 350px;
+    width: 370px;
     background: #B1B0B0;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 5px 5px 8px rgb(22, 22, 22);  
 }
 .wrapper1 header{
     text-align: center;
     align-items: center;
+    user-select: none;
 }
 .calendar1{
     padding: 20px;
@@ -252,6 +260,7 @@ header .icons1 span{
     flex-wrap: wrap;
     list-style: none;
     text-align: center;
+    user-select: none;
 }
 .calendar1 .days{
     margin-bottom: 2px;
@@ -282,8 +291,8 @@ header .icons1 span{
     content: "";
     left: 50%;
     top: 50%;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     z-index: -1;
     border-radius: 50%;
     transform: translate(-50%, -50%);
@@ -306,6 +315,15 @@ header .icons1 span{
 .days1 li:not(.active):hover::before{
     background: #f2f2f2;
 }
+@media screen and (max-width:950px){
+    .calendar{
+        padding-top: 0%;
+        height: 0%;
+    }
+    .wrapper{
+        width: 350px;
+    }
+}
 @media screen and (max-width:768px){
     #masodik_naptar{
         display: inline;
@@ -317,6 +335,9 @@ header .icons1 span{
     #right {
         width: 100%;
     }
+    body:has(#nav_switch:checked) #right{
+        width: 100%;
+    }
     #elrendezes{
         display: block;
     }
@@ -324,17 +345,8 @@ header .icons1 span{
         margin-top: 210%;
     }
 }
-@media screen and (max-width:950px){
-    .calendar{
-        padding-top: 0%;
-        height: 0%;
-    }
-    .wrapper{
-        width: 350px;
-    }
-}
 @media screen and (max-width:400px){
     .wrapper1{
-        width: 270px;
+        width: 300px;
     }
 }
