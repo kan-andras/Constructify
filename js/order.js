@@ -104,7 +104,7 @@ function megrendeles(){
     setTimeout(() => {
       mainblock.style.display = "none";
       secondmain.style.display = "block";
-      egesz.style.height = "700px";
+      egesz.style.height = "650px";
     }, 6000);
 }
 
