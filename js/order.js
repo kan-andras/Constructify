@@ -28,8 +28,8 @@
 //  }
 //
 //});
-const mainblock = document.getElementById("main-con");
-const secondmain = document.getElementById("secondmain");
+const mainblock = document.getElementById("egesz");
+const secondmain = document.getElementById("second");
 
 const hazgomb = document.getElementById("housebuild");
 const ceggomb = document.getElementById("factorybuild");
@@ -43,7 +43,7 @@ const gombok = document.querySelectorAll(".buttons");
 const jobbgombok = document.querySelectorAll(".rightbuttons");
 const kepek = document.querySelectorAll(".image");
 const jobbkepek = document.querySelectorAll(".rightimage");
-const egesz = document.getElementById("egesz");
+
 secondmain.style.display = "none";
 
 
@@ -104,7 +104,6 @@ function megrendeles(){
     setTimeout(() => {
       mainblock.style.display = "none";
       secondmain.style.display = "block";
-      egesz.style.height = "650px";
     }, 6000);
 }
 

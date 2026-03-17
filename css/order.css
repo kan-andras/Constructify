@@ -8,8 +8,9 @@
     font-optical-sizing: auto;
 }
 body{
-  height: auto;
-  width: auto;
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
 }
 
 body{
@@ -23,7 +24,7 @@ body:has(#nav_switch:checked) {
 }
 
 .main{
-    height: auto;
+  flex: 1;
 }
 
 .imgdiv{
@@ -132,7 +133,7 @@ body:has(#nav_switch:checked) {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    height: 110%;
+    height: auto;
     background-color: #59595981;
     border-radius: 40px;
     margin-bottom: 5%;
@@ -170,28 +171,36 @@ body:has(#nav_switch:checked) {
             }
     .sdiv3 { grid-area: 3 / 2 / 5 / 5;
              background-color: gray;
-             border-radius: 15px; }
+             border-radius: 15px;
+            width: 100%; }
     .sdiv4 { grid-area: 3 / 5 / 5 / 8;
              background-color: gray;
-             border-radius: 15px; }
+             border-radius: 15px;
+            width: 100%; }
     .sdiv5 { grid-area: 3 / 8 / 5 / 11; 
              background-color: gray;
-             border-radius: 15px; }
+             border-radius: 15px;
+            width: 100%; }
     .sdiv6 { grid-area: 3 / 11 / 5 / 14;
              background-color: gray;
-             border-radius: 15px; }
+             border-radius: 15px;
+            width: 100%; }
     .sdiv7 { grid-area: 5 / 2 / 7 / 5;
              background-color: gray;
-             border-radius: 15px; }
+             border-radius: 15px;
+            width: 100%; }
     .sdiv8 { grid-area: 5 / 5 / 7 / 8;
              background-color: gray;
-             border-radius: 15px; }
+             border-radius: 15px;
+            width: 100%; }
     .sdiv9 { grid-area: 5 / 8 / 7 / 11;
              background-color: gray;
-             border-radius: 15px; }
+             border-radius: 15px;
+            width: 100%; }
     .sdiv10 { grid-area: 5 / 11 / 7 / 14; 
              background-color: gray;
-             border-radius: 15px; }
+             border-radius: 15px;
+            width: 100%; }
     .sdiv11 { grid-area: 7 / 5 / 7 / 9;
              width: 140%; }
 
@@ -321,6 +330,11 @@ body:has(#nav_switch:checked) {
       height: auto;
     }
 
+    #second{
+      min-height: 100%;
+    }
+
+
     .glow {
       animation: glowPulse 1.5s infinite alternate;
       border-radius: 37px;
@@ -436,6 +450,12 @@ body:has(#nav_switch:checked) {
       color: white;
       text-align: center;
     }
+    .numberbuttons{
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      background-color: transparent;
+    }
 
 
 @media screen and (max-width: 845px){
@@ -454,6 +474,9 @@ body:has(#nav_switch:checked) {
   .buttons{
     width: 45%;
     margin-left: 29%;
+  }
+  .textdiv{
+    margin-left: 16%;
   }
 }
 
