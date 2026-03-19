@@ -22,7 +22,12 @@ body:has(#nav_switch:checked) {
     background: #DEDEF0;
     background: linear-gradient(0deg,rgba(222, 222, 240, 1) 2%, rgba(173, 172, 247, 1) 100%);
 }
-
+.nav_items{
+  font-family: "";
+}
+.nav_hamburgeritem{
+  font-family: "";
+}
 .main{
   flex: 1;
 }
