@@ -175,39 +175,91 @@ body:has(#nav_switch:checked) {
              background-color: gray;
             }
     .sdiv3 { grid-area: 3 / 2 / 5 / 5;
-             background-color: gray;
+             background: #07ba78c2;
              border-radius: 15px;
             width: 100%; }
     .sdiv4 { grid-area: 3 / 5 / 5 / 8;
-             background-color: gray;
+             background: #07ba78c2;
              border-radius: 15px;
             width: 100%; }
     .sdiv5 { grid-area: 3 / 8 / 5 / 11; 
-             background-color: gray;
+             background: #07ba78c2;
              border-radius: 15px;
             width: 100%; }
     .sdiv6 { grid-area: 3 / 11 / 5 / 14;
-             background-color: gray;
+             background: #07ba78c2;
              border-radius: 15px;
             width: 100%; }
     .sdiv7 { grid-area: 5 / 2 / 7 / 5;
-             background-color: gray;
+             background: #07ba78c2;
              border-radius: 15px;
             width: 100%; }
     .sdiv8 { grid-area: 5 / 5 / 7 / 8;
-             background-color: gray;
+             background: #07ba78c2;
              border-radius: 15px;
             width: 100%; }
     .sdiv9 { grid-area: 5 / 8 / 7 / 11;
-             background-color: gray;
+             background: #07ba78c2;
              border-radius: 15px;
             width: 100%; }
     .sdiv10 { grid-area: 5 / 11 / 7 / 14; 
-             background-color: gray;
+             background: #07ba78c2;
              border-radius: 15px;
             width: 100%; }
     .sdiv11 { grid-area: 7 / 5 / 7 / 9;
              width: 140%; }
+
+
+  .thirdmain-container{
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
+    background-color: #59595981;
+    border-radius: 40px;
+    margin-bottom: 5%;
+    }
+
+    .thirdparent {
+      display: grid;
+      grid-template-columns: repeat(14, 1fr);
+      grid-template-rows: repeat(9, 1fr);
+      grid-column-gap: 16px;
+      grid-row-gap: 17px;
+    }
+
+    .zdiv1 { grid-area: 1 / 2 / 2 / 14;
+             color: #CDCDCD;
+             text-align: center;
+             width: 75%;
+             margin-top: 2%;
+             margin-left: auto;
+             margin-right: auto;
+             border-radius: 30px;
+             background-color: gray; }
+    .zdiv2 { grid-area: 2 / 5 / 3 / 11;
+             color: #CDCDCD;
+             text-align: center;
+             margin-left: auto;
+             margin-right: auto;
+             width: 70%;
+             height: 70%;
+             border-radius: 30px;
+             background-color: gray; }
+    .zdiv3 { grid-area: 3 / 2 / 4 / 5; }
+    .zdiv4 { grid-area: 3 / 5 / 4 / 8; }
+    .zdiv5 { grid-area: 3 / 8 / 4 / 11; }
+    .zdiv6 { grid-area: 3 / 11 / 4 / 14; }
+    .zdiv7 { grid-area: 4 / 2 / 6 / 5; }
+    .zdiv8 { grid-area: 6 / 2 / 8 / 5; }
+    .zdiv9 { grid-area: 4 / 5 / 6 / 8; }
+    .zdiv10 { grid-area: 6 / 5 / 8 / 8; }
+    .zdiv11 { grid-area: 4 / 8 / 6 / 11; }
+    .zdiv12 { grid-area: 6 / 8 / 8 / 11; }
+    .zdiv13 { grid-area: 4 / 11 / 6 / 14; }
+    .zdiv14 { grid-area: 6 / 11 / 8 / 14; }
+    .zdiv15 { grid-area: 8 / 6 / 10 / 10; }
 
     .rightimage{
         display: block;
@@ -252,9 +304,9 @@ body:has(#nav_switch:checked) {
     }
     
     .rightbuttons{
-        margin-top: 55%;
+        margin-top: 56%;
         margin-bottom: 5%;
-        margin-left: 20%;
+        margin-left: 18%;
         margin-right: auto;
         width: 65%;
         height: 20%;
@@ -443,6 +495,7 @@ body:has(#nav_switch:checked) {
       float: left;
       margin-top: 1%;
       margin-bottom: auto;
+      margin-left: -15%;
     }
     #slideright{
       float: right;
@@ -450,16 +503,25 @@ body:has(#nav_switch:checked) {
       height: auto;
       margin-top: auto;
       margin-bottom: auto;
+      font-size: 16px;
     }
     #valueforslide{
       color: white;
       text-align: center;
+      margin-left: 6%;
+      font-size: 90%;
     }
     .numberbuttons{
       width: 100%;
       height: 100%;
       border-radius: 16px;
-      background-color: transparent;
+      background-color: rgba(128, 128, 128, 0.698);
+    }
+    .numberbuttons p{
+      font-size: clamp(0.7rem, 0.9vh + 0.9rem, 2.5rem );
+      color: white;
+      font-weight: bold;
+      width: 100%;
     }
 
 
@@ -474,7 +536,8 @@ body:has(#nav_switch:checked) {
     margin-left: -15%;
   }
   .rightbuttons{
-    margin-left: 16%;
+    margin-left: 18%;
+    margin-top: 57%;
   }
   .buttons{
     width: 45%;
@@ -482,6 +545,20 @@ body:has(#nav_switch:checked) {
   }
   .textdiv{
     margin-left: 16%;
+  }
+  #slideleft{
+      width: 60%;
+      margin-left: -20%;
+  }
+  #slideright{
+    width: 60%;
+  }
+  #valueforslide{
+    margin-left: 12%;
+    font-size: 86%;
+  }
+  .sdiv11{
+    width: 160%;
   }
 }
 
@@ -547,6 +624,14 @@ body:has(#nav_switch:checked) {
     margin-left: 12%;
     margin-right: -12%;
   }
+  .secondmain-container h2{
+    font-size: 78%;
+    margin-top: 1.2%;
+  }
+  .sdiv1, .sdiv2{
+    width: 90%;
+    height: 80%;
+  }
 }
 @media screen and (max-width:540px){
   .parent {
@@ -603,6 +688,47 @@ body:has(#nav_switch:checked) {
              width: 150%;
              margin-left: 40%; }
 
+    .secondparent {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(11, 1fr);
+      grid-column-gap: 12px;
+      grid-row-gap: 15px;
+    }
+    
+    .sdiv1 { grid-area: 1 / 2 / 2 / 6; }
+    .sdiv2 { grid-area: 2 / 3 / 3 / 5; }
+    .sdiv3 { grid-area: 3 / 2 / 5 / 4; }
+    .sdiv4 { grid-area: 3 / 4 / 5 / 6; }
+    .sdiv5 { grid-area: 5 / 2 / 7 / 4; }
+    .sdiv6 { grid-area: 5 / 4 / 7 / 6; }
+    .sdiv7 { grid-area: 7 / 2 / 9 / 4; }
+    .sdiv8 { grid-area: 7 / 4 / 9 / 6; }
+    .sdiv9 { grid-area: 9 / 2 / 11 / 4; }
+    .sdiv10 { grid-area: 9 / 4 / 11 / 6; }
+    .sdiv11 { grid-area: 11 / 2 / 12 / 6;
+              width: 100%; }
+
+  .secondmain-container h2{
+    margin-top: 1%;
+  }
+
+  #slideleft{
+    width: 40%;
+    margin-left: -15%;
+  }
+  #slideright{
+    width: 50%;
+  }
+  #valueforslide{
+    font-size: 86%;
+    margin-left: -60%;
+  }
+  .slidecontainer {
+      width: 100%;
+      margin-left: 15%;
+    }
+
   .container{
     margin-left: auto;
     margin-right: auto;
@@ -635,7 +761,7 @@ body:has(#nav_switch:checked) {
   }
   .righttext{
     margin-top: -10%;
-    font-size: 55%;
+    font-size: 51%;
   }
   .rightoverlay{
     width: 120%;
@@ -676,11 +802,17 @@ body:has(#nav_switch:checked) {
     margin-left: -80%;
   }
   .text{
-    font-size: 50%;
+    font-size: 48%;
     margin-top: -10%;
   }
   .rightbuttons{
     margin-top: 65%;
+  }
+  .secondmain-container h2{
+    font-size: 65%;
+  }
+  .numberbuttons p{
+    font-size: 110%;
   }
 }
 @media screen and (max-width:350px){

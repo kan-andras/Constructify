@@ -1,116 +1,132 @@
-//window.addEventListener("DOMContentLoaded", () => {
-//
-//  const mentett = localStorage.getItem("kivalasztottKep");
-//
-//  if (mentett) {
-//    const hely = document.getElementById("hely");
-//    hely.innerHTML = "";
-//
-//    const div = document.createElement("div");
-//    div.style.display = "flex";
-//    div.style.alignItems = "center";
-//    div.style.gap = "20px";
-//    div.style.marginTop = "2%";
-//    div.style.marginLeft = "13%";
-//
-//    const p = document.createElement("p");
-//    p.textContent = "Ezt választottad:";
-//    p.style.color = "white";
-//
-//    const img = document.createElement("img");
-//    img.src = kepek[index].src;
-//    img.width = 65;
-//    img.style.borderRadius = "10px";
-//
-//    div.appendChild(p);
-//    div.appendChild(img);
-//    hely.appendChild(div);
-//  }
-//
-//});
+// RESET
+localStorage.removeItem("adat");
+
 const mainblock = document.getElementById("egesz");
 const secondmain = document.getElementById("second");
-
-const hazgomb = document.getElementById("housebuild");
-const ceggomb = document.getElementById("factorybuild");
-const tombhazgomb = document.getElementById("arrayhousebuild");
-
-const hazimg = document.getElementById("house");
-const cegimg = document.getElementById("factory");
-const tömbimg = document.getElementById("array");
+const thirdmain = document.getElementById("third");
 
 const gombok = document.querySelectorAll(".buttons");
 const jobbgombok = document.querySelectorAll(".rightbuttons");
+
 const kepek = document.querySelectorAll(".image");
 const jobbkepek = document.querySelectorAll(".rightimage");
 
+const numberButtons = document.querySelectorAll(".numberbuttons");
+
+const slider = document.getElementById("myRange");
+const output = document.getElementById("demo");
+
+
 secondmain.style.display = "none";
+thirdmain.style.display = "none";
 
+function mentes(ujAdat) {
+    const regi = JSON.parse(localStorage.getItem("adat")) || {};
 
-var seged = false;
-var segedsecond = false;
+    const uj = {
+        ...regi,
+        ...ujAdat
+    };
 
-
-function megrendeles(){
-    if (segedsecond){
-      kepek.forEach(kep => kep.classList.remove("glow"));
-    }
-    else{
-      gombok.forEach((gomb, index) => {
-        gomb.addEventListener("click", () => {
-          // glow levétele mindről
-          kepek.forEach(kep => kep.classList.remove("glow"));
-          jobbkepek.forEach(kep => kep.classList.remove("glowtwo"));
-
-          //localStorage.setItem("kivalasztottkep", JSON.stringify({
-          //  kep: kepek[index].src,
-          //  id: index
-          //}));
-
-          // glow hozzáadása csak az aktuálishoz
-          kepek[index].classList.add("glow");
-
-          seged = true;
-        });
-      });
-    }
-
-
-    if (seged){
-      jobbkepek.forEach(kep => kep.classList.remove("glowtwo"));
-    }
-    else{
-      jobbgombok.forEach((jobbgomb, index) => {
-        jobbgomb.addEventListener("click", () => {
-          // glow levétele mindről
-          jobbkepek.forEach(kep => kep.classList.remove("glowtwo"));
-          kepek.forEach(kep => kep.classList.remove("glow"));
-
-          // Local storage
-          //localStorage.setItem("kivalasztottkep", JSON.stringify({
-          //  kep: jobbkepek[index].src,
-          //  id: index
-          //}));
-
-          // glow hozzáadása csak az aktuálishoz
-          jobbkepek[index].classList.add("glowtwo");
-
-          segedsecond = true;
-          
-        });
-      });
-    }
-    
-    setTimeout(() => {
-      mainblock.style.display = "none";
-      secondmain.style.display = "block";
-    }, 6000);
+    localStorage.setItem("adat", JSON.stringify(uj));
 }
 
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
+
+gombok.forEach((gomb, index) => {
+    gomb.addEventListener("click", () => {
+
+        kepek.forEach(kep => kep.classList.remove("glow"));
+        jobbkepek.forEach(kep => kep.classList.remove("glowtwo"));
+
+        kepek[index].classList.add("glow");
+
+        mentes({
+            id: index,
+            nev: kepek[index].id
+        });
+
+        console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
+        let text = "Biztos vagy a döntésedben?";
+         if (confirm(text) == true) {
+           valt();
+         } else {
+          localStorage.removeItem("adat");
+         }
+    });
+});
+
+
+jobbgombok.forEach((gomb, index) => {
+    gomb.addEventListener("click", () => {
+
+        jobbkepek.forEach(kep => kep.classList.remove("glowtwo"));
+        kepek.forEach(kep => kep.classList.remove("glow"));
+
+        jobbkepek[index].classList.add("glowtwo");
+
+
+        mentes({
+            id: index,
+            nev: jobbkepek[index].id
+        });
+
+        console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
+        let text2 = "Biztos vagy a döntésedben?";
+        if (confirm(text2) == true) {
+           valt();
+         } else {
+          localStorage.removeItem("adat");
+         }
+        
+    });
+});
+
+function valt() {
+    setTimeout(() => {
+        mainblock.style.display = "none";
+        secondmain.style.display = "block";
+    }, 2000);
+}
+
+numberButtons.forEach(gomb => {
+    gomb.addEventListener("click", () => {
+
+        numberButtons.forEach(b => b.classList.remove("active"));
+        gomb.classList.add("active");
+
+        const szoba = gomb.dataset.szoba;
+
+
+        mentes({
+            szoba: szoba
+        });
+
+        console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
+        valt2();
+    });
+});
+
+function valt2(){
+    setTimeout(() =>{
+      secondmain.style.display = "none";
+      thirdmain.style.display = "block";
+    }, 2000);
+}
+
+
 output.innerHTML = slider.value;
 
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
+slider.oninput = function () {
+    output.innerHTML = this.value;
+
+    
+    mentes({
+        slider: this.value
+    });
+};
+
+
+window.onload = () => {
+    const adat = JSON.parse(localStorage.getItem("adat"));
+    console.log("Betöltött adat:", adat);
+};
