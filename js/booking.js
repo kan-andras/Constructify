@@ -6,30 +6,10 @@ let date = new Date(),
 currYear = date.getFullYear(),
 currMonth = date.getMonth();
 const bookedDates = [
-    "2026-03-12",
-    "2026-03-13",
-    "2026-03-14",
-    "2026-03-15",
-    "2026-03-16",
-    "2026-03-17",
-    "2026-04-1",
-    "2026-04-2",
-    "2026-04-3",
-    "2026-04-4",
-    "2026-04-5",
-    "2026-04-6",
-    "2026-04-7",
-    "2026-04-8",
-    "2026-04-9",
-    "2026-04-10",
-    "2026-04-11",
-    "2026-04-12",
-    "2026-04-13",
-    "2026-05-20",
-    "2026-05-21",
-    "2026-05-22",
-    "2026-05-23",
-    "2026-05-24",
+    "2026-04-01","2026-04-02","2026-04-03","2026-04-04","2026-04-05","2026-04-06","2026-04-07","2026-04-08","2026-04-09","2026-04-10","2026-04-11","2026-04-12","2026-04-13","2026-04-14","2026-04-15",
+    "2026-04-16","2026-04-17","2026-04-18","2026-04-19","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-25","2026-04-26","2026-04-27","2026-04-28","2026-04-29","2026-04-30",
+    "2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-14","2026-05-15","2026-05-16","2026-05-17","2026-05-18","2026-05-24","2026-05-25","2026-05-26","2026-05-27","2026-05-28",
+    "2026-05-29","2026-05-30",
 ];
 
 const months = ["January", "February", "March", "April", "May", "June", "July",
@@ -41,16 +21,20 @@ const renderCalendar = () => {
         lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(),
         lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate();
 
+    let today = new Date();
+    let todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,"0")}-${String(today.getDate()).padStart(2,"0")}`;
     let liTag = "";
+
     for (let i = firstDayofMonth; i > 0; i--) {
         liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
     }
     for (let i = 1; i <= lastDateofMonth; i++) {
 
         let fullDate = `${currYear}-${String(currMonth+1).padStart(2,"0")}-${String(i).padStart(2,"0")}`;
-        let isBooked = bookedDates.includes(fullDate);
-        let statusClass = isBooked ? "booked" : "free";
 
+        let isPast = fullDate < todayStr;
+        let isBooked = bookedDates.includes(fullDate);
+        let statusClass = isPast ? "inactive" : (isBooked ? "booked" : "free");
         liTag += `<li class="${statusClass}" data-date="${fullDate}">${i}</li>`;
     }
     for (let i = lastDayofMonth; i < 6; i++) {
@@ -62,6 +46,7 @@ const renderCalendar = () => {
 };
 
 renderCalendar();
+
 prevNextIcon.forEach(icon => {
     icon.addEventListener("click", () => {
         currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
@@ -135,73 +120,44 @@ currYear1 = date1.getFullYear(),
 currMonth1 = date1.getMonth();
 
 const bookedDates1 = [
-    "2026-03-12",
-    "2026-03-13",
-    "2026-03-14",
-    "2026-03-15",
-    "2026-03-16",
-    "2026-03-17",
-    "2026-04-1",
-    "2026-04-2",
-    "2026-04-3",
-    "2026-04-4",
-    "2026-04-5",
-    "2026-04-6",
-    "2026-04-7",
-    "2026-04-8",
-    "2026-04-9",
-    "2026-04-10",
-    "2026-04-11",
-    "2026-04-12",
-    "2026-04-13",
-    "2026-05-20",
-    "2026-05-21",
-    "2026-05-22",
-    "2026-05-23",
-    "2026-05-24",
+    "2026-04-01","2026-04-02","2026-04-03","2026-04-04","2026-04-05","2026-04-06","2026-04-07","2026-04-08","2026-04-09","2026-04-10",
+    "2026-04-11","2026-04-12","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-18","2026-04-19","2026-04-20",
+    "2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-25","2026-04-26","2026-04-27","2026-04-28","2026-04-29","2026-04-30",
+    "2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-14","2026-05-15","2026-05-16","2026-05-17","2026-05-18",
+    "2026-05-24","2026-05-25","2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-05-30"
 ];
 
-const months1 = ["January", "February", "March", "April", "May", "June", "July",
-              "August", "September", "October", "November", "December"];
+const months1 = ["January","February","March","April","May","June","July",
+"August","September","October","November","December"];
 
 const renderCalendar1 = () => {
+
     let firstDayofMonth1 = new Date(currYear1, currMonth1, 1).getDay(),
         lastDateofMonth1 = new Date(currYear1, currMonth1 + 1, 0).getDate(),
         lastDayofMonth1 = new Date(currYear1, currMonth1, lastDateofMonth1).getDay(),
         lastDateofLastMonth1 = new Date(currYear1, currMonth1, 0).getDate();
 
+    let today1 = new Date();
+    let todayStr1 = `${today1.getFullYear()}-${String(today1.getMonth()+1).padStart(2,"0")}-${String(today1.getDate()).padStart(2,"0")}`;
+
     let liTag1 = "";
 
-    // Előző hónap napjai
     for (let i = firstDayofMonth1; i > 0; i--) {
         liTag1 += `<li class="inactive">${lastDateofLastMonth1 - i + 1}</li>`;
     }
 
-    // Aktuális hónap napjai (FOGLALT / SZABAD / MÚLT)
     for (let i = 1; i <= lastDateofMonth1; i++) {
 
         let fullDate1 = `${currYear1}-${String(currMonth1+1).padStart(2,"0")}-${String(i).padStart(2,"0")}`;
-        let fullDateObj1 = new Date(currYear1, currMonth1, i);
-        fullDateObj1.setHours(0,0,0,0);
 
-        let today1 = new Date();
-        today1.setHours(0,0,0,0);
-
-        let isPast1 = fullDateObj1 < today1;
+        let isPast1 = fullDate1 < todayStr1;
         let isBooked1 = bookedDates1.includes(fullDate1);
 
-        let statusClass1 = "";
-
-        if (isPast1) {
-            statusClass1 = "inactive";
-        } else {
-            statusClass1 = isBooked1 ? "booked" : "free";
-        }
+        let statusClass1 = isPast1 ? "inactive" : (isBooked1 ? "booked" : "free");
 
         liTag1 += `<li class="${statusClass1}" data-date="${fullDate1}">${i}</li>`;
     }
 
-    // Következő hónap napjai
     for (let i = lastDayofMonth1; i < 6; i++) {
         liTag1 += `<li class="inactive">${i - lastDayofMonth1 + 1}</li>`;
     }
@@ -212,7 +168,6 @@ const renderCalendar1 = () => {
 
 renderCalendar1();
 
-// Hónap váltás
 prevNextIcon1.forEach(icon1 => {
     icon1.addEventListener("click", () => {
         currMonth1 = icon1.id === "prev1" ? currMonth1 - 1 : currMonth1 + 1;
@@ -229,7 +184,6 @@ prevNextIcon1.forEach(icon1 => {
     });
 });
 
-// Tartomány kijelölés a 2. naptárban
 let startDate1 = null;
 let endDate1 = null;
 

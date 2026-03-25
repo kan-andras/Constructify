@@ -192,6 +192,7 @@ header .current-date{
     background: rgba(0, 200, 0, 0.6);
     color: white;
 }
+
 .days li:nth-child(7n+1).booked,
 .days li:nth-child(7n+1).free,
 .days li:nth-child(7n+1).selected {
