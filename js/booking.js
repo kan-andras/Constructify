@@ -170,7 +170,7 @@ renderCalendar1();
 
 prevNextIcon1.forEach(icon1 => {
     icon1.addEventListener("click", () => {
-        currMonth1 = icon1.id === "prev1" ? currMonth1 - 1 : currMonth1 + 1;
+        currMonth1 = icon1.id === "prev" ? currMonth1 - 1 : currMonth1 + 1;
 
         if(currMonth1 < 0 || currMonth1 > 11) {
             date1 = new Date(currYear1, currMonth1, new Date().getDate());
@@ -225,3 +225,7 @@ document.addEventListener("click", (e) => {
     clearSelection1();
     e.target.classList.add("selected");
 });
+
+function foglalas() {
+    confirm("Biztos az időpont foglalásban")
+}
