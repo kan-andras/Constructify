@@ -58,7 +58,7 @@
                 <input type="password" 
                 placeholder="Jelszó újra" id="regPwAgain">
                 <label for="text" class="helytelenadatok" id="wrongpasswordagain"></label>
-                <button type="button" onclick="registerbutton()" id="regisztralokgomb">Regisztrálok!</button>
+                <button type="button"  id="regisztralokgomb">Regisztrálok!</button>
             </form>
         </div>
         <div class="form-container bejelentkezes">
@@ -69,7 +69,7 @@
                 placeholder="Email">
                 <input type="password" id="loginPw"
                 placeholder="Jelszó">
-                <button id="log" type="button" onclick="asd()">Login</button>
+                <button id="log" type="button" onclick="">Login</button>
             </form>
         </div>
         <div class="kapcsolt-container">
@@ -77,18 +77,19 @@
                 <div class="kapcsolt-panel kapcsolt-left">
                     <img src="images/Logo_feher.png" alt="Logo">
                     <h1>Üdv újra!</h1>
-                    <p>A bejelentkezéshez kattints az alábbi gombra!</p>
-                    <button class="eltuntetett" id="login">Login</button>
+                    <p>Van már fiókod? <br> A bejelentkezéshez kattints az alábbi gombra!</p>
+                    <button class="eltuntetett" id="login" onclick="login()">Login</button>
                 </div>
                 <div class="kapcsolt-panel kapcsolt-right">
                     <img src="images/Logo_feher.png" alt="Logo">
                     <h1>Üdvözlünk!</h1>
-                    <p>A regisztrációhoz kattints az alábbi gombra!</p>
+                    <p>Nincs még fiókod? <br> A regisztrációhoz kattints az alábbi gombra!</p>
                     <button class="eltuntetett" id="register" onclick="register()">Regisztráció</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="/js/storage.js"></script>
     <script src="/js/login.js"></script>
 </body>
 </html>

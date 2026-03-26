@@ -1,3 +1,12 @@
+let user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+if (user) {
+    console.log(`Bejelentkezve: ${user.id}, ${user.name}, ${user.email},${user.pw},${user.phone},${user.address}`);
+} else {
+    console.log("Nincs bejelentkezve");
+}
+
+
 // RESET
 localStorage.removeItem("adat");
 

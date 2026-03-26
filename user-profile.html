@@ -49,46 +49,46 @@
         <div id="inputok">
             
             <div class="inputparok">
-                <input id="nevinput" class="inputmezo"  type="text" 
+                <input id="input1" class="inputmezo"  type="text" 
                 placeholder="Név">
-                <button class="gomb" id="nevgomb">Név
+                <button class="gomb" id="nevgomb" onclick="nevEdit()">Név
                     módosítása</button>
             </div>
             <div  class="inputparok">
-                <input id="nevinput2" class="inputmezo"  type="text" 
+                <input id="input2" class="inputmezo"  type="text" 
             placeholder="Lakcím (Opcionális) ">
-                <button class="gomb" id="lakcimgomb">Lakcím
+                <button class="gomb" id="lakcimgomb" onclick="lakcimEdit()">Lakcím
                     megadása</button>
             </div>
             <div   class="inputparok" >
-                <input id="nevinput3" class="inputmezo"  type="text"
+                <input id="input3" class="inputmezo"  type="text"
             placeholder="Felhasználónév" >
                 <button class="gomb" id="felnevgomb">Felhasználónév
                     módosítása</button>
             </div>
             <div  class="inputparok">
-                <input id="nevinput4" class="inputmezo"  type="email" 
+                <input id="input4" class="inputmezo"  type="email" 
             placeholder="Email">
-                <button class="gomb" id="emailgomb">Email
+                <button class="gomb" id="emailgomb" onclick="emailEdit()">Email
                     módosítása</button>
             </div>
             <div  class="inputparok">
-                <input id="nevinput5" class="inputmezo"  type="tel" 
+                <input id="input5" class="inputmezo"  type="tel" 
             placeholder="Telefonszám">
-                <button class="gomb" id="telszamgomb">Telefonszám
+                <button class="gomb" id="telszamgomb" onclick="telEdit()">Telefonszám
                     megadása</button>
             </div>
             <div  class="inputparok">
-                <input id="nevinput6" class="inputmezo"  type="password" 
+                <input id="input6" class="inputmezo"  type="password" 
             placeholder="Jelszó">
-                <button class="gomb" id="jelszogomb">Jelszó
+                <button class="gomb" id="jelszogomb" onclick="pwEdit()">Jelszó
                     módosítása</button>
             </div>
             <div id="alulsogombok">
-                <button class="gomb" id="fioktorles">Fiók törlése</button>
+                <button class="gomb" id="fioktorles" onclick="accDel()">Fiók törlése</button>
                 
                 <button class="gomb" id="valtment">Változtatások mentése</button>
-                <button class="gomb" id="kijel">Kijelentkezés</button>
+                <button class="gomb" id="kijel" onclick="logOut()" >Kijelentkezés</button>
             </div>
 
         </div>
@@ -102,7 +102,7 @@
             <a href="https://x.com/?lang=hu" class="social-link4"><img src="images/twitter.png" alt="twitter"></a>
         </div>
     </footer>
-    
+    <script src="/js/storage.js"></script>
     <script src="js/up.js"></script>
 </body>
 </html>

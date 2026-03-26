@@ -1,3 +1,11 @@
+let user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+if (user) {
+    console.log(`Bejelentkezve: ${user.id}, ${user.name}, ${user.email},${user.pw},${user.phone},${user.address}`);
+} else {
+    console.log("Nincs bejelentkezve");
+}
+
 const daysTag = document.querySelector(".days"),
 currentDate = document.querySelector(".current-date"),
 prevNextIcon = document.querySelectorAll(".icons span");

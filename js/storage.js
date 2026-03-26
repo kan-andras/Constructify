@@ -15,21 +15,36 @@ const Tarolo = {
 
 //dani login.js-éhez felhasználók adatait tárolja
 const userDB = {
-    userMentes: function( name, email, pw, phone, address) {
+    userMentes: function(name, email, pw, phone = null, address = null) {
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+        let newId = users.length > 0 ? users[users.length - 1].id + 1 : 1;
+
         const adat = {
-            id: id,
+            id: newId,
             name: name,
             email: email,
             pw: pw,
             phone: phone,
             address: address
         };
-        id++
-        localStorage.setItem("valasztas", JSON.stringify(adat));
+
+        users.push(adat);
+        localStorage.setItem("users", JSON.stringify(users));
+
+        return adat;
     },
 
     leker: function() {
-        return JSON.parse(localStorage.getItem("valasztas"));
+        return JSON.parse(localStorage.getItem("users")) || [];
+    },
+
+    torol: function() {
+        localStorage.removeItem("users"); // csak a userdb-t törli
+    },
+    mindenTorol: function() {
+        localStorage.clear() //MINDEN MEGLÉVŐ ADATOT TÖRÖL
     }
 };
 

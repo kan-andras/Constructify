@@ -1,3 +1,11 @@
+let user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+if (user) {
+    console.log(`Bejelentkezve: ${user.id}, ${user.name}, ${user.email},${user.pw},${user.phone},${user.address}`);
+} else {
+    console.log("Nincs bejelentkezve");
+}
+
 function uzenetKuldes(){
     let veznev = document.getElementById("veznevinput").value
     let kernev = document.getElementById("kernevinput").value
