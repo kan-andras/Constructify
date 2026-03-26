@@ -20,6 +20,11 @@ function loginHTML(){
 
 
 
+
+
+
+
+/*
 // 1. Több adat mentése
 function adatMentesOlvasas() {
     const users = [
@@ -43,7 +48,7 @@ function adatMentesOlvasas() {
         resolve("un: "/*
         selectedUser.name+ "email: "+
         selectedUser.email+ "pw: "+
-        selectedUser.pw */) 
+        selectedUser.pw ) 
       } else {
         reject("Nincs ilyen user")
       }
@@ -53,7 +58,7 @@ function adatMentesOlvasas() {
 
     adatMentesOlvasas().then(uzenet=> console.log(uzenet)).catch(hiba => console.log(hiba))
 
-
+*/
 
 /*
 let users = [
@@ -187,6 +192,23 @@ function registerbutton() {
 
 
     if (bool1 && bool2 && bool3 && bool4 && bool5){
+        
+        registerBtn.addEventListener("click", () => {
+        
+        
+                userMentes({
+                    
+                    nev: nev
+                });
+        
+                console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
+                let text = "Biztos vagy a döntésedben?";
+                 if (confirm(text) == true) {
+                   valt();
+                 } else {
+                  localStorage.removeItem("adat");
+                 }
+        });
         
     }
 }
