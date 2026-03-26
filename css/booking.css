@@ -127,7 +127,7 @@ header .current-date{
 }
 .calendar .days li {
     margin-top: 0;
-    padding: 10px 0;
+    padding: 8px 0;
 }
 
 .calendar li{
@@ -143,7 +143,7 @@ header .current-date{
     z-index: 1;
     cursor: pointer;
     position: relative;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .days li.inactive{
     color: #aaa;
@@ -387,6 +387,10 @@ header .icons1 span{
         display: inline;
         position: absolute;
     }
+    .current-date1{
+        margin: 1%;
+        margin-top: 3%;
+    }
     #elso_naptar{
         display: none;
     }
@@ -401,6 +405,9 @@ header .icons1 span{
     }
     #rendeles{
         margin-top: 210%;
+    }
+    .calendar1 .days1 li {
+        padding: 7px 0;
     }
 }
 @media screen and (max-width:400px){
