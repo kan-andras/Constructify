@@ -42,16 +42,18 @@ gombok.forEach((gomb, index) => {
 
         mentes({
             id: index,
-            nev: kepek[index].id
+            név: kepek[index].id
         });
 
         console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
-        let text = "Biztos vagy a döntésedben?";
-         if (confirm(text) == true) {
+        setTimeout(() => {
+            let text = "Biztos vagy a döntésedben?";
+        if (confirm(text) == true) {
            valt();
          } else {
           localStorage.removeItem("adat");
          }
+        }, 2000);
     });
 });
 
@@ -67,17 +69,18 @@ jobbgombok.forEach((gomb, index) => {
 
         mentes({
             id: index,
-            nev: jobbkepek[index].id
+            név: jobbkepek[index].id
         });
 
         console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
-        let text2 = "Biztos vagy a döntésedben?";
+        setTimeout(() => {
+            let text2 = "Biztos vagy a döntésedben?";
         if (confirm(text2) == true) {
            valt();
          } else {
           localStorage.removeItem("adat");
          }
-        
+        }, 2000);
     });
 });
 
@@ -98,7 +101,7 @@ numberButtons.forEach(gomb => {
 
 
         mentes({
-            szoba: szoba
+            szobák: szoba
         });
 
         console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
@@ -124,7 +127,7 @@ slider.oninput = function () {
         slider: this.value
     });
 };
-
+console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
 
 window.onload = () => {
     const adat = JSON.parse(localStorage.getItem("adat"));
