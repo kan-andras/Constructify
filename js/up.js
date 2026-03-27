@@ -38,7 +38,7 @@ function nevEdit(){
 function lakcimEdit(){
     let input2 = document.getElementById('input2').value;
     if(userIndex !== -1) {
-    users[userIndex].name = input2;
+    users[userIndex].address = input2;
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("loggedInUser", JSON.stringify(users[userIndex]));
     console.log("User adatai frissítve!");
@@ -48,7 +48,7 @@ function lakcimEdit(){
 function emailEdit(){
     let input4 = document.getElementById('input4').value;
     if(userIndex !== -1) {
-    users[userIndex].name = input4;
+    users[userIndex].email = input4;
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("loggedInUser", JSON.stringify(users[userIndex]));
     console.log("User adatai frissítve!");
@@ -58,7 +58,7 @@ function emailEdit(){
 function telEdit(){
     let input5 = document.getElementById('input5').value;
     if(userIndex !== -1) {
-    users[userIndex].name = input5;
+    users[userIndex].phone = input5;
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("loggedInUser", JSON.stringify(users[userIndex]));
     console.log("User adatai frissítve!");
@@ -68,7 +68,7 @@ function telEdit(){
 function pwEdit(){
     let input6 = document.getElementById('input6').value;
     if(userIndex !== -1) {
-    users[userIndex].name = input6;
+    users[userIndex].pw = input6;
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("loggedInUser", JSON.stringify(users[userIndex]));
     console.log("User adatai frissítve!");
