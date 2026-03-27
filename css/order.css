@@ -28,6 +28,9 @@ body:has(#nav_switch:checked) {
 .nav_hamburgeritem{
   font-family: "";
 }
+#nav_account{
+  border-radius: 8px;
+}
 .main{
   flex: 1;
 }
@@ -247,19 +250,64 @@ body:has(#nav_switch:checked) {
              height: 70%;
              border-radius: 30px;
              background-color: gray; }
-    .zdiv3 { grid-area: 3 / 2 / 4 / 5; }
-    .zdiv4 { grid-area: 3 / 5 / 4 / 8; }
-    .zdiv5 { grid-area: 3 / 8 / 4 / 11; }
-    .zdiv6 { grid-area: 3 / 11 / 4 / 14; }
-    .zdiv7 { grid-area: 4 / 2 / 6 / 5; }
-    .zdiv8 { grid-area: 6 / 2 / 8 / 5; }
-    .zdiv9 { grid-area: 4 / 5 / 6 / 8; }
-    .zdiv10 { grid-area: 6 / 5 / 8 / 8; }
-    .zdiv11 { grid-area: 4 / 8 / 6 / 11; }
-    .zdiv12 { grid-area: 6 / 8 / 8 / 11; }
-    .zdiv13 { grid-area: 4 / 11 / 6 / 14; }
-    .zdiv14 { grid-area: 6 / 11 / 8 / 14; }
-    .zdiv15 { grid-area: 8 / 6 / 10 / 10; }
+    .zdiv3 { grid-area: 3 / 2 / 4 / 5;
+      background-color: gray;
+      width: 60%;
+      height: 65%;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 4%;
+      border-radius: 8px;
+      color: white; }
+    .zdiv4 { grid-area: 3 / 5 / 4 / 8;
+      background-color: gray;
+      width: 60%;
+      height: 65%;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 4%;
+      border-radius: 8px;
+      color: white; }
+    .zdiv5 { grid-area: 3 / 8 / 4 / 11;
+      background-color: gray;
+      width: 60%;
+      height: 65%;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 4%;
+      border-radius: 8px;
+      color: white; }
+    .zdiv6 { grid-area: 3 / 11 / 4 / 14;
+      background-color: gray;
+      width: 60%;
+      height: 65%;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 4%;
+      border-radius: 8px;
+      color: white; }
+    .zdiv7 { grid-area: 4 / 2 / 6 / 5;
+      background-color: gray; }
+    .zdiv8 { grid-area: 6 / 2 / 8 / 5;
+      background-color: gray; }
+    .zdiv9 { grid-area: 4 / 5 / 6 / 8;
+      background-color: gray; }
+    .zdiv10 { grid-area: 6 / 5 / 8 / 8;
+      background-color: gray; }
+    .zdiv11 { grid-area: 4 / 8 / 6 / 11;
+      background-color: gray; }
+    .zdiv12 { grid-area: 6 / 8 / 8 / 11;
+      background-color: gray; }
+    .zdiv13 { grid-area: 4 / 11 / 6 / 14;
+      background-color: gray; }
+    .zdiv14 { grid-area: 6 / 11 / 8 / 14;
+      background-color: gray; }
+    .zdiv15 { grid-area: 8 / 6 / 10 / 10;
+      background-color: gray; }
 
     .rightimage{
         display: block;
