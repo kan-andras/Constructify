@@ -28,6 +28,29 @@ const slider = document.getElementById("myRange");
 const output = document.getElementById("demo");
 
 
+const confirmBox = document.getElementById("confirmBox");
+const confirmText = document.getElementById("confirmText");
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+
+function showConfirm(szoveg) {
+    return new Promise((resolve) => {
+        confirmText.innerText = szoveg;
+        confirmBox.style.display = "flex";
+
+        yesBtn.onclick = () => {
+            confirmBox.style.display = "none";
+            resolve(true);
+        };
+
+        noBtn.onclick = () => {
+            confirmBox.style.display = "none";
+            resolve(false);
+        };
+    });
+}
+
+
 secondmain.style.display = "none";
 thirdmain.style.display = "none";
 
@@ -57,13 +80,17 @@ gombok.forEach((gomb, index) => {
         });
 
         console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
-        setTimeout(() => {
+        setTimeout(async () => {
             let text = "Biztos vagy a döntésedben?";
-        if (confirm(text) == true) {
-           valt();
-         } else {
-          localStorage.removeItem("adat");
-         }
+
+            const valasz = await showConfirm(text);
+
+            if (valasz) {
+                valt();
+            } else {
+                localStorage.removeItem("adat");
+            }
+
         }, 2000);
     });
 });
@@ -84,13 +111,17 @@ jobbgombok.forEach((gomb, index) => {
         });
 
         console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
-        setTimeout(() => {
+        setTimeout(async () => {
             let text2 = "Biztos vagy a döntésedben?";
-        if (confirm(text2) == true) {
-           valt();
-         } else {
-          localStorage.removeItem("adat");
-         }
+
+            const valasz = await showConfirm(text2);
+
+            if (valasz) {
+                valt();
+            } else {
+                localStorage.removeItem("adat");
+            }
+
         }, 2000);
     });
 });
@@ -116,9 +147,20 @@ numberButtons.forEach(gomb => {
         });
 
         console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
-        valt2();
+        setTimeout(async () => {
+            let text3 = "Biztos vagy a döntésedben?";
+
+            const valasz = await showConfirm(text3);
+
+            if (valasz) {
+                valt2();
+            } else {
+                localStorage.removeItem("adat");
+            }
+
+        }, 2000);
     });
-});
+    });
 
 function valt2(){
     setTimeout(() =>{
@@ -131,14 +173,16 @@ function valt2(){
 output.innerHTML = slider.value;
 
 slider.oninput = function () {
-    output.innerHTML = this.value;
-
-    
+    output.innerHTML = this.value; 
     mentes({
         slider: this.value
     });
+    const gombok = document.querySelectorAll(".numberbuttons");
+    gombok.forEach(gomb => {
+        gomb.disabled = true;
+    });
 };
-console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
+
 
 window.onload = () => {
     const adat = JSON.parse(localStorage.getItem("adat"));
