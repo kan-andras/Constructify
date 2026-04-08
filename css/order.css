@@ -236,7 +236,9 @@ body:has(#nav_switch:checked) {
              color: #CDCDCD;
              text-align: center;
              width: 75%;
+             height:  50%;
              margin-top: 2%;
+             padding-top: 1%;
              margin-left: auto;
              margin-right: auto;
              border-radius: 30px;
@@ -247,97 +249,118 @@ body:has(#nav_switch:checked) {
              margin-left: auto;
              margin-right: auto;
              width: 70%;
-             height: 70%;
+             height: 50%;
+             padding-top: 1%;
              border-radius: 30px;
              background-color: gray; }
     .zdiv3 { grid-area: 3 / 2 / 4 / 5;
       background-color: gray;
-      width: 60%;
-      height: 65%;
+      width: 98%;
+      height: 47%;
+      padding-top: 2%;
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 4%;
       border-radius: 8px;
       color: white; }
     .zdiv4 { grid-area: 3 / 5 / 4 / 8;
       background-color: gray;
-      width: 60%;
-      height: 65%;
+      width: 98%;
+      height: 47%;
+      padding-top: 2%;
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 4%;
       border-radius: 8px;
       color: white; }
     .zdiv5 { grid-area: 3 / 8 / 4 / 11;
       background-color: gray;
-      width: 60%;
-      height: 65%;
+      width: 98%;
+      height: 47%;
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      padding-top: 4%;
+      padding-top: 2%;
       border-radius: 8px;
       color: white; }
     .zdiv6 { grid-area: 3 / 11 / 4 / 14;
       background-color: gray;
-      width: 60%;
-      height: 65%;
+      width: 98%;
+      height: 47%;
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      padding-top: 4%;
+      padding-top: 2%;
       border-radius: 8px;
       color: white; }
     .zdiv7 { grid-area: 4 / 2 / 6 / 5;
       background-color: gray;
        border-radius: 30px;
-      width: 90%;
+      width: 105%;
       height: 85%;
-       }
+      margin-right: 20px;
+      margin-left: -5px; }
     .zdiv8 { grid-area: 6 / 2 / 8 / 5;
       background-color: gray;
        border-radius: 30px;
-      width: 90%;
-      height: 85%; }
+      width: 105%;
+      height: 85%;
+      margin-right: 20px;
+      margin-left: -5px; }
     .zdiv9 { grid-area: 4 / 5 / 6 / 8;
       background-color: gray;
        border-radius: 30px;
-      width: 90%;
-      height: 85%; }
+      width: 105%;
+      height: 85%;
+      margin-right: 20px;
+      margin-left: -5px; }
     .zdiv10 { grid-area: 6 / 5 / 8 / 8;
       background-color: gray;
        border-radius: 30px;
-      width: 90%;
-      height: 85%; }
+      width: 105%;
+      height: 85%;
+      margin-right: 20px;
+      margin-left: -5px; }
     .zdiv11 { grid-area: 4 / 8 / 6 / 11;
       background-color: gray;
        border-radius: 30px;
-      width: 90%;
-      height: 85%; }
+      width: 105%;
+      height: 85%;
+      margin-right: 20px;
+      margin-left: -5px; }
     .zdiv12 { grid-area: 6 / 8 / 8 / 11;
       background-color: gray;
        border-radius: 30px;
-      width: 90%;
-      height: 85%; }
+      width: 105%;
+      height: 85%;
+      margin-right: 20px;
+      margin-left: -5px; }
     .zdiv13 { grid-area: 4 / 11 / 6 / 14;
       background-color: gray;
        border-radius: 30px;
-      width: 85%;
-      height: 85%; }
+      width: 105%;
+      height: 85%;
+      margin-right: 20px;
+      margin-left: -5px; }
     .zdiv14 { grid-area: 6 / 11 / 8 / 14;
       background-color: gray;
        border-radius: 30px;
-      width: 90%;
-      height: 85%; }
+      width: 105%;
+      height: 85%;
+      margin-right: 20px;
+      margin-left: -5px; }
     .zdiv15 { grid-area: 8 / 6 / 10 / 10;
       background-color: gray;
        border-radius: 30px;
-      width: 90%;
+      width: 105%;
       height: 85%;
       margin-bottom: 8px; }
     
+
+    .thirdmain-container h2{
+      font-size: clamp(0.5rem ,0.8vw + 0.5rem ,1.5rem);
+    }
+
     .alert-overlay {
         position: fixed;
         top: 0;
@@ -354,7 +377,7 @@ body:has(#nav_switch:checked) {
     }
 
     .alert-box {
-        background: white;
+        background: rgb(196, 196, 196);
         padding: 20px 30px;
         border-radius: 10px;
         text-align: center;
@@ -402,6 +425,10 @@ body:has(#nav_switch:checked) {
       width: 100%;
       border-radius: 30px;
       height: 100%;
+    }
+
+    .anyagoktext{
+      font-size: 76%;
     }
 
     .rightimage{
@@ -674,6 +701,52 @@ body:has(#nav_switch:checked) {
 
 
 @media screen and (max-width: 845px){
+  .thirdparent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+  }
+
+  .zdiv1 { grid-area: 1 / 2 / 2 / 6;
+  height: 40%;
+  padding-top: 1%; }
+  .zdiv2 { grid-area: 2 / 3 / 3 / 5;
+  margin-top: -15%;
+  width: 85%;
+  height: 45%;
+  padding-top: 2%; }
+  .zdiv3 { grid-area: 3 / 2 / 4 / 4;
+  margin-top: -15%; }
+  .zdiv4 { grid-area: 3 / 4 / 4 / 6;
+  margin-top: -15%; }
+  .zdiv5 { grid-area: 8 / 2 / 9 / 4;
+  margin-top: -15%; }
+  .zdiv6 { grid-area: 8 / 4 / 9 / 6;
+  margin-top: -15%; }
+  .zdiv7 { grid-area: 4 / 2 / 6 / 4;
+  margin-top: -15%; }
+  .zdiv8 { grid-area: 6 / 2 / 8 / 4;
+  margin-top: -15%; }
+  .zdiv9 { grid-area: 4 / 4 / 6 / 6;
+  margin-top: -15%; }
+  .zdiv10 { grid-area: 6 / 4 / 8 / 6;
+  margin-top: -15%; }
+  .zdiv11 { grid-area: 9 / 2 / 11 / 4;
+  margin-top: -15%; }
+  .zdiv12 { grid-area: 11 / 2 / 13 / 4;
+  margin-top: -15%; }
+  .zdiv13 { grid-area: 9 / 4 / 11 / 6;
+  margin-top: -15%; }
+  .zdiv14 { grid-area: 11 / 4 / 13 / 6;
+  margin-top: -15%; }
+  .zdiv15 { grid-area: 13 / 3 / 15 / 5;
+  margin-top: -15%; }
+
+  .anyagoktext{
+    font-size: medium;
+  }
   .rightimage{
     width: 140%;
     height: 110%;
@@ -711,6 +784,15 @@ body:has(#nav_switch:checked) {
 }
 
 @media screen and (max-width:768px){
+  .anyagoktext{
+    font-size: 70%;
+  }
+  .zdiv2{
+    width: 105%;
+  }
+  .zdiv2 h2{
+    font-size: 75%;
+  }
   .container {
     position: relative;
     width: 97%;
@@ -782,6 +864,61 @@ body:has(#nav_switch:checked) {
   }
 }
 @media screen and (max-width:540px){
+  .zdiv1, .zdiv2{
+    padding-top: 0.1%;
+  }
+  .thirdparent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(14, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+  }
+  
+  .zdiv1 { grid-area: 1 / 1 / 2 / 5;
+  width: 90%; }
+  .zdiv2 { grid-area: 2 / 2 / 3 / 4;
+  width: 90%; }
+  .zdiv3 { grid-area: 3 / 1 / 4 / 3;
+  width: 90%; }
+  .zdiv4 { grid-area: 3 / 3 / 4 / 5;
+  width: 90%; }
+  .zdiv5 { grid-area: 8 / 1 / 9 / 3;
+  width: 90%; }
+  .zdiv6 { grid-area: 8 / 3 / 9 / 5;
+  width: 90%; }
+  .zdiv7 { grid-area: 4 / 1 / 6 / 3;
+  width: 90%;
+  margin-left: 10px; }
+  .zdiv8 { grid-area: 6 / 1 / 8 / 3;
+  width: 90%;
+  margin-left: 10px; }
+  .zdiv9 { grid-area: 4 / 3 / 6 / 5;
+  width: 90%;
+  margin-left: 10px; }
+  .zdiv10 { grid-area: 6 / 3 / 8 / 5;
+  width: 90%;
+  margin-left: 10px; }
+  .zdiv11 { grid-area: 9 / 1 / 11 / 3;
+  width: 90%;
+  margin-left: 10px; }
+  .zdiv12 { grid-area: 11 / 1 / 13 / 3;
+  width: 90%;
+  margin-left: 10px; }
+  .zdiv13 { grid-area: 9 / 3 / 11 / 5;
+  width: 90%;
+  margin-left: 1px; }
+  .zdiv14 { grid-area: 11 / 3 / 13 / 5;
+  width: 90%;
+  margin-left: 1px; }
+  .zdiv15 { grid-area: 13 / 2 / 15 / 4;
+  width: 90%;
+  margin-left: 10px; }
+
+ .thirdmain-container h2{
+  font-size: 70%;
+  padding-top: 0.4%;
+ }
   .parent {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -926,6 +1063,19 @@ body:has(#nav_switch:checked) {
   }
 }
 @media screen and (max-width:430px){
+  .thirdmain-container h2{
+  font-size: 70%;
+  padding-top: -1%;
+  }
+  .zdiv3, .zdiv4, .zdiv5, .zdiv6{
+    padding-top: 1%;
+  }
+  .anyagoktext{
+    font-size: 60%;
+  }
+  .zdiv2{
+    width: 97%;
+  }
   .div3{
     margin-left: 10%;
   }
@@ -964,6 +1114,18 @@ body:has(#nav_switch:checked) {
   }
 }
 @media screen and (max-width:350px){
+  .anyagoktext{
+    font-size: 65%;
+  }
+  .zdiv1, .zdiv2{
+    height: 50%;
+  }
+  .zdiv2{
+    width: 105%;
+  }
+  .zdiv3, .zdiv4, .zdiv5, .zdiv6{
+    padding-top: 0.8%;
+  }
   .image{
     width: 90%;
   }
