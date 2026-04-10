@@ -1,0 +1,50 @@
+{
+  "velemenyek": [
+    {
+      "felkeres": "Egy nagy volumenű, kiemelt minőségű kivitelezési munkára kerestem megbízható szakembereket. Fontos volt számomra a precizitás, a határidők pontos betartása, valamint az, hogy a végeredmény minden részletében magas színvonalat képviseljen.",
+      "velemeny": "A kivitelezés minden szempontból kifogástalan lett. A csapat végig professzionálisan dolgozott, pontosan tartották a határidőket, és kiemelkedő figyelmet fordítottak a részletekre. A végeredmény felülmúlta az elvárásaimat – csak ajánlani tudom őket mindenkinek, aki minőségi munkát keres.",
+      "kep": "images/fehérház.jpg"
+    },
+    {
+      "felkeres": "Egy családi ház teljes felújítására kerestem megbízható kivitelezőt. Fontos volt számunkra a modern megjelenés, az energiatakarékos megoldások, valamint az, hogy minden a megbeszéltek szerint, pontosan készüljön el.",
+      "velemeny": "Nagyon elégedettek vagyunk a végeredménnyel. A ház teljesen megújult, minden részlet igényesen lett kivitelezve. A csapat pontosan dolgozott, segítőkészek voltak, és végig tartották a határidőt. Csak ajánlani tudjuk őket!",
+      "kep": "images/csaladihaz.jpg"
+    },
+    {
+      "felkeres": "Új családi ház építéséhez kerestünk kivitelezőt, ahol fontos volt a tartósság, a minőségi anyaghasználat és az, hogy egy megbízható csapat vigye végig a teljes folyamatot az alapoktól a kulcsrakész állapotig.",
+      "velemeny": "A kivitelezés gördülékenyen zajlott, minden a tervek szerint haladt. A végeredmény egy szép, stabil és jól megépített otthon lett. Külön kiemelnénk a precíz munkát és a korrekt hozzáállást. Nagyon jó döntés volt őket választani.",
+      "kep": "images/csladihaz2.png"
+    }
+  ],
+
+    "nagy_projektek": [
+      {
+        "felkeres": "Egy több szintes, modern családi ház teljes kivitelezésére kerestünk tapasztalt szakembereket. A projekt összetettsége miatt kiemelten fontos volt a precíz tervezés, a magas minőségű kivitelezés és az, hogy minden munkafolyamat összehangoltan, szakértő kezekben történjen.",
+        "kep": "images/FoOldal_rendeleshatterV.png"
+      },
+      {
+        "felkeres": "Egy nagy alapterületű, több emeletes családi ház megépítéséhez kerestünk megbízható kivitelezőt. Fontos szempont volt a stabil szerkezet, a prémium anyaghasználat és az, hogy a teljes projekt az alapoktól a befejezésig gördülékenyen, határidőre valósuljon meg.",
+        "kep": "images/FoOldal_rendeleshatterV.png"
+      }
+    ],
+
+
+  "gyik": [
+    {
+      "kerdes": "Vállalnak teljes kivitelezést kulcsrakész állapotig?",
+      "valasz": "Igen, a tervezéstől egészen a kulcsrakész átadásig vállaljuk a teljes kivitelezést. Minden munkafolyamatot összehangoltan kezelünk, hogy Önnek ne kelljen több külön szakemberrel egyeztetnie."
+    },
+    {
+      "kerdes": "Lehet egyedi igényeket kérni az építkezés során?",
+      "valasz": "Természetesen! Minden projektet az ügyfél igényeihez igazítunk. Legyen szó egyedi alaprajzról, különleges anyagokról vagy speciális megoldásokról, igyekszünk minden elképzelést megvalósítani."
+    },
+    {
+      "kerdes": "Hogyan kérhetek ajánlatot?",
+      "valasz": "Ajánlatot egyszerűen kérhet telefonon vagy az oldalon található kapcsolatfelvételi űrlapon keresztül. Rövid egyeztetés után személyre szabott ajánlatot készítünk az Ön igényei alapján."
+    },
+    {
+      "kerdes": "Milyen garanciát vállalnak a munkára?",
+      "valasz": "Minden elvégzett munkára garanciát vállalunk. A pontos garanciális feltételek a projekt típusától függnek, de célunk, hogy hosszú távon is megbízható és tartós eredményt biztosítsunk."
+    }
+  ]
+}
