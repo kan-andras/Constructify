@@ -9,9 +9,7 @@ if (user) {
     document.getElementById('input4').value = user.email
     document.getElementById('input6').value = user.pw
 } else {
-    console.log("Nincs bejelentkezve, hogy jutottál ide?");
-    
-    
+    console.log("Nincs bejelentkezve, hogy jutottál ide?"); 
 }
 
 function logOut(){
@@ -30,13 +28,8 @@ function accDel() {
 
     userDB.torol(user.id);
     localStorage.removeItem("loggedInUser");
-window.location.replace("register.html");
-    
-function accDel() {
-    userDB.torol()
+    window.location.replace("register.html");
 }
-
-
 
 
 
@@ -46,56 +39,34 @@ const userIndex = users.findIndex(user => user.id === loggedInUser.id);
 
 function nevEdit(){
     let input1 = document.getElementById("input1").value;
-    if(userIndex !== -1) {
-    users[userIndex].name = input1;
-    localStorage.setItem("users", JSON.stringify(users));
-    localStorage.setItem("loggedInUser", JSON.stringify(users[userIndex]));
-    console.log("User adatai frissítve!");
-    console.log(users[userIndex])
-}
+    inputLoad(input1)
 };
 function lakcimEdit(){
     let input2 = document.getElementById('input2').value;
-    if(userIndex !== -1) {
-    users[userIndex].address = input2;
-    localStorage.setItem("users", JSON.stringify(users));
-    localStorage.setItem("loggedInUser", JSON.stringify(users[userIndex]));
-    console.log("User adatai frissítve!");
-    console.log(users[userIndex])
-}
+    inputLoad(input2)
 };
 function emailEdit(){
     let input4 = document.getElementById('input4').value;
-    if(userIndex !== -1) {
-    users[userIndex].email = input4;
-    localStorage.setItem("users", JSON.stringify(users));
-    localStorage.setItem("loggedInUser", JSON.stringify(users[userIndex]));
-    console.log("User adatai frissítve!");
-    console.log(users[userIndex])
-}
+    inputLoad(input4)
 };
 function telEdit(){
     let input5 = document.getElementById('input5').value;
-    if(userIndex !== -1) {
-    users[userIndex].phone = input5;
-    localStorage.setItem("users", JSON.stringify(users));
-    localStorage.setItem("loggedInUser", JSON.stringify(users[userIndex]));
-    console.log("User adatai frissítve!");
-    console.log(users[userIndex])
-}
+    inputLoad(input5)
 };
 function pwEdit(){
     let input6 = document.getElementById('input6').value;
+    inputLoad(input6)
+};
+
+function inputLoad(inputNUM) {
     if(userIndex !== -1) {
-    users[userIndex].pw = input6;
+    users[userIndex].pw = inputNUM;
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("loggedInUser", JSON.stringify(users[userIndex]));
     console.log("User adatai frissítve!");
     console.log(users[userIndex])
+    }
 }
-};
-
-
 
 
 
