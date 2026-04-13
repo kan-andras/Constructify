@@ -40,12 +40,17 @@ const userDB = {
         return JSON.parse(localStorage.getItem("users")) || [];
     },
 
-    torol: function() {
+    userDBDEL: function() {
         localStorage.removeItem("users"); // csak a userdb-t törli
     },
     mindenTorol: function() {
         localStorage.clear() //MINDEN MEGLÉVŐ ADATOT TÖRÖL
-    }
+    },
+    torol: function(id) {
+    let users = this.leker();
+    users = users.filter(u => u.id !== id);
+    localStorage.setItem("users", JSON.stringify(users));
+}
 };
 
 //Gergő booking.js-éhez a kiválasztott napok tárolásához
