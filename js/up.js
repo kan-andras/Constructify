@@ -9,13 +9,29 @@ if (user) {
     document.getElementById('input4').value = user.email
     document.getElementById('input6').value = user.pw
 } else {
-    console.log("Nincs bejelentkezve");
+    console.log("Nincs bejelentkezve, hogy jutottál ide?");
+    
+    
 }
 
 function logOut(){
     localStorage.removeItem("loggedInUser");
     window.location.replace("register.html");
 }
+function accDel() {
+    if (!user) {
+        console.log("Nincs bejelentkezve user");
+        return;
+    }
+
+    if (!confirm("Biztosan törölni akarod a fiókodat?")) {
+        return;
+    }
+
+    userDB.torol(user.id);
+    localStorage.removeItem("loggedInUser");
+window.location.replace("register.html");
+    
 function accDel() {
     userDB.torol()
 }
