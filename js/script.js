@@ -1,3 +1,15 @@
+const user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+if (user) {
+    console.log(`Bejelentkezve: ${user.id}, ${user.name}, ${user.email},${user.pw},${user.phone},${user.address}`);
+    document.getElementById('nav_account').src = "images/userLoggedInPlaceholder.jpg"
+    document.getElementById('regImg').href = "user-profile.html"
+    document.getElementById('nav_account').style.borderRadius = "8px"
+} else {
+    console.log("Nincs bejelentkezve");
+}
+
+
 function initModal(velemenyek) {
     const modal = document.getElementById("modal");
     const modalVelemeny = document.getElementById("modalVelemeny");
