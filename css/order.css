@@ -428,14 +428,14 @@ body:has(#nav_switch:checked) {
     }
 
     .anyagoktext{
-      font-size: 76%;
+      font-size: 74%;
     }
 
     .rightimage{
         display: block;
         width: 125%;
         height: auto;
-        border-radius: 35px;
+        border-radius: 30px;
     }
     
     .rightoverlay{
@@ -715,6 +715,9 @@ body:has(#nav_switch:checked) {
     grid-template-rows: repeat(7, 1fr);
     grid-column-gap: 15px;
     grid-row-gap: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
   }
 
   .fourthmain-container h2{
@@ -742,11 +745,64 @@ body:has(#nav_switch:checked) {
              height: 70%;
              border-radius: 30px;
              background-color: gray;}
-  .fourdiv3 { grid-area: 3 / 2 / 5 / 6; }
-  .fourdiv4 { grid-area: 3 / 6 / 5 / 10; }
-  .fourdiv5 { grid-area: 3 / 10 / 5 / 14; }
-  .fourdiv6 { grid-area: 5 / 2 / 8 / 14; }
-
+  .fourdiv3 { grid-area: 3 / 2 / 5 / 6;
+              border-radius: 8px; }
+  .fourdiv4 { grid-area: 3 / 6 / 5 / 10;
+              border-radius: 8px; }
+  .fourdiv5 { grid-area: 3 / 10 / 5 / 14;
+              border-radius: 8px; }
+  .fourdiv6 { grid-area: 5 / 2 / 8 / 14;
+              border-radius: 8px;
+            margin-bottom: 2%; }
+  textarea {
+    width: 100%;
+    resize: none;
+    height: 80%;
+    border-radius: 8px;
+    background-color: gray;
+    color: white;
+    text-align: left;
+    font-size: clamp(0.3rem ,0.66vw + 0.35rem ,1.2rem);
+  }
+  .szobameretimages{ 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 90%;
+    border-radius: 15px;
+    height: auto;
+    object-fit: cover;
+    transform: transform .6s ease;
+  }
+  .szobameretimages:hover{
+    transform: scale(1.2);
+  }
+  .overlayforszoba{
+    position: absolute;
+    height: auto;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: auto;
+    opacity: 0;
+    border-radius: 15px;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.19);
+    backdrop-filter: blur(6px);
+    color: white;
+    z-index: 99;
+  }
+  .szobameretimages:hover + .overlayforszoba {
+    opacity: 1;
+    z-index: 100;
+  }
+  #megjegyzesLB{
+    color: white;
+    font-size: clamp(0.3rem ,0.66vw + 0.35rem ,1.2rem);
+  }
 
 @media screen and (max-width: 845px){
   .thirdparent {

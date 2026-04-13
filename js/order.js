@@ -150,7 +150,7 @@ function szobakTorles() {
 
 numberButtons.forEach(gomb => {
     gomb.addEventListener("click", () => {
-
+        slider.disabled = true;
         numberButtons.forEach(b => b.classList.remove("active"));
         gomb.classList.add("active");
 
@@ -160,16 +160,20 @@ numberButtons.forEach(gomb => {
         mentes({
             szobák: szoba
         });
-
+        const adat = JSON.parse(localStorage.getItem("adat"));
         console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
         setTimeout(async () => {
             let text = "Biztos vagy a döntésedben?";
 
             const valasz = await showConfirm(text);
 
-            if (valasz) {
+            if (valasz && adat.név == "epulet") {
                 valt2();
-            } else {
+            } 
+            else if (valasz && adat.név == "munka") {
+                valt3();
+            }
+            else {
                 szobakTorles();
                 console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
             }
@@ -193,20 +197,25 @@ function valt3(){
     }, 2000);
 }
 
-
-output.innerHTML = slider.value;
-
+slider.value = 0;
+output.innerHTML = 0;
 slider.oninput = function () {
     output.innerHTML = this.value; 
     mentes({
         slider: this.value
     });
+    const adat = JSON.parse(localStorage.getItem("adat"));
     const gombok = document.querySelectorAll(".numberbuttons");
     gombok.forEach(gomb => {
         gomb.disabled = true;
     });
     setTimeout(() => {
-        valt2();
+        if (adat.név == "epulet") {
+            valt2();
+        } 
+        else if (adat.név == "munka") {
+            valt3();
+        }
     }, 3000);
 };
 
@@ -214,7 +223,6 @@ const epitoanyagkepek = document.querySelectorAll(".epitoanyagimages");
 
 epitoanyagkepek.forEach((kep) => {
     kep.addEventListener("click", () => {
-        console.log("Mentés:", kep.id); // debug
 
         mentes({
             epitoanyag: kep.id
@@ -230,6 +238,7 @@ epitoanyagkepek.forEach((kep) => {
                 localStorage.removeItem("adat");
             }
         }, 3000);
+        console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
     });
 });
 
