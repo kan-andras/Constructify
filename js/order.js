@@ -15,6 +15,7 @@ localStorage.removeItem("adat");
 const mainblock = document.getElementById("egesz");
 const secondmain = document.getElementById("second");
 const thirdmain = document.getElementById("third");
+const fourthmain = document.getElementById("fourth");
 
 const gombok = document.querySelectorAll(".buttons");
 const jobbgombok = document.querySelectorAll(".rightbuttons");
@@ -53,6 +54,7 @@ function showConfirm(szoveg) {
 
 secondmain.style.display = "none";
 thirdmain.style.display = "none";
+fourthmain.style.display = "none";
 
 function mentes(ujAdat) {
     const regi = JSON.parse(localStorage.getItem("adat")) || {};
@@ -73,10 +75,12 @@ gombok.forEach((gomb, index) => {
         jobbkepek.forEach(kep => kep.classList.remove("glowtwo"));
 
         kepek[index].classList.add("glow");
+        let altSzoveg = kepek[index].alt;
 
         mentes({
             id: index,
-            név: kepek[index].id
+            név: kepek[index].id,
+            alt: altSzoveg
         });
 
         console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
@@ -103,18 +107,19 @@ jobbgombok.forEach((gomb, index) => {
         kepek.forEach(kep => kep.classList.remove("glow"));
 
         jobbkepek[index].classList.add("glowtwo");
-
+        let altSzoveg = jobbkepek[index].alt;
 
         mentes({
             id: index,
-            név: jobbkepek[index].id
+            név: jobbkepek[index].id,
+            alt: altSzoveg
         });
 
         console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
         setTimeout(async () => {
-            let text2 = "Biztos vagy a döntésedben?";
+            let text = "Biztos vagy a döntésedben?";
 
-            const valasz = await showConfirm(text2);
+            const valasz = await showConfirm(text);
 
             if (valasz) {
                 valt();
@@ -133,6 +138,16 @@ function valt() {
     }, 2000);
 }
 
+function szobakTorles() {
+    let adat = JSON.parse(localStorage.getItem("adat")) || {};
+
+    delete adat.szobák;
+
+    localStorage.setItem("adat", JSON.stringify(adat));
+
+    console.log("Szobák törölve:", adat);
+}
+
 numberButtons.forEach(gomb => {
     gomb.addEventListener("click", () => {
 
@@ -148,14 +163,15 @@ numberButtons.forEach(gomb => {
 
         console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
         setTimeout(async () => {
-            let text3 = "Biztos vagy a döntésedben?";
+            let text = "Biztos vagy a döntésedben?";
 
-            const valasz = await showConfirm(text3);
+            const valasz = await showConfirm(text);
 
             if (valasz) {
                 valt2();
             } else {
-                localStorage.removeItem("adat");
+                szobakTorles();
+                console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
             }
 
         }, 2000);
@@ -166,6 +182,14 @@ function valt2(){
     setTimeout(() =>{
       secondmain.style.display = "none";
       thirdmain.style.display = "block";
+    }, 2000);
+}
+
+function valt3(){
+    setTimeout(() =>{
+      secondmain.style.display = "none";
+      thirdmain.style.display = "none";
+      fourthmain.style.display = "block";
     }, 2000);
 }
 
@@ -181,7 +205,33 @@ slider.oninput = function () {
     gombok.forEach(gomb => {
         gomb.disabled = true;
     });
+    setTimeout(() => {
+        valt2();
+    }, 3000);
 };
+
+const epitoanyagkepek = document.querySelectorAll(".epitoanyagimages");
+
+epitoanyagkepek.forEach((kep) => {
+    kep.addEventListener("click", () => {
+        console.log("Mentés:", kep.id); // debug
+
+        mentes({
+            epitoanyag: kep.id
+        });
+        setTimeout(async () => {
+            let text = "Biztos vagy a döntésedben?";
+
+            const valasz = await showConfirm(text);
+
+            if (valasz) {
+                valt3();
+            } else {
+                localStorage.removeItem("adat");
+            }
+        }, 3000);
+    });
+});
 
 
 window.onload = () => {
