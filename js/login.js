@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 null
             );
 
+            login()
             console.log("Új user:", ujUser);
             console.log("Összes user:", userDB.leker());
 
@@ -95,6 +96,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (bejelentkezettUser) {
             console.log("Bejelentkeztél:", bejelentkezettUser.name);
             localStorage.setItem("loggedInUser", JSON.stringify(bejelentkezettUser));
+            setTimeout(() => {
+                console.log("Átirányítás a főoldalra...")
+            }, 700);
+            
             setTimeout(() => {
                 window.location.replace("index.html");
             }, 2000);
