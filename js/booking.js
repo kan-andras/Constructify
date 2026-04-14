@@ -8,6 +8,9 @@ if (user) {
     console.log("Nincs bejelentkezve");
 }
 
+
+
+
 const daysTag = document.querySelector(".days"),
 currentDate = document.querySelector(".current-date"),
 prevNextIcon = document.querySelectorAll(".icons span");
@@ -106,13 +109,22 @@ document.addEventListener("click", (e) => {
         });
 
         console.log("Foglalás:", startDate, "→", endDate);
+        const newDateSave = foglaltIdopont.idopontMentes(
+            startDate,
+            endDate
+        );
+        console.log("Új időpont:", newDateSave);
+        console.log("Összes időpont:", foglaltIdopont.leker());
         return;
+        
     }
 
     startDate = clickedDate;
     endDate = null;
     clearSelection();
     e.target.classList.add("selected");
+
+    
 });
 
 
@@ -227,6 +239,12 @@ document.addEventListener("click", (e) => {
         });
 
         console.log("Foglalás 2. naptár:", startDate1, "→", endDate1);
+        const newDateSave1 = foglaltIdopont.idopontMentes(
+            startDate1,
+            endDate1
+        );
+        console.log("Új időpont:", newDateSave1);
+        console.log("Összes időpont:", foglaltIdopont.leker());
         return;
     }
 
@@ -234,8 +252,11 @@ document.addEventListener("click", (e) => {
     endDate1 = null;
     clearSelection1();
     e.target.classList.add("selected");
+
+
+    
 });
 
 function foglalas() {
-    confirm("Biztos az időpont foglalásban")
+    confirm("Biztos az időpont foglalásban?")
 }
