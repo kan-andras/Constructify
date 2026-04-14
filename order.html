@@ -221,7 +221,7 @@
                             <input type="range" min="1" max="100" value="1" class="slider" id="myRange">
                         </div>
                         <div id="slideright">
-                             <p id="valueforslide">Szobák száma: <span id="demo"></span></p>
+                             <p id="valueforslide">Szobák száma: <span id="demo">1</span></p>
                         </div>
                         </div>
                      </div>
@@ -255,18 +255,22 @@
                 <div class="fourparent">
                     <div class="fourdiv1"> <h2>Válassz a lehetőségek közül!</h2> </div>
                     <div class="fourdiv2"> <h3>A méretek szobára értendők!</h3> </div>
-                    <div class="fourdiv3"> <img class="szobameretimages" src="images/20x25szoba.png" alt="20negyzetmeteresszobavagyszobak"> <div class="overlayforszoba">
-                        <p>20m^2</p>
-                    </div> </div>
-                    <div class="fourdiv4"> <img class="szobameretimages" src="images/40szoba.png" alt="40negyzetmeteresszobavagyszobak"> <div class="overlayforszoba">
-                        <p>40m^2</p>
-                    </div> </div>
-                    <div class="fourdiv5"> <img class="szobameretimages" src="images/60szoba.png" alt="60negyzetmeteresszobavagyszobak"> <div class="overlayforszoba">
-                        <p>60m^2</p>
-                    </div> </div>
+                    <div class="fourdiv3"> <div class="overlayforszoba">
+                        <p class="overlaytextszoba">20m^2</p>
+                    </div>
+                    <img class="szobameretimages" src="images/20x25szoba.png" alt="20negyzetmeteresszobavagyszobak"> </div>
+                    <div class="fourdiv4"><div class="overlayforszoba">
+                        
+                        <p class="overlaytextszoba">40m^2</p>
+                    </div>
+                    <img class="szobameretimages" src="images/40szoba.png" alt="40negyzetmeteresszobavagyszobak"> </div>
+                    <div class="fourdiv5"><div class="overlayforszoba">
+                        
+                        <p class="overlaytextszoba">60m^2</p>
+                    </div>
+                    <img class="szobameretimages" src="images/60szoba.png" alt="60negyzetmeteresszobavagyszobak"> </div>
                     <div class="fourdiv6"> <label for="megjegyzes" id="megjegyzesLB">Megjegyzés/méret váltás</label>
-                    <textarea id="megjegyzes" name="megjegyzes" rows="5" cols="33" maxlength="250" placeholder="Ide írd a megjegyzésed vagy ha méretet szeretnél váltani! (max 250 karakter)">
-                    </textarea>
+                    <textarea id="megjegyzes" name="megjegyzes" rows="1" cols="33" maxlength="250" placeholder="Ide írd a megjegyzésed vagy ha méretet szeretnél váltani! (max 250 karakter)"></textarea>
                     </div>
                 </div> 
             </div>

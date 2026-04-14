@@ -149,11 +149,12 @@ function szobakTorles() {
 }
 
 numberButtons.forEach(gomb => {
+    slider.disabled = true;
     gomb.addEventListener("click", () => {
-        slider.disabled = true;
+
+        
         numberButtons.forEach(b => b.classList.remove("active"));
         gomb.classList.add("active");
-
         const szoba = gomb.dataset.szoba;
 
 
