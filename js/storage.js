@@ -55,10 +55,15 @@ const userDB = {
 
 //Gergő booking.js-éhez a kiválasztott napok tárolásához
 const foglaltIdopont = {
-    idopontMentes: function(id, idopont) {
+    idopontMentes: function(idopontStart, idopontEnd) {
+        let datesStorage = JSON.parse(localStorage.getItem("datesStorage")) || [];
+
+        let newId = datesStorage.length > 0 ? datesStorage[datesStorage.length - 1].id + 1 : 1;
+        
         const adat = {
-            id: id,
-            idopont: idopont
+            id: newId,
+            idopontStart: idopontStart,
+            idopontEnd: idopontEnd
         };
         localStorage.setItem("valasztas", JSON.stringify(adat));
     },
