@@ -243,6 +243,17 @@ epitoanyagkepek.forEach((kep) => {
     });
 });
 
+function countChar(val){
+    var len = val.value.length;
+    var max = 250;
+
+    if (len >= max) {
+        val.value = val.value.substring(0, max);
+    }
+
+    document.getElementById("charNum").innerText = max - len;
+}
+
 
 window.onload = () => {
     const adat = JSON.parse(localStorage.getItem("adat"));

@@ -813,6 +813,21 @@ body:has(#nav_switch:checked) {
     color: white;
     font-size: clamp(0.3rem ,0.66vw + 0.35rem ,1.2rem);
   }
+  .overlaytextforszoba{
+    font-size: clamp(0.3rem ,0.66vw + 0.35rem ,1.2rem);
+    text-align: center;
+  }
+  .fourdiv6{
+  position: relative;  
+  display: inline-block;
+  }
+  .fourdiv6 span{
+    color: rgb(46, 46, 46);
+    position: absolute;
+    margin-left: -6%;
+    margin-top: 12%;
+    font-style: italic;
+  }
 
 @media screen and (max-width: 845px){
   .thirdparent {
@@ -898,6 +913,25 @@ body:has(#nav_switch:checked) {
 }
 
 @media screen and (max-width:768px){
+  .fourparent {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+  }
+
+  .fourdiv1 { grid-area: 1 / 2 / 2 / 10; }
+  .fourdiv2 { grid-area: 2 / 3 / 3 / 9; }
+  .fourdiv3 { grid-area: 3 / 2 / 6 / 6; }
+  .fourdiv4 { grid-area: 3 / 6 / 6 / 10; }
+  .fourdiv5 { grid-area: 6 / 4 / 9 / 8; }
+  .fourdiv6 { grid-area: 9 / 2 / 14 / 10; }
+
+  textarea{
+    height: 90%;
+  }
+
   .anyagoktext{
     font-size: 70%;
   }
