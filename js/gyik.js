@@ -26,11 +26,10 @@ fetch("../content.json")
   .then(data => {
     const gyik = data.gyik; 
     const keret = document.getElementById("keret");
-
     gyik.forEach(item => {
       keret.innerHTML += `
         <div class="kerdes">
-            <button class="prob">
+            <button class="prob" onclick=lenyilas()>
                 ${item.kerdes}
                 <img src="../images/Arrow_down.png" class="kep">
             </button>
@@ -42,3 +41,17 @@ fetch("../content.json")
     });
     initGyik();
   });
+  let lenyil = null
+  function lenyilas(){  
+    let valasz = document.getElementById("megold")
+    let hely = 0
+    lenyil = setInterval(frame,1)
+    function frame(){
+      if(hely = 30){
+        clearInterval(lenyil)
+      }
+      else{
+        valasz.style.top = hely + 'px'
+      }
+    }
+  }
