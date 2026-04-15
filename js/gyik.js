@@ -13,9 +13,11 @@ function initGyik() {
       const nyil = problem.querySelector(".kep");
       if (sz.classList.contains("active")) {
         nyil.src = "../images/Arrow_up.png";
+        sz.style.transition = "max-height 0.7s cubic-bezier(0.4, 0, 1, 1)";
       } 
       else {
         nyil.src = "../images/Arrow_down.png";
+        sz.style.transition = "max-height 0.5s cubic-bezier(0.4, 0, 1, 1)";
       }
     });
   });
