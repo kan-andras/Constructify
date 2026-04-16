@@ -55,17 +55,20 @@ function telEdit(){
 };
 function pwEdit(){
     let input6 = document.getElementById('input6').value;
-    inputLoad(input6)
+    if(userIndex !== -1) {
+        users[userIndex].pw = input6;
+        inputLoad()
+    }
+
+    
 };
 
-function inputLoad(inputNUM) {
-    if(userIndex !== -1) {
-    users[userIndex].pw = inputNUM;
+function inputLoad() {
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("loggedInUser", JSON.stringify(users[userIndex]));
     console.log("User adatai frissítve!");
     console.log(users[userIndex])
-    }
+    
 }
 
 
