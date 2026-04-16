@@ -36,7 +36,7 @@ fetch("../content.json")
                 <img src="../images/Arrow_down.png" class="kep">
             </button>
             <div class="megold">
-                <p>${item.valasz}</p>
+                <p class="szoveg">${item.valasz}</p>
             </div>
         </div>
       `;
