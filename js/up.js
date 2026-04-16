@@ -71,7 +71,7 @@ function inputLoad(inputNUM) {
 
 
 
-
+/*
 const B = document.getElementById('valtment');
 const A = document.getElementById('fioktorles');
 const C = document.getElementById('kijel');
@@ -113,11 +113,12 @@ function syncHeight(){
     I5.style.height = height2 -2 + 'px';
     I6.style.height = height2 -2 + 'px';
     
-    /*
+    
     H.style.height = height2 + 'px';
-    .style.width = widthA2*2 + 'px';*/
+    .style.width = widthA2*2 + 'px';
     
 }
 
 syncHeight();
 window.addEventListener('resize', syncHeight);
+*/
