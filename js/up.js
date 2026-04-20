@@ -1,5 +1,5 @@
 let user = JSON.parse(localStorage.getItem("loggedInUser"));
-
+console.log(userDB.leker())
 if (user) {
     console.log(`Bejelentkezve: ${user.id}, ${user.name}, ${user.email},${user.pw},${user.phone},${user.address}`);
     document.getElementById('nav_account').src = "images/userLoggedInPlaceholder.jpg"
@@ -8,6 +8,7 @@ if (user) {
     document.getElementById('input1').value = user.name
     document.getElementById('input4').value = user.email
     document.getElementById('input6').value = user.pw
+    
 } else {
     console.log("Nincs bejelentkezve, hogy jutottál ide?"); 
 }
@@ -39,39 +40,54 @@ const userIndex = users.findIndex(user => user.id === loggedInUser.id);
 
 function nevEdit(){
     let input1 = document.getElementById("input1").value;
-    inputLoad(input1)
+    if(userIndex !== -1) {
+        users[userIndex].name = input1;
+        inputLoad()
+    }
 };
 function lakcimEdit(){
     let input2 = document.getElementById('input2').value;
-    inputLoad(input2)
+    if(userIndex !== -1) {
+        users[userIndex].address = input2;
+        inputLoad()
+    }
 };
 function emailEdit(){
     let input4 = document.getElementById('input4').value;
-    inputLoad(input4)
+    if(userIndex !== -1) {
+        users[userIndex].email = input4;
+        inputLoad()
+    }
 };
 function telEdit(){
     let input5 = document.getElementById('input5').value;
-    inputLoad(input5)
+    if(userIndex !== -1) {
+        users[userIndex].phone = input5;
+        inputLoad()
+    }
 };
 function pwEdit(){
     let input6 = document.getElementById('input6').value;
-    inputLoad(input6)
+    if(userIndex !== -1) {
+        users[userIndex].pw = input6;
+        inputLoad()
+    }
+
+    
 };
 
-function inputLoad(inputNUM) {
-    if(userIndex !== -1) {
-    users[userIndex].pw = inputNUM;
+function inputLoad() {
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("loggedInUser", JSON.stringify(users[userIndex]));
     console.log("User adatai frissítve!");
     console.log(users[userIndex])
-    }
+    
 }
 
 
 
 
-
+/*
 const B = document.getElementById('valtment');
 const A = document.getElementById('fioktorles');
 const C = document.getElementById('kijel');
@@ -113,11 +129,12 @@ function syncHeight(){
     I5.style.height = height2 -2 + 'px';
     I6.style.height = height2 -2 + 'px';
     
-    /*
+    
     H.style.height = height2 + 'px';
-    .style.width = widthA2*2 + 'px';*/
+    .style.width = widthA2*2 + 'px';
     
 }
 
 syncHeight();
 window.addEventListener('resize', syncHeight);
+*/

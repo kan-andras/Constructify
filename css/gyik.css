@@ -87,6 +87,10 @@ body{
 .kep{
     margin-left: 3%;
 }
+.szoveg{
+    margin-left: 3%;
+    margin-right: 3%;
+}
 @media screen and (max-width:870px){
     .megold{
         width: 70%;
