@@ -50,7 +50,7 @@ document.querySelectorAll(".modalKepTrigger").forEach((kep) => {
 modalBezar1.onclick = () => modal1.style.display = "none";
 modal1.onclick = (e) => { if (e.target === modal1) modal1.style.display = "none"; }
 
-fetch("content.json")
+fetch("js/content.json")
   .then(res => res.json())
   .then(data => {
     const container = document.getElementById("velemenyresz");
@@ -81,7 +81,7 @@ fetch("content.json")
     initModal(data.velemenyek);
 });
 
-fetch("content.json")
+fetch("js/content.json")
   .then(res => res.json())
   .then(data => {
     const container = document.getElementById("nagyprojekt");

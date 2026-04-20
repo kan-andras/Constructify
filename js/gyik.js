@@ -23,7 +23,7 @@ function initGyik() {
   });
 }
 
-fetch("../content.json")
+fetch("js/content.json")
   .then(res => res.json())
   .then(data => {
     const gyik = data.gyik; 

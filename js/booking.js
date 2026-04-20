@@ -8,22 +8,24 @@ if (user) {
     console.log("Nincs bejelentkezve");
 }
 
-
-
-
-const daysTag = document.querySelector(".days"),
-currentDate = document.querySelector(".current-date"),
-prevNextIcon = document.querySelectorAll(".icons span");
-
-let date = new Date(),
-currYear = date.getFullYear(),
-currMonth = date.getMonth();
 const bookedDates = [
     "2026-04-01","2026-04-02","2026-04-03","2026-04-04","2026-04-05","2026-04-06","2026-04-07","2026-04-08","2026-04-09","2026-04-10","2026-04-11","2026-04-12","2026-04-13","2026-04-14","2026-04-15",
     "2026-04-16","2026-04-17","2026-04-18","2026-04-19","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-25","2026-04-26","2026-04-27","2026-04-28","2026-04-29","2026-04-30",
     "2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-14","2026-05-15","2026-05-16","2026-05-17","2026-05-18","2026-05-24","2026-05-25","2026-05-26","2026-05-27","2026-05-28",
     "2026-05-29","2026-05-30",
 ];
+
+function Calendar(config) {
+
+    const daysTag = document.querySelector(config.days),
+    currentDate = document.querySelector(config.currentDate),
+    prevNextIcon = document.querySelectorAll(config.navButtons);
+
+    let date = new Date(),
+    currYear = date.getFullYear(),
+    currMonth = date.getMonth();
+
+    const bookedDates = config.bookedDates;
 
 const months = ["January", "February", "March", "April", "May", "June", "July",
               "August", "September", "October", "November", "December"];
@@ -80,11 +82,11 @@ let startDate = null;
 let endDate = null;
 
 function clearSelection() {
-    document.querySelectorAll(".days li").forEach(li => li.classList.remove("selected"));
+    daysTag.querySelectorAll("li").forEach(li => li.classList.remove("selected"));
 }
 
-document.addEventListener("click", (e) => {
-    if (!e.target.matches(".days li.free")) return;
+daysTag.addEventListener("click", (e) => {
+    if (!e.target.matches("li.free")) return;
 
     let clickedDate = e.target.dataset.date;
 
@@ -101,7 +103,7 @@ document.addEventListener("click", (e) => {
             [startDate, endDate] = [endDate, startDate];
         }
 
-        document.querySelectorAll(".days li.free").forEach(li => {
+        daysTag.querySelectorAll("li.free").forEach(li => {
             let d = li.dataset.date;
             if (d >= startDate && d <= endDate) {
                 li.classList.add("selected");
@@ -109,154 +111,32 @@ document.addEventListener("click", (e) => {
         });
 
         console.log("Foglalás:", startDate, "→", endDate);
-        const newDateSave = foglaltIdopont.idopontMentes(
-            startDate,
-            endDate
-        );
-        console.log("Új időpont:", newDateSave);
-        console.log("Összes időpont:", foglaltIdopont.leker());
+        foglaltIdopont.idopontMentes(startDate, endDate);
         return;
-        
     }
-
     startDate = clickedDate;
     endDate = null;
     clearSelection();
     e.target.classList.add("selected");
-
-    
 });
-
-
-
-
-
-
-
-const daysTag1 = document.querySelector(".days1"),
-currentDate1 = document.querySelector(".current-date1"),
-prevNextIcon1 = document.querySelectorAll(".icons1 span");
-
-let date1 = new Date(),
-currYear1 = date1.getFullYear(),
-currMonth1 = date1.getMonth();
-
-const bookedDates1 = [
-    "2026-04-01","2026-04-02","2026-04-03","2026-04-04","2026-04-05","2026-04-06","2026-04-07","2026-04-08","2026-04-09","2026-04-10",
-    "2026-04-11","2026-04-12","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-18","2026-04-19","2026-04-20",
-    "2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-25","2026-04-26","2026-04-27","2026-04-28","2026-04-29","2026-04-30",
-    "2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-14","2026-05-15","2026-05-16","2026-05-17","2026-05-18",
-    "2026-05-24","2026-05-25","2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-05-30"
-];
-
-const months1 = ["January","February","March","April","May","June","July",
-"August","September","October","November","December"];
-
-const renderCalendar1 = () => {
-
-    let firstDayofMonth1 = new Date(currYear1, currMonth1, 1).getDay(),
-        lastDateofMonth1 = new Date(currYear1, currMonth1 + 1, 0).getDate(),
-        lastDayofMonth1 = new Date(currYear1, currMonth1, lastDateofMonth1).getDay(),
-        lastDateofLastMonth1 = new Date(currYear1, currMonth1, 0).getDate();
-
-    let today1 = new Date();
-    let todayStr1 = `${today1.getFullYear()}-${String(today1.getMonth()+1).padStart(2,"0")}-${String(today1.getDate()).padStart(2,"0")}`;
-
-    let liTag1 = "";
-
-    for (let i = firstDayofMonth1; i > 0; i--) {
-        liTag1 += `<li class="inactive">${lastDateofLastMonth1 - i + 1}</li>`;
-    }
-
-    for (let i = 1; i <= lastDateofMonth1; i++) {
-
-        let fullDate1 = `${currYear1}-${String(currMonth1+1).padStart(2,"0")}-${String(i).padStart(2,"0")}`;
-
-        let isPast1 = fullDate1 < todayStr1;
-        let isBooked1 = bookedDates1.includes(fullDate1);
-
-        let statusClass1 = isPast1 ? "inactive" : (isBooked1 ? "booked" : "free");
-
-        liTag1 += `<li class="${statusClass1}" data-date="${fullDate1}">${i}</li>`;
-    }
-
-    for (let i = lastDayofMonth1; i < 6; i++) {
-        liTag1 += `<li class="inactive">${i - lastDayofMonth1 + 1}</li>`;
-    }
-
-    currentDate1.innerText = `${months1[currMonth1]} ${currYear1}`;
-    daysTag1.innerHTML = liTag1;
-};
-
-renderCalendar1();
-
-prevNextIcon1.forEach(icon1 => {
-    icon1.addEventListener("click", () => {
-        currMonth1 = icon1.id === "prev" ? currMonth1 - 1 : currMonth1 + 1;
-
-        if(currMonth1 < 0 || currMonth1 > 11) {
-            date1 = new Date(currYear1, currMonth1, new Date().getDate());
-            currYear1 = date1.getFullYear();
-            currMonth1 = date1.getMonth();
-        } else {
-            date1 = new Date();
-        }
-
-        renderCalendar1();
-    });
-});
-
-let startDate1 = null;
-let endDate1 = null;
-
-function clearSelection1() {
-    document.querySelectorAll(".days1 li").forEach(li => li.classList.remove("selected"));
 }
 
-document.addEventListener("click", (e) => {
-    if (!e.target.matches(".days1 li.free")) return;
+new Calendar({
+    wrapper: "#elso_naptar",
+    days: ".days",
+    currentDate: ".current-date",
+    navButtons: ".icons span",
+    bookedDates: bookedDates
+});
 
-    let clickedDate1 = e.target.dataset.date;
-
-    if (!startDate1) {
-        startDate1 = clickedDate1;
-        e.target.classList.add("selected");
-        return;
-    }
-
-    if (!endDate1) {
-        endDate1 = clickedDate1;
-
-        if (endDate1 < startDate1) {
-            [startDate1, endDate1] = [endDate1, startDate1];
-        }
-
-        document.querySelectorAll(".days1 li.free").forEach(li => {
-            let d = li.dataset.date;
-            if (d >= startDate1 && d <= endDate1) {
-                li.classList.add("selected");
-            }
-        });
-
-        console.log("Foglalás 2. naptár:", startDate1, "→", endDate1);
-        const newDateSave1 = foglaltIdopont.idopontMentes(
-            startDate1,
-            endDate1
-        );
-        console.log("Új időpont:", newDateSave1);
-        console.log("Összes időpont:", foglaltIdopont.leker());
-        return;
-    }
-
-    startDate1 = clickedDate1;
-    endDate1 = null;
-    clearSelection1();
-    e.target.classList.add("selected");
-
-
-    
+new Calendar({
+    wrapper: "#masodik_naptar",
+    days: ".days1",
+    currentDate: ".current-date1",
+    navButtons: ".icons1 span",
+    bookedDates: bookedDates
 });
 
 function foglalas() {
-    confirm("Biztos az időpont foglalásban?")
+    confirm("Biztos az időpont foglalásban?");
 }
