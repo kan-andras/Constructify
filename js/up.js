@@ -13,6 +13,35 @@ if (user) {
     console.log("Nincs bejelentkezve, hogy jutottál ide?"); 
 }
 
+const confirmBox = document.getElementById("confirmBox");
+const confirmText = document.getElementById("confirmText");
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+yesBtn.style.background="darkred"
+function showConfirm(szoveg) {
+    setTimeout(() => {
+        yesBtn.disabled = "False"
+        yesBtn.style.background="red"
+        yesBtn.addEventListener("mouseenter", (event) => { event.target.style.background="darkred"})
+        yesBtn.addEventListener("mouseleave", (event) => { event.target.style.background="red"})
+        
+    }, 5000);
+    return new Promise((resolve) => {
+        confirmText.innerText = szoveg;
+        confirmBox.style.display = "flex";
+       
+        yesBtn.onclick = () => {
+            confirmBox.style.display = "none";
+            resolve(true);
+        };
+
+        noBtn.onclick = () => {
+            confirmBox.style.display = "none";
+            resolve(false);
+        };
+    });
+}
+
 function logOut(){
     localStorage.removeItem("loggedInUser");
     window.location.replace("register.html");
@@ -23,13 +52,22 @@ function accDel() {
         return;
     }
 
-    if (!confirm("Biztosan törölni akarod a fiókodat?")) {
-        return;
-    }
+    setTimeout(async () => {
+        let text = "Biztos vagy a döntésedben?";
 
-    userDB.torol(user.id);
-    localStorage.removeItem("loggedInUser");
-    window.location.replace("register.html");
+        const valasz = await showConfirm(text);
+
+        if (valasz) {
+            userDB.torol(user.id);
+            localStorage.removeItem("loggedInUser");
+            window.location.replace("register.html");
+        } else {
+            confirmBox.style.display = "none";
+        }
+
+    }, 2000);
+
+    
 }
 
 
