@@ -87,7 +87,16 @@
                   <ul class="days1"></ul>
                 </div>
           </div>
-            <a href="index.html"><button id="rendeles" class="szovegszin" onclick="foglalas()">Időpont foglalás</button></a>
+            <button id="rendeles" class="szovegszin" onclick="foglalas()">Időpont foglalás</button>
+              <div id="confirmBox" class="alert-overlay">
+                <div class="alert-box">
+                    <p class="szoveg">Nem vagy bejelentkezve!</p>
+                    <p class="szoveg">Kérjük add meg az elérhetőségeidet a rendelésed leadásához!</p>
+                    <input type="text" id="Email">
+                    <input type="text" id="Telephone">
+                    <a href="index.html"><button id="loginbtn">Rendelés elküldése</button></a>
+                </div>
+              </div>
         </div>
     </div>
     <footer>

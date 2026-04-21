@@ -32,7 +32,7 @@ fetch("js/content.json")
       keret.innerHTML += `
         <div class="kerdes">
             <button class="prob" onclick=lenyilas()>
-                ${item.kerdes}
+                <p class="szoveg">${item.kerdes}</p>
                 <img src="../images/Arrow_down.png" class="kep">
             </button>
             <div class="megold">

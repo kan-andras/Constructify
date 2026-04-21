@@ -140,3 +140,22 @@ new Calendar({
 function foglalas() {
     confirm("Biztos az időpont foglalásban?");
 }
+
+const loginbtn = document.getElementById("loginbtn");
+
+function showConfirm(szoveg) {
+    return new Promise((resolve) => {
+        confirmText.innerText = szoveg;
+        confirmBox.style.display = "flex";
+
+        yesBtn.onclick = () => {
+            confirmBox.style.display = "none";
+            resolve(true);
+        };
+
+        noBtn.onclick = () => {
+            confirmBox.style.display = "none";
+            resolve(false);
+        };
+    });
+}

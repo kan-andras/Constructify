@@ -56,6 +56,7 @@ body{
     transition: max-height 0.9s linear;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0%;
 }
 .megold.active{
     background-color: #BEBCBC;
@@ -63,6 +64,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     max-height: 150px;
+    margin-top: 0%;
 }
 
 .prob{
@@ -85,11 +87,18 @@ body{
     margin-bottom: 15px;
 }
 .kep{
-    margin-left: 3%;
+    margin-left: auto;
+    height: 30%;
 }
 .szoveg{
     margin-left: 3%;
     margin-right: 3%;
+}
+.prob{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
 }
 @media screen and (max-width:870px){
     .megold{
