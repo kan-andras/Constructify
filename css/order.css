@@ -828,6 +828,17 @@ body:has(#nav_switch:checked) {
     margin-top: 12%;
     font-style: italic;
   }
+  #tovabbbutton {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    float: right;
+  }
+
+  #tovabbbutton.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 @media screen and (max-width: 845px){
   .thirdparent {
