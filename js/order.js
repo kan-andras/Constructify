@@ -34,6 +34,9 @@ const confirmText = document.getElementById("confirmText");
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 
+const textarea = document.getElementById("megjegyzes");
+const nextbutton = document.getElementById("tovabbbutton");
+
 function showConfirm(szoveg) {
     return new Promise((resolve) => {
         confirmText.innerText = szoveg;
@@ -254,6 +257,19 @@ function countChar(val){
     document.getElementById("charNum").innerText = max - len;
 }
 
+textarea.addEventListener("input", function(event) {
+    const value = event.target.value.trim();
+
+    if (value.length > 0) {
+      nextbutton.classList.add("show");
+    } else {
+      nextbutton.classList.remove("show");
+    }
+  });
+
+textarea.addEventListener("change", function(event) {
+    console.log("Végleges érték:", event.target.value);
+  });
 
 window.onload = () => {
     const adat = JSON.parse(localStorage.getItem("adat"));
