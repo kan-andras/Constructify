@@ -138,24 +138,21 @@ new Calendar({
 });
 
 function foglalas() {
-    confirm("Biztos az időpont foglalásban?");
+    showConfirm()
 }
 
 const loginbtn = document.getElementById("loginbtn");
+const confirmText = document.querySelectorAll("szoveg")
+const confirmBox = document.getElementById("confirmBox")
 
 function showConfirm(szoveg) {
     return new Promise((resolve) => {
         confirmText.innerText = szoveg;
         confirmBox.style.display = "flex";
 
-        yesBtn.onclick = () => {
+        loginbtn.onclick = () => {
             confirmBox.style.display = "none";
             resolve(true);
-        };
-
-        noBtn.onclick = () => {
-            confirmBox.style.display = "none";
-            resolve(false);
         };
     });
 }
