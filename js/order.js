@@ -152,9 +152,8 @@ function szobakTorles() {
 }
 
 numberButtons.forEach(gomb => {
-    slider.disabled = true;
     gomb.addEventListener("click", () => {
-
+    slider.disabled = true;
         
         numberButtons.forEach(b => b.classList.remove("active"));
         gomb.classList.add("active");
@@ -201,8 +200,6 @@ function valt3(){
     }, 2000);
 }
 
-slider.value = 0;
-output.innerHTML = 0;
 slider.oninput = function () {
     output.innerHTML = this.value; 
     mentes({
