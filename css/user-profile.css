@@ -194,7 +194,6 @@ margin-bottom: 3%;
     border: 1px rgba(137, 114, 44, 1) solid;
     padding: 1%;
     font-size: clamp(0.2rem,0.8vw + 0.4rem,0.9rem);
-    width: 8rem;
     
     float: right;
 
@@ -212,9 +211,6 @@ margin-bottom: 3%;
 
 #alulsogombok{
     margin-top: 10%;
-   /* display: flex;
-    gap: 5%;
-    flex-direction: row;*/
 }
 #fioktorles{
     float: left;
@@ -229,14 +225,14 @@ margin-bottom: 3%;
     margin: 0px;
     margin-left: 4%;
     margin-right: 3%;
-    width: 7rem;
+    width: 8rem;
 }
 #kijel{
     
     float: right;
     margin: 0px;
     color: rgb(219, 43, 43);
-    width: 7rem;
+    width: 8rem;
 }
 
 
@@ -367,11 +363,12 @@ footer{
         width: 20%;
     }
 }*/
-@media screen and (max-width:512px){
+@media screen and (max-width:526px){
     #alulsogombok{
         display: flex;
         flex-direction: column-reverse;
-            
+        align-items:center;
+        
     }
     .inputmezo{
       
@@ -384,19 +381,31 @@ footer{
     }
 
     #valtment{
-        float: right;
-        
-        
-        margin-right: 6%;
+        margin: 0%;
         width: 7rem;
+        margin-top: 2%;
+        margin-bottom: 2%;
     }
     #kijel{
-        
-        float: right;
-       margin-top: 3%;
-        margin-right: 6%;
+        margin: 0%;
         width: 7rem;
     }
+    #fioktorles{
+        margin: 0%;
+    }
+    #valtment:hover{
+        border: #3D3D3D 2px solid;
+        padding: 0.9%
+    }
+    #kijel:hover{
+        border: #3D3D3D 2px solid;
+        padding: 0.9%
+    }
+    #fioktorles:hover{
+        border: #3D3D3D 2px solid;
+        padding: 0.9%
+    }
+    
 }
 @media screen and (max-width:467px){
     #focimkep{

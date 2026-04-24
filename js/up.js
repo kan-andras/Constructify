@@ -8,6 +8,8 @@ if (user) {
     document.getElementById('input1').value = user.name
     document.getElementById('input4').value = user.email
     document.getElementById('input6').value = user.pw
+    document.getElementById('input2').value = user.address
+    document.getElementById('input5').value = user.phone
     
 } else {
     console.log("Nincs bejelentkezve, hogy jutottál ide?"); 
@@ -76,51 +78,63 @@ const users = userDB.leker();
 const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 const userIndex = users.findIndex(user => user.id === loggedInUser.id);
 
-function nevEdit(){
-    let input1 = document.getElementById("input1").value;
-    if(userIndex !== -1) {
-        users[userIndex].name = input1;
-        inputLoad()
-    }
-};
-function lakcimEdit(){
-    let input2 = document.getElementById('input2').value;
-    if(userIndex !== -1) {
-        users[userIndex].address = input2;
-        inputLoad()
-    }
-};
-function emailEdit(){
-    let input4 = document.getElementById('input4').value;
-    if(userIndex !== -1) {
-        users[userIndex].email = input4;
-        inputLoad()
-    }
-};
-function telEdit(){
-    let input5 = document.getElementById('input5').value;
-    if(userIndex !== -1) {
-        users[userIndex].phone = input5;
-        inputLoad()
-    }
-};
-function pwEdit(){
-    let input6 = document.getElementById('input6').value;
-    if(userIndex !== -1) {
-        users[userIndex].pw = input6;
-        inputLoad()
-    }
 
+function saveAll() {
     
-};
+    function nevEdit(){
+        let input1 = document.getElementById("input1").value;
+        if(userIndex !== -1) {
+            users[userIndex].name = input1;
+            
+        }
+    };
+    function lakcimEdit(){
+        let input2 = document.getElementById('input2').value;
+        if(userIndex !== -1) {
+            users[userIndex].address = input2;
+            
+        }
+    };
+    function emailEdit(){
+        let input4 = document.getElementById('input4').value;
+        if(userIndex !== -1) {
+            users[userIndex].email = input4;
+            
+        }
+    };
+    function telEdit(){
+        let input5 = document.getElementById('input5').value;
+        if(userIndex !== -1) {
+            users[userIndex].phone = input5;
+            
+        }
+    };
+    function pwEdit(){
+        let input6 = document.getElementById('input6').value;
+        if(userIndex !== -1) {
+            users[userIndex].pw = input6;
+           
+        }
+    
+        
+    };
+    
+    
+        
+        
+    
 
-function inputLoad() {
+    nevEdit()
+    lakcimEdit()
+    emailEdit()
+    telEdit()
+    pwEdit()
     localStorage.setItem("users", JSON.stringify(users));
-    localStorage.setItem("loggedInUser", JSON.stringify(users[userIndex]));
-    console.log("User adatai frissítve!");
-    console.log(users[userIndex])
-    
+        localStorage.setItem("loggedInUser", JSON.stringify(users[userIndex]));
+        console.log("User adatai frissítve!");
+        console.log(users[userIndex])
 }
+
 
 
 
