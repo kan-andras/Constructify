@@ -256,10 +256,10 @@ function countChar(val){
 
 textarea.addEventListener("input", function(event) {
     const value = event.target.value.trim();
-
     if (value.length > 0) {
       nextbutton.classList.add("show");
-    } else {
+    } 
+    else {
       nextbutton.classList.remove("show");
     }
   });

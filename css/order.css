@@ -749,9 +749,12 @@ body:has(#nav_switch:checked) {
                 position: relative; }
     .fourdiv6 { grid-area: 5 / 2 / 8 / 14;
                 border-radius: 8px;
-                margin-bottom: 2%; }
+                margin-bottom: 2%;
+                font-size: clamp(0.6rem, 0.9rem, 2rem); }
     .fourdiv7 { grid-area: 8 / 13 / 9 / 15;
-                padding-right: 25%; }
+                padding-right: 25%;
+                padding-top: 5%;
+                width: 85%; }
     
   textarea {
     width: 100%;
@@ -820,8 +823,8 @@ body:has(#nav_switch:checked) {
   .fourdiv6 span{
     color: rgb(46, 46, 46);
     position: absolute;
-    margin-left: -6%;
-    margin-top: 12%;
+    margin-left: -5%;
+    margin-top: 13%;
     font-style: italic;
   }
   #tovabbbutton {
@@ -829,6 +832,13 @@ body:has(#nav_switch:checked) {
     transform: translateY(10px);
     transition: all 0.3s ease;
     float: right;
+    color: white;
+    background-color: #8F8F8F;
+    border: 1px rgba(137, 114, 44, 1) solid;
+    border-radius: 8px;
+    width: auto;
+    padding: 5px;
+    font-size: clamp(0.2rem,0.8vw + 0.4rem,0.9rem);
   }
 
   #tovabbbutton.show {
@@ -935,6 +945,11 @@ body:has(#nav_switch:checked) {
     .fourdiv5 { grid-area: 5 / 5 / 7 / 9; }
     .fourdiv6 { grid-area: 7 / 3 / 10 / 11; }
     .fourdiv7 { grid-area: 10 / 10 / 11 / 12; }
+
+  .fourdiv6 span{
+    margin-top: 22%;
+    margin-left: -10%;
+  }
     
   textarea{
     height: 90%;
