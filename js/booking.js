@@ -137,8 +137,17 @@ new Calendar({
     bookedDates: bookedDates
 });
 
+let gomb = document.getElementById("gomb")
+gomb.innerHTML = `<button id="rendeles" class="szovegszin" onclick="foglalas()">Időpont foglalás</button>`
+
 function foglalas() {
-    showConfirm()
+    if(user){
+        gomb.innerHTML =`<a href="index.html"><button id="rendeles" class="szovegszin" onclick="foglalas()">Időpont foglalás</button></a>`
+    }
+    else{
+        gomb.innerHTML =`<button id="rendeles" class="szovegszin" onclick="foglalas()">Időpont foglalás</button>`
+        showConfirm()
+    }
 }
 
 const loginbtn = document.getElementById("loginbtn");
@@ -154,6 +163,10 @@ function showConfirm(szoveg) {
         loginbtn.onclick = () => {
             confirmBox.style.display = "none";
             resolve(true);
+            let email = document.getElementById("Email").value
+            let telephone = document.getElementById("Telephone").value
+            console.log("Email: " + email)
+            console.log("Telephone: " + telephone)
         };
         close.onclick = () => {
             confirmBox.style.display = "none";
