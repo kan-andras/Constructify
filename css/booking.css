@@ -212,7 +212,7 @@ header .current-date{
 }
 #right {
     width: 50%;
-    height: 777px;
+    height: 775px;
     background: url("../images/Rendeles_hatterS.png");
     background-size: cover;
     background-position: center;
@@ -245,8 +245,7 @@ header .current-date{
     cursor: pointer;
     transition: 0.2s;
     text-align: center;
-    width: 100%;
-    margin-top: 110%;
+    margin-top: 150px;
 }
 #masodik_naptar{
     display: none;
@@ -380,6 +379,26 @@ header .icons1 span{
     padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 3%;
+}
+#Email{
+    margin: 3%;
+}
+#Telephone{
+    margin: 3%;
+}
+#close{
+    margin-left: auto;
+}
+.input{
+    background-color: #D9D9D9;
+    height: 3.5vw;
+    border-radius: 18px;
+    font-size: clamp(0.3rem, 1vw + 0.4rem, 2rem);
+    padding-left: 5%;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
 }
 .alert-overlay {
     position: fixed;
@@ -397,11 +416,12 @@ header .icons1 span{
 }
 
 .alert-box {
-    background: rgb(196, 196, 196);
+    background: linear-gradient(180deg, #E1CA93 0%, #CCAC55 100%);
     padding: 20px 30px;
     border-radius: 10px;
     text-align: center;
     min-width: 250px;
+    display: grid;
 }
 
 .kerdezobuttons {
@@ -442,7 +462,7 @@ header .icons1 span{
         display: block;
     }
     #rendeles{
-        margin-top: 210%;
+        margin-top: 500px;
     }
     .calendar1 .days1 li {
         padding: 7px 0;

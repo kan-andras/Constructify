@@ -144,6 +144,7 @@ function foglalas() {
 const loginbtn = document.getElementById("loginbtn");
 const confirmText = document.querySelectorAll("szoveg")
 const confirmBox = document.getElementById("confirmBox")
+const close = document.getElementById("close")
 
 function showConfirm(szoveg) {
     return new Promise((resolve) => {
@@ -154,5 +155,9 @@ function showConfirm(szoveg) {
             confirmBox.style.display = "none";
             resolve(true);
         };
+        close.onclick = () => {
+            confirmBox.style.display = "none";
+            resolve(false)
+        }
     });
 }
