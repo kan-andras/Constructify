@@ -1,9 +1,11 @@
 let user = JSON.parse(localStorage.getItem("loggedInUser"));
-
 if (user) {
     console.log(`Bejelentkezve: ${user.id}, ${user.name}, ${user.email},${user.pw},${user.phone},${user.address}`);
+    document.getElementById('nav_account').src = "images/userLoggedInPlaceholder.jpg"
+    document.getElementById('regImg').href = "user-profile.html"
+    document.getElementById('nav_account').style.borderRadius = "8px"
 } else {
-    console.log("Nincs bejelentkezve");
+    console.log("Nincs bejelentkezve, hogy jutottál ide?"); 
 }
 
 function uzenetKuldes(){

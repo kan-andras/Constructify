@@ -21,13 +21,26 @@ const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 yesBtn.style.background="darkred"
 function showConfirm(szoveg) {
-    setTimeout(() => {
-        yesBtn.disabled = "False"
+    
+    var timeleft = 5;
+    var downloadTimer = setInterval(function(){
+      if(timeleft <= 0){
+        clearInterval(downloadTimer);
+        document.getElementById("countdown").innerHTML = "";
+        document.getElementById("yesBtn").disabled = false
         yesBtn.style.background="red"
         yesBtn.addEventListener("mouseenter", (event) => { event.target.style.background="darkred"})
         yesBtn.addEventListener("mouseleave", (event) => { event.target.style.background="red"})
+      } else {
+        document.getElementById("countdown").innerHTML = timeleft ;
+      }
+      timeleft -= 1;
+    }, 1000);
+
+
         
-    }, 5000);
+        
+    
     return new Promise((resolve) => {
         confirmText.innerText = szoveg;
         confirmBox.style.display = "flex";
@@ -67,11 +80,10 @@ function accDel() {
             confirmBox.style.display = "none";
         }
 
-    }, 2000);
+    }, 500);
 
     
 }
-
 
 
 const users = userDB.leker(); 
@@ -134,59 +146,3 @@ function saveAll() {
         console.log("User adatai frissítve!");
         console.log(users[userIndex])
 }
-
-
-
-
-
-/*
-const B = document.getElementById('valtment');
-const A = document.getElementById('fioktorles');
-const C = document.getElementById('kijel');
-const D = document.getElementById('nevgomb');
-const E = document.getElementById('lakcimgomb');
-const F = document.getElementById('emailgomb');
-const G = document.getElementById('jelszogomb');
-const J = document.getElementById('telszamgomb');
-
-
-
-const A2 = document.getElementById('felnevgomb');
-const I  = document.getElementById('input1');
-const I2 = document.getElementById('input2');
-const I3 = document.getElementById('input3');
-const I4 = document.getElementById('input4');
-const I5 = document.getElementById('input5');
-const I6 = document.getElementById('input6');
-
-const H = document.getElementsByClassName('inputmezo');
-
-function syncHeight(){
-    const height2 = A2.offsetHeight;
-    const height4 = I.offsetHeight;
-    //const widthA2 = A2.offsetWidth;
-    A.style.height = height2 + 'px';
-    C.style.height = height2 + 'px';
-
-    D.style.height = height2 + 'px';
-    E.style.height = height2 + 'px';
-    F.style.height = height2 + 'px';
-    G.style.height = height2 + 'px';
-    B.style.height = height2 + 'px';
-    J.style.height = height2 + 'px';
-    I.style.height = height2 -2 + 'px';
-    I2.style.height = height2 -2 + 'px';
-    I3.style.height = height2 -2 + 'px';
-    I4.style.height = height2 -2 + 'px';
-    I5.style.height = height2 -2 + 'px';
-    I6.style.height = height2 -2 + 'px';
-    
-    
-    H.style.height = height2 + 'px';
-    .style.width = widthA2*2 + 'px';
-    
-}
-
-syncHeight();
-window.addEventListener('resize', syncHeight);
-*/
