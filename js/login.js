@@ -17,7 +17,8 @@ const loginBtn = document.getElementById('log');
 //userDB.mindenTorol()
 
 
-
+document.getElementById("spinner").style.display = "none"
+document.getElementById("szoveg").style.display = "none"
 document.addEventListener("DOMContentLoaded", () => {
 
     const registerBtn = document.getElementById('regisztralokgomb');
@@ -108,8 +109,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (bejelentkezettUser) {
             console.log("Bejelentkeztél:", bejelentkezettUser.name);
+            document.getElementById("szoveg").style.display = "block"
+                document.getElementById("szoveg").innerHTML = "Bejelentkeztél: "+ bejelentkezettUser.name
             localStorage.setItem("loggedInUser", JSON.stringify(bejelentkezettUser));
             setTimeout(() => {
+                document.getElementById("spinner").style.display = "block"
+                document.getElementById("szoveg").style.display = "block"
+                document.getElementById("szoveg").innerHTML = "Átirányítás a főoldalra..."
                 console.log("Átirányítás a főoldalra...")
             }, 700);
             

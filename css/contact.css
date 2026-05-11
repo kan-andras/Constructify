@@ -21,6 +21,63 @@ body.page {
     display: flex;
     flex-direction: column;
 }
+body:has(#nav_switch:checked){
+    
+   
+    background: #DEDEF0;
+    background: linear-gradient(0deg,rgba(222, 222, 240, 1) 2%, rgba(173, 172, 247, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body:has(#nav_switch:checked) nav{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .nav_items{
+    color: black;
+}
+body:has(#nav_switch:checked) #nav_myLinks{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .nav_hamburgeritem{
+    color: black;
+}
+body:has(#nav_switch:checked) footer{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .profilkep {
+    background-color: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) .velemeny {
+    background-color: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) .projektek {
+    background-color: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) .munkas {
+    background-color: rgb(195, 217, 242);
+}
+body:has(#nav_switch:checked) .szovegszin {
+    color: black;
+}
+body:has(#nav_switch:checked) .szovegszin1 {
+    color: black;
+}
+body:has(#nav_switch:checked) #nav_myLinks{
+    background: rgb(255, 255, 255);
+    color: black;
+}
+body:has(#nav_switch:checked) #nav_feherlogo{
+    content: url("../images/Logo_fekete.png");
+}
+body:has(#nav_switch:checked) #focimkep{
+    content: url("../images/Logo_fekete.png");
+}
+body:has(#nav_switch:checked) #nav_account{
+    content: url("../images/account_fekete.png");
+}
+body:has(#nav_switch:checked) #nav_account{
+    
+}
 /*
 .contact{
     margin-top: 100px;
@@ -85,7 +142,7 @@ body.page {
 
 .inputfield:focus {
     border: none;
-    border: 0.1px solid red;
+    border: 0.1px solid #8d8d8d;
 }
 
 textarea:focus, input:focus{
@@ -135,7 +192,7 @@ textarea {
     border-radius: 40px;
     color: white;
     background-color: #8F8F8F;
-    border: 1px rgba(137, 114, 44, 1) solid;
+    border: 0.1px #8d8d8d solid;
     padding: 10px;
     font-size: clamp(0.2rem,0.8vw + 0.4rem,0.9rem);
     width: 8rem;
