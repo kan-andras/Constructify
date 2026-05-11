@@ -16,6 +16,7 @@ const mainblock = document.getElementById("egesz");
 const secondmain = document.getElementById("second");
 const thirdmain = document.getElementById("third");
 const fourthmain = document.getElementById("fourth");
+const fifthmain = document.getElementById("fifth");
 
 const gombok = document.querySelectorAll(".buttons");
 const jobbgombok = document.querySelectorAll(".rightbuttons");
@@ -58,6 +59,7 @@ function showConfirm(szoveg) {
 secondmain.style.display = "none";
 thirdmain.style.display = "none";
 fourthmain.style.display = "none";
+fifthmain.style.display = "none";
 
 function mentes(ujAdat) {
     const regi = JSON.parse(localStorage.getItem("adat")) || {};
@@ -150,6 +152,15 @@ function szobakTorles() {
 
     console.log("Szobák törölve:", adat);
 }
+function meretTorles() {
+    let adat = JSON.parse(localStorage.getItem("adat")) || {};
+
+    delete adat.szobameret;
+
+    localStorage.setItem("adat", JSON.stringify(adat));
+
+    console.log("Méret törölve:", adat);
+}
 
 numberButtons.forEach(gomb => {
     gomb.addEventListener("click", () => {
@@ -197,6 +208,12 @@ function valt3(){
       secondmain.style.display = "none";
       thirdmain.style.display = "none";
       fourthmain.style.display = "block";
+    }, 2000);
+}
+function valt4(){
+    setTimeout(() =>{
+      fourthmain.style.display = "none";
+      fifthmain.style.display = "block";
     }, 2000);
 }
 
@@ -253,6 +270,30 @@ function countChar(val){
 
     document.getElementById("charNum").innerText = max - len;
 }
+const szobameretek = document.querySelectorAll(".overlayforszoba");
+szobameretek.forEach((kep) =>{
+    kep.addEventListener("click", ()=>{
+    mentes({
+        szobameret: kep.id
+    });
+    setTimeout(async () => {
+        let text = "Biztos vagy a döntésedben?";
+
+        const valasz = await showConfirm(text);
+
+        if (valasz) {
+            valt4();
+        } else {
+            meretTorles();
+            console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
+        }
+    }, 3000);
+    console.log("Módosított adat:", JSON.parse(localStorage.getItem("adat")));
+    })
+})
+
+
+
 
 textarea.addEventListener("input", function(event) {
     const value = event.target.value.trim();
@@ -266,7 +307,22 @@ textarea.addEventListener("input", function(event) {
 
 textarea.addEventListener("change", function(event) {
     console.log("Végleges érték:", event.target.value);
+    mentes({
+        megjegyzes: event.target.value
+    });
+    console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
   });
+
+function Nextform(){
+    const szoveg = document.getElementById("megjegyzes").value;
+    mentes({
+        megjegyzes: szoveg
+    });
+    setTimeout(async () => {
+        valt4();
+    }, 3000);
+    console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
+}
 
 window.onload = () => {
     const adat = JSON.parse(localStorage.getItem("adat"));
