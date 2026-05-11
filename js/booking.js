@@ -165,6 +165,10 @@ function showConfirm(szoveg) {
             resolve(true);
             let email = document.getElementById("Email").value
             let telephone = document.getElementById("Telephone").value
+            new showConfirm({
+                Email: "email",
+                Telephone: "telephone"
+            })
             console.log("Email: " + email)
             console.log("Telephone: " + telephone)
         };

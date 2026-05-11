@@ -2,7 +2,7 @@
   "velemenyek": [
     {
       "felkeres": "Egy nagy volumenű, kiemelt minőségű kivitelezési munkára kerestem megbízható szakembereket. Fontos volt számomra a precizitás, a határidők pontos betartása, valamint az, hogy a végeredmény minden részletében magas színvonalat képviseljen.",
-      "velemeny": "A kivitelezés minden szempontból kifogástalan lett. A csapat végig professzionálisan dolgozott, pontosan tartották a határidőket, és kiemelkedő figyelmet fordítottak a részletekre. A végeredmény felülmúlta az elvárásaimat – csak ajánlani tudom őket mindenkinek, aki minőségi munkát keres.",
+      "velemeny": "A kivitelezés minden szempontból kifogástalan lett. Pontosan tartották a határidőket, és kiemelkedő figyelmet fordítottak a részletekre. A végeredmény felülmúlta az elvárásaimat – csak ajánlani tudom őket mindenkinek, aki minőségi munkát keres.",
       "kep": "images/fehérház.jpg"
     },
     {
@@ -20,15 +20,31 @@
     "nagy_projektek": [
       {
         "felkeres": "Egy több szintes, modern családi ház teljes kivitelezésére kerestünk tapasztalt szakembereket. A projekt összetettsége miatt kiemelten fontos volt a precíz tervezés, a magas minőségű kivitelezés és az, hogy minden munkafolyamat összehangoltan, szakértő kezekben történjen.",
-        "kep": "images/FoOldal_rendeleshatterV.png"
+        "kep": "images/nagyprojekt.png"
       },
       {
         "felkeres": "Egy nagy alapterületű, több emeletes családi ház megépítéséhez kerestünk megbízható kivitelezőt. Fontos szempont volt a stabil szerkezet, a prémium anyaghasználat és az, hogy a teljes projekt az alapoktól a befejezésig gördülékenyen, határidőre valósuljon meg.",
-        "kep": "images/FoOldal_rendeleshatterV.png"
+        "kep": "images/nagyprojekt1.png"
       }
     ],
 
-
+    "munkatars": [
+      {
+        "nev":"Kiss Péter",
+        "leiras":"több mint 10 éves tapasztalattal rendelkező építőipari szakember, aki lakó- és ipari kivitelezési projektekben vett részt Magyarország különböző területein. Pályafutása során dolgozott családi házak teljes körű kivitelezésén, társasház-felújításokon, szerkezetépítési munkákon és belsőépítészeti befejezéseken is.",
+        "special":"Specializációi: családi házak kulcsrakész kivitelezése, modern hőszigetelési rendszerek, térburkolás és kültéri munkák, kisebb csapatok irányítása és helyszíni koordináció, precíz műszaki kivitelezés és határidők betartása"
+      },
+      {
+        "nev":"Kovács Elemér",
+        "leiras":"32 éves szakmai tapasztalattal rendelkező építőipari kivitelező és szakember, aki hosszú pályafutása során számos lakossági, ipari és felújítási projektben vett részt. Több évtizedes tapasztalatát családi házak építésében, szerkezetkivitelezésben és komplett felújítási munkák lebonyolításában szerezte.",
+        "special":"Specializációi: generálkivitelezési projektek vezetése, régi épületek felújítása és korszerűsítése, hagyományos és modern építési technológiák alkalmazása, munkafolyamatok szervezése és szakmai irányítása, minőségi, tartós kivitelezési megoldások"
+      },
+      {
+        "nev":"Nagy Anna",
+        "leiras":"15 éves tapasztalattal rendelkező építőipari szakember, aki főként lakóingatlanok kivitelezésében, felújítási projektekben és belsőépítészeti munkákban szerzett jelentős szakmai gyakorlatot. Pályafutása során családi házak, társasházak és kisebb üzleti ingatlanok építési és korszerűsítési munkálataiban vett részt.",
+        "special":"Specializációi: lakás- és házfelújítások koordinálása, modern belső terek kialakítása, precíz burkolási és befejező munkák, ügyfélkapcsolatok és helyszíni egyeztetések kezelése, minőségi és esztétikus kivitelezés"
+      }
+    ],
   "gyik": [
     {
       "kerdes": "Vállalnak teljes kivitelezést kulcsrakész állapotig?",
