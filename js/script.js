@@ -33,22 +33,29 @@ function initModal(velemenyek) {
     modal.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
 }
 
+
 const modal1 = document.getElementById("modal1");
 const modalNev = document.getElementById("modalNev");
 const modalLeiras = document.getElementById("modalLeiras");
-const modalKep1 = document.getElementById("modalKep1");
+const modalspec = document.getElementById("modalKep1");
 const modalBezar1 = document.getElementById("modalBezar1");
 
-document.querySelectorAll(".modalKepTrigger").forEach((kep) => {
-    kep.addEventListener("click", () => {
-        modalNev.innerText = kep.dataset.nev;
-        modalLeiras.innerText = kep.dataset.leiras;
-        modalKep1.src = kep.dataset.kep;
-        modal1.style.display = "flex";
-    });
+document.querySelectorAll(".megnyitGomb").forEach(gomb => {
+  gomb.addEventListener("click", () => {
+      const adat = munkatars[gomb.dataset.index];
+
+      modalNev.innerText = adat.nev;
+      modalLeiras.innerText = adat.leiras;
+      modalspec.innerHTML = adat.special;
+
+      modal1.style.display = "flex";
+  });
 });
 modalBezar1.onclick = () => modal1.style.display = "none";
 modal1.onclick = (e) => { if (e.target === modal1) modal1.style.display = "none"; }
+
+
+
 
 fetch("js/content.json")
   .then(res => res.json())
