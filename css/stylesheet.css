@@ -57,6 +57,9 @@ body:has(#nav_switch:checked) #nav_feherlogo{
 body:has(#nav_switch:checked) #nav_account{
     content: url("../images/account_fekete.png");
 }
+body:has(#nav_switch:checked) #hamburger_account{
+    content: url("../images/account_fekete.png");
+}
 body:has(#nav_switch:checked) #fokep{
     content: url("../images/FoOldal_hatterkepV.png");
 }
@@ -133,6 +136,11 @@ body:has(#nav_switch:checked) .projektsz{
     position: relative;
     top: 60px;
 
+}
+#hamburger_account{
+    width: 30%;
+    padding-top: 1%;
+    border-radius: 8px;
 }
 #velemeny1{
     width: 90%;
