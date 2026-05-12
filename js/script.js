@@ -4,13 +4,21 @@ if (user) {
     console.log(`Bejelentkezve: ${user.id}, ${user.name}, ${user.email},${user.pw},${user.phone},${user.address}`);
     document.getElementById('nav_account').src = "images/userLoggedInPlaceholder.jpg"
     document.getElementById('regImg').href = "user-profile.html"
+    document.getElementById('nav_regImg').href = "user-profile.html"
+    document.getElementById('hamburger_account').src = "images/userLoggedInPlaceholder.jpg"
     document.getElementById('nav_account').style.borderRadius = "8px"
+    let vilagossotet = document.getElementById("nav_switch")
+    if (vilagossotet !== true){
+      document.getElementById('nav_account').src = "images/userLoggedInPlaceholder.jpg"
+      document.getElementById('regImg').href = "user-profile.html"
+      document.getElementById('nav_regImg').href = "user-profile.html"
+      document.getElementById('hamburger_account').src = "images/userLoggedInPlaceholder.jpg"
+    }
 } else {
     console.log("Nincs bejelentkezve");
 }
 
-
-function initModal(velemenyek) {
+/*function initModal(velemenyek) {
     const modal = document.getElementById("modal");
     const modalVelemeny = document.getElementById("modalVelemeny");
     const modalFelkeres = document.getElementById("modalFelkeres");
@@ -31,7 +39,7 @@ function initModal(velemenyek) {
 
     modalBezar.onclick = () => modal.style.display = "none";
     modal.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
-}
+}*/
 
 
 const modal1 = document.getElementById("modal1");
