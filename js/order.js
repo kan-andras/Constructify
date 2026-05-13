@@ -181,10 +181,10 @@ numberButtons.forEach(gomb => {
 
             const valasz = await showConfirm(text);
 
-            if (valasz && adat.név == "epulet") {
+            if (valasz && adat.név == "Épület") {
                 valt2();
             } 
-            else if (valasz && adat.név == "munka") {
+            else if (valasz && adat.név == "Munka") {
                 valt3();
             }
             else {
@@ -214,6 +214,8 @@ function valt4(){
     setTimeout(() =>{
       fourthmain.style.display = "none";
       fifthmain.style.display = "block";
+
+      osszegzesMegjelenites();
     }, 2000);
 }
 
@@ -228,10 +230,10 @@ slider.oninput = function () {
         gomb.disabled = true;
     });
     setTimeout(() => {
-        if (adat.név == "epulet") {
+        if (adat.név == "Épület") {
             valt2();
         } 
-        else if (adat.név == "munka") {
+        else if (adat.név == "Munka") {
             valt3();
         }
     }, 3000);
@@ -322,6 +324,27 @@ function Nextform(){
         valt4();
     }, 3000);
     console.log("Mentett adat:", JSON.parse(localStorage.getItem("adat")));
+}
+
+function osszegzesMegjelenites() {
+    const adat = JSON.parse(localStorage.getItem("adat")) || {};
+    const liElemek = document.querySelectorAll("#osszegzesLista li");
+
+    if (!adat) return;
+
+    liElemek[0].textContent = `(1.) Opció: ${adat.név || "-"}`;
+    liElemek[1].textContent = `(2.) Opció: ${adat.alt || "-"}`;
+    liElemek[2].textContent = `(3.) Opció: ${adat.szobák
+        ? adat.szobák + " szobát választottál ki."
+        : adat.slider
+            ? adat.slider + " szobát választottál ki."
+            : "-"
+    }`;
+    liElemek[3].textContent = `(4.) Opció: ${adat.szobameret 
+    ? adat.szobameret + " négyzetméterű szobákat választottál."
+    : "Megjegyzésben változtattál a szobák nagyságán!"}`;
+    liElemek[4].textContent = `(5.) Opció: ${adat.epitoanyag || "Nincs megjeleníthető adat!"}`;
+    liElemek[5].textContent = `(6.) Opció: ${adat.megjegyzes || "Nem adott meg megjegyzést!"}`;
 }
 
 window.onload = () => {
