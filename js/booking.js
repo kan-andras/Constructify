@@ -9,11 +9,31 @@ if (user) {
 }
 
 const bookedDates = [
-    "2026-04-01","2026-04-02","2026-04-03","2026-04-04","2026-04-05","2026-04-06","2026-04-07","2026-04-08","2026-04-09","2026-04-10","2026-04-11","2026-04-12","2026-04-13","2026-04-14","2026-04-15",
-    "2026-04-16","2026-04-17","2026-04-18","2026-04-19","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-25","2026-04-26","2026-04-27","2026-04-28","2026-04-29","2026-04-30",
-    "2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-14","2026-05-15","2026-05-16","2026-05-17","2026-05-18","2026-05-24","2026-05-25","2026-05-26","2026-05-27","2026-05-28",
-    "2026-05-29","2026-05-30",
+    { start: "2026-04-01", end: "2026-04-30" },
+    { start: "2026-05-04", end: "2026-05-30" },
+    { start: "2026-06-04", end: "2026-06-10" }
 ];
+
+function foglaltnap(ranges) {
+    let dates = [];
+
+    ranges.forEach(r => {
+        let start = new Date(r.start);
+        let end = new Date(r.end);
+
+        while (start <= end) {
+            let y = start.getFullYear();
+            let m = String(start.getMonth() + 1).padStart(2, "0");
+            let d = String(start.getDate()).padStart(2, "0");
+            dates.push(`${y}-${m}-${d}`);
+            start.setDate(start.getDate() + 1);
+        }
+    });
+
+    return dates;
+}
+
+const bookedranges = foglaltnap(bookedDates);
 
 function Calendar(config) {
 
@@ -27,6 +47,21 @@ function Calendar(config) {
 
     const bookedDates = config.bookedDates;
 
+    function getDatesBetween(start, end) {
+        let result = [];
+        let s = new Date(start);
+        let e = new Date(end);
+
+        while (s <= e) {
+            let y = s.getFullYear();
+            let m = String(s.getMonth() + 1).padStart(2, "0");
+            let d = String(s.getDate()).padStart(2, "0");
+            result.push(`${y}-${m}-${d}`);
+            s.setDate(s.getDate() + 1);
+        }
+        return result;
+    }
+    
 const months = ["January", "February", "March", "April", "May", "June", "July",
               "August", "September", "October", "November", "December"];
 
@@ -103,15 +138,14 @@ daysTag.addEventListener("click", (e) => {
             [startDate, endDate] = [endDate, startDate];
         }
 
-        daysTag.querySelectorAll("li.free").forEach(li => {
-            let d = li.dataset.date;
-            if (d >= startDate && d <= endDate) {
-                li.classList.add("selected");
-            }
+        let selectedDays = getDatesBetween(startDate, endDate);
+        selectedDays.forEach(day => {
+            let li = daysTag.querySelector(`li[data-date="${day}"]`);
+            if (li) li.classList.add("selected");
         });
 
-        console.log("Foglalás:", startDate, "→", endDate);
-        foglaltIdopont.idopontMentes(startDate, endDate);
+        console.log("Foglalás:", selectedDays);
+        foglaltIdopont.idopontMentes(selectedDays);
         return;
     }
     startDate = clickedDate;
@@ -126,7 +160,7 @@ new Calendar({
     days: ".days",
     currentDate: ".current-date",
     navButtons: ".icons span",
-    bookedDates: bookedDates
+    bookedDates: bookedranges
 });
 
 new Calendar({
@@ -134,7 +168,7 @@ new Calendar({
     days: ".days1",
     currentDate: ".current-date1",
     navButtons: ".icons1 span",
-    bookedDates: bookedDates
+    bookedDates: bookedranges
 });
 
 let gomb = document.getElementById("gomb")
@@ -165,10 +199,8 @@ function showConfirm(szoveg) {
             resolve(true);
             let email = document.getElementById("Email").value
             let telephone = document.getElementById("Telephone").value
-            new showConfirm({
-                Email: "email",
-                Telephone: "telephone"
-            })
+            localStorage.setItem("Email", email);
+            localStorage.setItem("Phone", telephone);
             console.log("Email: " + email)
             console.log("Telephone: " + telephone)
         };
