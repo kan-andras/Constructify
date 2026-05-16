@@ -59,16 +59,17 @@ const foglaltIdopont = {
         let datesStorage = JSON.parse(localStorage.getItem("datesStorage")) || [];
 
         let newId = datesStorage.length > 0 ? datesStorage[datesStorage.length - 1].id + 1 : 1;
-        
+
         const adat = {
             id: newId,
             idopontStart: idopontStart,
             idopontEnd: idopontEnd
         };
-        localStorage.setItem("valasztas", JSON.stringify(adat));
+        datesStorage.push(adat);
+        localStorage.setItem("datesStorage", JSON.stringify(datesStorage));
     },
 
     leker: function() {
-        return JSON.parse(localStorage.getItem("valasztas"));
+        return JSON.parse(localStorage.getItem("datesStorage")) || [];
     }
 };

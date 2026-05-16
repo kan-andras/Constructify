@@ -8,11 +8,20 @@ if (user) {
     console.log("Nincs bejelentkezve");
 }
 
+const savedBookings = JSON.parse(localStorage.getItem("datesStorage")) || [];
+
 const bookedDates = [
     { start: "2026-04-01", end: "2026-04-30" },
     { start: "2026-05-04", end: "2026-05-30" },
     { start: "2026-06-04", end: "2026-06-10" }
 ];
+
+savedBookings.forEach(booking => {
+    if (booking.idopontStart && booking.idopontEnd) {
+        console.log(`Betöltött foglalás: ${booking.idopontStart} - ${booking.idopontEnd}`);
+        bookedDates.push({ start: booking.idopontStart, end: booking.idopontEnd });
+    }
+});
 
 function foglaltnap(ranges) {
     let dates = [];
@@ -145,7 +154,7 @@ daysTag.addEventListener("click", (e) => {
         });
 
         console.log("Foglalás:", selectedDays);
-        foglaltIdopont.idopontMentes(selectedDays);
+        foglaltIdopont.idopontMentes(startDate, endDate);
         return;
     }
     startDate = clickedDate;
