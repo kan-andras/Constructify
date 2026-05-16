@@ -307,3 +307,83 @@ nav{
     padding: 3%;
     border-radius: 20px;
 }
+
+@media (max-width: 600px) {
+    .form-container {
+        width: 100%;
+        left: auto;
+    }
+
+    .bejelentkezes {
+        top: 0;
+        width: 100%;
+    }
+
+    .container.active .bejelentkezes {
+        transform: translateY(-100%);
+    }
+
+    .regisztracio {
+        top: 100%;
+        width: 100%;
+    }
+
+    .container.active .regisztracio {
+        transform: translateY(-100%);
+        opacity: 1;
+        z-index: 5;
+        animation: none;
+    }
+
+    .kapcsolt-container {
+        position: static;
+        width: 100%;
+        height: auto;
+        left: auto;
+        overflow: visible;
+        transform: none !important;
+        border-radius: 0;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .container.active .kapcsolt-container {
+        transform: none !important;
+        border-radius: 0;
+    }
+
+    .kapcsolt {
+        width: 100%;
+        left: 0;
+        transform: translateX(0) !important;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .container.active .kapcsolt {
+        transform: translateX(0) !important;
+    }
+
+    .kapcsolt-panel {
+        position: static;
+        width: auto;
+        display: inline-flex;
+        padding: 0;
+        background: transparent;
+    }
+
+    .kapcsolt-left,
+    .kapcsolt-right {
+        transform: translateX(0) !important;
+    }
+
+    .container.active .kapcsolt-left,
+    .container.active .kapcsolt-right {
+        transform: translateX(0) !important;
+    }
+}
