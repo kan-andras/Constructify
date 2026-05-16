@@ -54,10 +54,7 @@ body:has(#nav_switch:checked) #nav_myLinks{
 body:has(#nav_switch:checked) #nav_feherlogo{
     content: url("../images/Logo_fekete.png");
 }
-body:has(#nav_switch:checked) #nav_account{
-    content: url("../images/account_fekete.png");
-}
-body:has(#nav_switch:checked) #hamburger_account{
+body:has(#nav_switch:checked) #nav_account:not(.loggedin) {
     content: url("../images/account_fekete.png");
 }
 body:has(#nav_switch:checked) #fokep{
@@ -323,6 +320,9 @@ body:has(#nav_switch:checked) .projektsz{
         align-items: center;
         gap: 30px;
         padding: 3%;
+    }
+    #nagyprojekt .projektek:not(:first-child) {
+        display: none;
     }
     .velemenyek{
         width: 100%;

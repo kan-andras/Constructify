@@ -14,54 +14,51 @@ if (user) {
       document.getElementById('nav_regImg').href = "user-profile.html"
       document.getElementById('hamburger_account').src = "images/userLoggedInPlaceholder.jpg"
     }
+    if (!vilagossotet.checked) {
+      document.getElementById('nav_account').src = "images/userLoggedInPlaceholder.jpg";
+      document.getElementById('regImg').href = "user-profile.html";
+      document.getElementById('nav_regImg').href = "user-profile.html";
+      document.getElementById('hamburger_account').src = "images/userLoggedInPlaceholder.jpg";
+    }
+    if (user) {
+      document.getElementById('nav_account').classList.add("loggedin");
+    }
+
 } else {
     console.log("Nincs bejelentkezve");
 }
 
-/*function initModal(velemenyek) {
-    const modal = document.getElementById("modal");
-    const modalVelemeny = document.getElementById("modalVelemeny");
-    const modalFelkeres = document.getElementById("modalFelkeres");
-    const modalKep = document.getElementById("modalKep");
-    const modalBezar = document.getElementById("modalBezar");
+fetch("js/content.json")
+  .then(res => res.json())
+  .then(data => {
+      initMunkasModal(data.munkatars);
+  });
 
-    document.querySelectorAll(".megnyitGomb").forEach(gomb => {
-        gomb.addEventListener("click", () => {
-            const adat = velemenyek[gomb.dataset.index];
-
-            modalVelemeny.innerText = adat.velemeny;
-            modalFelkeres.innerText = adat.felkeres;
-            modalKep.src = adat.kep;
-
-            modal.style.display = "flex";
-        });
-    });
-
-    modalBezar.onclick = () => modal.style.display = "none";
-    modal.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
-}*/
-
-
+function initMunkasModal(munkatars) {
 const modal1 = document.getElementById("modal1");
 const modalNev = document.getElementById("modalNev");
 const modalLeiras = document.getElementById("modalLeiras");
 const modalspec = document.getElementById("modalKep1");
 const modalBezar1 = document.getElementById("modalBezar1");
 
-document.querySelectorAll(".megnyitGomb").forEach(gomb => {
-  gomb.addEventListener("click", () => {
-      const adat = munkatars[gomb.dataset.index];
+document.querySelectorAll(".modalKepTrigger").forEach((elem, index) => {
+  elem.dataset.index = index;
+  elem.addEventListener("click", () => {
+      const adat = munkatars[index];
 
       modalNev.innerText = adat.nev;
-      modalLeiras.innerText = adat.leiras;
-      modalspec.innerHTML = adat.special;
+      modalLeiras.innerHTML = `
+                <p>${adat.leiras}</p>
+                <br>
+                <p><strong>${adat.special}</strong></p>
+            `;
 
       modal1.style.display = "flex";
   });
 });
 modalBezar1.onclick = () => modal1.style.display = "none";
 modal1.onclick = (e) => { if (e.target === modal1) modal1.style.display = "none"; }
-
+}
 
 
 
@@ -92,9 +89,30 @@ fetch("js/content.json")
         </div>
       `;
     });
-
     initModal(data.velemenyek);
 });
+function initModal(velemenyek){
+     const modal = document.getElementById("modal");
+    const modalVelemeny = document.getElementById("modalVelemeny");
+    const modalFelkeres = document.getElementById("modalFelkeres");
+    const modalKep = document.getElementById("modalKep");
+    const modalBezar = document.getElementById("modalBezar");
+
+    document.querySelectorAll(".megnyitGomb").forEach(gomb => {
+        gomb.addEventListener("click", () => {
+            const adat = velemenyek[gomb.dataset.index];
+
+            modalVelemeny.innerText = adat.velemeny;
+            modalFelkeres.innerText = adat.felkeres;
+            modalKep.src = adat.kep;
+
+            modal.style.display = "flex";
+        });
+    });
+
+    modalBezar.onclick = () => modal.style.display = "none";
+    modal.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+}
 
 fetch("js/content.json")
   .then(res => res.json())
@@ -111,4 +129,3 @@ fetch("js/content.json")
       `;
     });
 });
-initMunkasModal()
