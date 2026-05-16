@@ -14,12 +14,6 @@ if (user) {
       document.getElementById('nav_regImg').href = "user-profile.html"
       document.getElementById('hamburger_account').src = "images/userLoggedInPlaceholder.jpg"
     }
-    if (!vilagossotet.checked) {
-      document.getElementById('nav_account').src = "images/userLoggedInPlaceholder.jpg";
-      document.getElementById('regImg').href = "user-profile.html";
-      document.getElementById('nav_regImg').href = "user-profile.html";
-      document.getElementById('hamburger_account').src = "images/userLoggedInPlaceholder.jpg";
-    }
     if (user) {
       document.getElementById('nav_account').classList.add("loggedin");
     }
