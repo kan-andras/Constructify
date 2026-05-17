@@ -307,3 +307,216 @@ nav{
     padding: 3%;
     border-radius: 20px;
 }
+
+.mobile-logo {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        padding: 70px 16px 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Mobile logo megjelenítése a form-okban */
+    .mobile-logo {
+        display: block;
+        width: 70px;
+        height: auto;
+        margin-bottom: 8px;
+    }
+
+    /* Container: flex oszlop, auto magasság */
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 360px;
+        min-height: unset;
+        height: auto;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Form konténerek alapjai */
+    .form-container {
+        position: relative;
+        width: 100%;
+        top: auto;
+        left: auto;
+        height: auto;
+        transform: none;
+        transition: opacity 0.35s ease, max-height 0.4s ease;
+        overflow: hidden;
+    }
+
+    /* === BEJELENTKEZÉS (alap állapot: látható, felül) === */
+    .bejelentkezes {
+        order: 1;
+        width: 100%;
+        opacity: 1;
+        max-height: 500px;
+        z-index: 2;
+        pointer-events: auto;
+        transform: none;
+    }
+
+    .container.active .bejelentkezes {
+        order: 3;
+        opacity: 0;
+        max-height: 0;
+        pointer-events: none;
+        transform: none;
+    }
+
+    /* === REGISZTRÁCIÓ (alap állapot: rejtett) === */
+    .regisztracio {
+        order: 3;
+        width: 100%;
+        opacity: 0;
+        max-height: 0;
+        z-index: 1;
+        pointer-events: none;
+        transform: none;
+    }
+
+    .container.active .regisztracio {
+        order: 2;
+        opacity: 1;
+        max-height: 650px;
+        z-index: 5;
+        pointer-events: auto;
+        transform: none;
+        animation: none;
+    }
+
+    /* === KAPCSOLT KONTÉNER (alap: alul; active: felül) === */
+    .kapcsolt-container {
+        order: 2;
+        position: relative;
+        width: 100%;
+        left: auto;
+        top: auto;
+        height: auto;
+        overflow: visible;
+        transform: none !important;
+        border-radius: 0 0 20px 20px;
+        z-index: 1000;
+    }
+
+    .container.active .kapcsolt-container {
+        order: 1;
+        transform: none !important;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .kapcsolt {
+        position: relative;
+        left: 0;
+        width: 100%;
+        height: auto;
+        transform: none !important;
+        background: transparent;
+        display: block;
+    }
+
+    .container.active .kapcsolt {
+        transform: none !important;
+    }
+
+    /* Panel alap stílus */
+    .kapcsolt-panel {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 140px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 28px 24px;
+        transform: none !important;
+        right: auto;
+    }
+
+    /* Logo elrejtése a kapcsolt panelekben mobilon (a form-okban van) */
+    .kapcsolt-panel img {
+        display: none;
+    }
+
+    /* === KAPCSOLT-RIGHT: alap állapotban látható (Üdvözlünk + Regisztráció) === */
+    .kapcsolt-right {
+        display: flex;
+        transform: none !important;
+        border-radius: 0 0 20px 20px;
+        background: linear-gradient(135deg, #747272 0%, #9b9999 100%);
+    }
+
+    .container.active .kapcsolt-right {
+        display: none;
+    }
+
+    /* === KAPCSOLT-LEFT: active állapotban látható (Üdv újra + Login) === */
+    .kapcsolt-left {
+        display: none;
+        transform: none !important;
+        border-radius: 20px 20px 0 0;
+        background: linear-gradient(135deg, #9b9999 0%, #747272 100%);
+    }
+
+    .container.active .kapcsolt-left {
+        display: flex;
+    }
+
+    /* Form stílus mobilon */
+    .container form {
+        padding: 28px 24px 24px;
+        height: auto;
+        justify-content: flex-start;
+        gap: 2px;
+    }
+
+    .container h1 {
+        margin-bottom: 4px;
+    }
+
+    .container span {
+        margin-bottom: 6px;
+    }
+
+    .container input {
+        margin: 6px 0;
+    }
+
+    .helytelenadatok {
+        width: 100%;
+        margin-right: 0;
+        margin-top: -4px;
+        margin-bottom: 2px;
+    }
+
+    .container p {
+        margin: 8px 0;
+        font-size: 0.75rem;
+    }
+
+    .container button {
+        margin-top: 14px;
+    }
+
+    #szoveg {
+        font-size: 0.75rem;
+        padding: 8px 16px;
+        margin-top: 8px;
+    }
+
+    .loader {
+        margin-top: 8px;
+    }
+}
