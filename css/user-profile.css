@@ -68,6 +68,8 @@ body:has(#nav_switch:checked) .szovegszin1 {
 }
 body:has(#nav_switch:checked) #nav_myLinks{
     background: rgb(255, 255, 255);
+}
+body:has(#nav_switch:checked) #nav_myLinks a{
     color: black;
 }
 body:has(#nav_switch:checked) #nav_feherlogo{
@@ -76,7 +78,7 @@ body:has(#nav_switch:checked) #nav_feherlogo{
 body:has(#nav_switch:checked) #focimkep{
     content: url("../images/Logo_fekete.png");
 }
-body:has(#nav_switch:checked) #nav_account{
+body:has(#nav_switch:checked) #nav_account:not(.loggedin) {
     content: url("../images/account_fekete.png");
 }
 body:has(#nav_switch:checked) .gomb{
@@ -97,7 +99,11 @@ body:has(#nav_switch:checked) #kijel{
 body:has(#nav_switch:checked) #kijel{
     background-color: #adacac;
 }
-
+#hamburger_account{
+    width: 30%;
+    padding-top: 1%;
+    border-radius: 8px;
+}
 
 
 

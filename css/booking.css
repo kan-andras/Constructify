@@ -50,10 +50,7 @@ body:has(#nav_switch:checked) #nav_myLinks{
     background: rgb(255, 255, 255);
     color: black;
 }
-body:has(#nav_switch:checked) #nav_feherlogo{
-    content: url("../images/Logo_fekete.png");
-}
-body:has(#nav_switch:checked) #nav_account{
+body:has(#nav_switch:checked) #nav_account:not(.loggedin) {
     content: url("../images/account_fekete.png");
 }
 body:has(#nav_switch:checked) #right{
@@ -231,8 +228,13 @@ header .current-date{
 }
 #blogo{
     position: absolute;
-    top: 10%;
+    top: 5%;
     width: 300px;
+}
+#hamburger_account{
+    width: 30%;
+    padding-top: 1%;
+    border-radius: 8px;
 }
 #rendeles {
     position: initial;

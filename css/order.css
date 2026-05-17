@@ -26,6 +26,36 @@ body:has(#nav_switch:checked) #osszegzesLista li, .fifthdiv1 h2{
 body:has(#nav_switch:not(:checked)) .fifthdiv1 h2{
   color: #CDCDCD;
 }
+body:has(#nav_switch:checked) nav{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .nav_items{
+    color: black;
+}
+body:has(#nav_switch:checked) #nav_myLinks{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) .nav_hamburgeritem{
+    color: black;
+}
+body:has(#nav_switch:checked) footer{
+    background-color: rgb(224, 224, 224);
+}
+body:has(#nav_switch:checked) #nav_myLinks{
+    background: rgb(255, 255, 255);
+    color: black;
+}
+body:has(#nav_switch:checked) #nav_feherlogo{
+    content: url("../images/Logo_fekete.png");
+}
+body:has(#nav_switch:checked) #nav_account:not(.loggedin) {
+    content: url("../images/account_fekete.png");
+}
+#hamburger_account{
+    width: 30%;
+    padding-top: 1%;
+    border-radius: 8px;
+}
 #nav_account{
   border-radius: 8px;
 }

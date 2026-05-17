@@ -4,6 +4,20 @@ if (user) {
     console.log(`Bejelentkezve: ${user.id}, ${user.name}, ${user.email},${user.pw},${user.phone},${user.address}`);
     document.getElementById('nav_account').src = "images/userLoggedInPlaceholder.jpg"
     document.getElementById('regImg').href = "user-profile.html"
+    document.getElementById('nav_regImg').href = "user-profile.html"
+    document.getElementById('hamburger_account').src = "images/userLoggedInPlaceholder.jpg"
+    document.getElementById('nav_account').style.borderRadius = "8px"
+    let vilagossotet = document.getElementById("nav_switch")
+    if (vilagossotet !== true){
+      document.getElementById('nav_account').src = "images/userLoggedInPlaceholder.jpg"
+      document.getElementById('regImg').href = "user-profile.html"
+      document.getElementById('nav_regImg').href = "user-profile.html"
+      document.getElementById('hamburger_account').src = "images/userLoggedInPlaceholder.jpg"
+    }
+    if (user) {
+      document.getElementById('nav_account').classList.add("loggedin");
+    }
+
 } else {
     console.log("Nincs bejelentkezve");
 }

@@ -64,19 +64,15 @@ body:has(#nav_switch:checked) .szovegszin1 {
 }
 body:has(#nav_switch:checked) #nav_myLinks{
     background: rgb(255, 255, 255);
+}
+body:has(#nav_switch:checked) #nav_myLinks a{
     color: black;
 }
 body:has(#nav_switch:checked) #nav_feherlogo{
     content: url("../images/Logo_fekete.png");
 }
-body:has(#nav_switch:checked) #focimkep{
-    content: url("../images/Logo_fekete.png");
-}
-body:has(#nav_switch:checked) #nav_account{
+body:has(#nav_switch:checked) #nav_account:not(.loggedin) {
     content: url("../images/account_fekete.png");
-}
-body:has(#nav_switch:checked) #nav_account{
-    
 }
 /*
 .contact{
@@ -119,7 +115,11 @@ body:has(#nav_switch:checked) #nav_account{
     font-size: clamp(0.3rem,1.2vw + 0.6rem,2rem);
     text-align: justify;
 }
-
+#hamburger_account{
+    width: 30%;
+    padding-top: 1%;
+    border-radius: 8px;
+}
 
 .inputfield{
     background-color: #D9D9D9;
