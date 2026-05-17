@@ -332,20 +332,27 @@ function osszegzesMegjelenites() {
 
     if (!adat) return;
 
-    liElemek[0].textContent = `(1.) Opció: ${adat.név || "-"}`;
-    liElemek[1].textContent = `(2.) Opció: ${adat.alt || "-"}`;
-    liElemek[2].textContent = `(3.) Opció: ${adat.szobák
+    liElemek[0].textContent = `(1.) Munka végzés típusa: ${adat.név || "-"}`;
+    liElemek[1].textContent = `(2.) Kiválasztott téma: ${adat.alt || "-"}`;
+    liElemek[2].textContent = `(3.) Szoba száma: ${adat.szobák
         ? adat.szobák + " szobát választottál ki."
         : adat.slider
             ? adat.slider + " szobát választottál ki."
             : "-"
     }`;
-    liElemek[3].textContent = `(4.) Opció: ${adat.szobameret 
+    liElemek[3].textContent = `(4.) Szoba mérete (m^2): ${adat.szobameret 
     ? adat.szobameret + " négyzetméterű szobákat választottál."
     : "Megjegyzésben változtattál a szobák nagyságán!"}`;
-    liElemek[4].textContent = `(5.) Opció: ${adat.epitoanyag || "Nincs megjeleníthető adat!"}`;
-    liElemek[5].textContent = `(6.) Opció: ${adat.megjegyzes || "Nem adott meg megjegyzést!"}`;
+    liElemek[4].textContent = `(5.) Építőanyag: ${adat.epitoanyag || "Nincs megjeleníthető adat!"}`;
+    liElemek[5].textContent = `(6.) Megjegyzés: ${adat.megjegyzes || "Nem adott meg megjegyzést!"}`;
 }
+
+document.getElementById("elkuldes").addEventListener("click", () => {
+    const adat = JSON.parse(localStorage.getItem("adat"));
+    console.log("Elküldött adat:", adat);
+
+    window.location.href = "booking.html";
+});
 
 window.onload = () => {
     const adat = JSON.parse(localStorage.getItem("adat"));

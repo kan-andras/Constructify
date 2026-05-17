@@ -1,3 +1,8 @@
+window.onload = () => {
+    const adat = JSON.parse(localStorage.getItem("adat"));
+    console.log("Betöltött adat:", adat);
+};
+
 let user = JSON.parse(localStorage.getItem("loggedInUser"));
 
 if (user) {
@@ -154,8 +159,21 @@ daysTag.addEventListener("click", (e) => {
         });
 
         console.log("Foglalás:", selectedDays);
-        foglaltIdopont.idopontMentes(startDate, endDate);
-        return;
+        console.log("Foglalás:", selectedDays);
+
+        // meglévő adat lekérése
+        let adat = JSON.parse(localStorage.getItem("adat")) || {};
+
+        // időpont mentése
+        adat.foglaltIdopont = {
+            start: startDate,
+            end: endDate
+        };
+
+        // visszamentés localStorage-be
+        localStorage.setItem("adat", JSON.stringify(adat));
+
+        console.log("Mentett időpont:", adat.foglaltIdopont);
     }
     startDate = clickedDate;
     endDate = null;
@@ -206,12 +224,12 @@ function showConfirm(szoveg) {
         loginbtn.onclick = () => {
             confirmBox.style.display = "none";
             resolve(true);
-            let email = document.getElementById("Email").value
-            let telephone = document.getElementById("Telephone").value
-            localStorage.setItem("Email", email);
-            localStorage.setItem("Phone", telephone);
-            console.log("Email: " + email)
-            console.log("Telephone: " + telephone)
+            let modositottemail = document.getElementById("Email").value
+            let modositotttelephone = document.getElementById("Telephone").value
+            localStorage.setItem("Email", modositottemail);
+            localStorage.setItem("Phone", modositotttelephone);
+            console.log("Email: " + modositottemail)
+            console.log("Telephone: " + modositotttelephone)
         };
         close.onclick = () => {
             confirmBox.style.display = "none";
@@ -219,3 +237,47 @@ function showConfirm(szoveg) {
         }
     });
 }
+
+
+//EMAIL KÜLDÉSE EMAILJS-EL!!!
+document.addEventListener("click", function(e) {
+    if (e.target && e.target.id === "rendeles") {
+
+        const adat = JSON.parse(localStorage.getItem("adat"));
+        const user = JSON.parse(localStorage.getItem("loggedInUser"));
+        const email = localStorage.getItem("Email");
+        const phone = localStorage.getItem("Phone");
+
+        console.log("USER:", user);
+        console.log("ADAT:", adat);
+
+        emailjs.send("service_s0zgg8t", "template_vz2se7a", {
+
+            username: user?.name || "Nincs név",
+            user_email: email || user?.email || "Nincs email",
+            user_phone: phone || user?.phone || "Nincs telefonszám",
+
+            nev: adat?.név || "-",
+            alt: adat?.alt || "-",
+            szobak: adat?.szobák || "Sliderrel választottál.",
+            szobakslider: adat?.slider || "Gombbal választottál.",
+            epitoanyag: adat?.epitoanyag || "Nincs epítőanyag választás.",
+            szobameret: adat?.szobameret + " Négyzetméterű szobákat választottál." || "-",
+            megjegyzes: adat?.megjegyzes || "-",
+
+            foglaltIdopont: adat?.foglaltIdopont 
+                ? `${adat.foglaltIdopont.start} - ${adat.foglaltIdopont.end}`
+                : "Nincs kiválasztva"
+
+        })
+        .then(() => {
+            alert("Sikeresen elküldve!");
+        })
+        .catch((error) => {
+            console.error(error);
+            alert("Hiba történt!");
+        });
+
+        console.log("Elküldött adat:", adat);
+    }
+});
