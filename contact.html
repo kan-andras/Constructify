@@ -40,96 +40,26 @@
       </div>
   </div>
 </nav>
-
-
-
-
-
     <section class="contact">
         <h1 id="cim">Lépj kapcsolatba velünk!</h1>
         <h3 id="szoveg">Kérjük add meg az adataidat és írd meg az üzeneted!</h3>
-
         <div class="parent">
             <div class="div1"><input class="inputfield" id="nevinput" type="email" 
-            placeholder="Vezetéknév"> </div>
+            placeholder="Név"> </div>
             <div class="div2"><input class="inputfield" id="phoneinput" type="email"
-            placeholder="Keresztnév"> </div>
+            placeholder="Telefonszám"> </div>
             <div class="div3"><input class="inputfield" id="emailinput" type="email"
             placeholder="Email"> </div>
             <div class="div4"><input class="inputfield" id="lakciminput" type="email"
             placeholder="Lakcím pl.:Budapest 1054 Szabadság tér 17."> </div>
             </div>
-        <!--<input id="uzenetinput" type="email" size="300"
-            placeholder="Üzenet">
-
-
-            <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Üzenet">
-        -->
-        
-        
-        
         <textarea id="uzenetinput" placeholder="Üzenet" rows="5" maxlength="800"></textarea>
-
         <div id="uzenetHelper" class="uzenet-helper">
             <span class="helper-text">Kérjük, írj egy részletes üzenetet (kérdés, megjegyzés, vagy visszajelzés)</span>
             <span class="helper-counter"><span id="charCount">0</span>/800</span>
         </div>
-
         <button id="uzKuldGomb" onclick="uzenetKuldes()">Üzenet <br> elküldése</button>
-            <!--
-        
-        <input id="uzKuldGomb" type="submit" 
-        value="Üzenet 
-elküldése"> -->
-
-
-
-
-
-
-        <!--
-        <input type="text" name="occasion" value="" maxLength="100">
-            
-        <div>
-            <textarea id="comment" name="comment" rows="5" maxlength="500"></textarea>
-            <div id="the-count_comment" style="">
-            <span id="current_comment">0</span>
-            <span id="maximum_comment"> / 500</span>
-            </div>-->
-        
-        
-
     </section>
-
-    <!--
-    <script>
-        $('#comment').keyup(function () {
-          var characterCount = $(this).val().length,
-          current = $('#current_comment'),
-          maximum = $('#maximum_comment'),
-          theCount = $('#the-count_comment');
-          var maxlength = $(this).attr('maxlength');
-          var changeColor = 0.75 * maxlength;
-          current.text(characterCount);
-        
-          if (characterCount > changeColor && characterCount < maxlength) {
-            current.css('color', '#FF4500');
-            current.css('fontWeight', 'bold');
-          }
-          else if (characterCount >= maxlength) {
-            current.css('color', '#B22222');
-            current.css('fontWeight', 'bold');
-          }
-          else {
-            var col = maximum.css('color');
-            var fontW = maximum.css('fontWeight');
-            current.css('color', col);
-            current.css('fontWeight', fontW);
-          }
-        });
-        </script>
-        
-        -->
         <footer>
             <div id="footer_elerhetosegek" class="footer_card">
                 <a href="https://www.instagram.com" class="social-link1"><img src="images/instagram.png" alt="instagram"></a>
@@ -138,10 +68,13 @@ elküldése"> -->
                 <a href="https://x.com/?lang=hu" class="social-link4"><img src="images/twitter.png" alt="twitter"></a>
             </div>
         </footer>
-
-
-
         <script src="js/storage.js"></script>
         <script src="js/contact.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script>
+        (function(){
+            emailjs.init("mnbYPyiNLYMtCVA6H");
+        })();
+        </script>
 </body>
 </html>

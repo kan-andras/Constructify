@@ -271,11 +271,11 @@ document.addEventListener("click", function(e) {
 
         })
         .then(() => {
-            alert("Sikeresen elküldve!");
+            console.log("Sikeresen elküldve!");
         })
         .catch((error) => {
             console.error(error);
-            alert("Hiba történt!");
+            console.log("Hiba történt!");
         });
 
         console.log("Elküldött adat:", adat);

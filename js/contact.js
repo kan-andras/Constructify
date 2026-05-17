@@ -43,4 +43,23 @@ function uzenetKuldes(){
     console.log(uzenet)
     let randDay = Math.floor(Math.random() * 10000);
     alert(`Köszönjük, hogy üzent nekünk! Ügyfélszolgálatunk hamarosan válaszolni fog. Várható idő: ${randDay} nap`)
+
+    //EMAILJS KÜLDÉS
+    emailjs.send("service_s0zgg8t", "template_un73gfr", {
+
+            nev: nev || "-",
+            phone: phone || "-",
+            email: email || "-",
+            lakcim: lakcim || "-",
+            uzenet: uzenet || "-",
+        })
+        .then(() => {
+            console.log("Sikeresen elküldve!");
+        })
+        .catch((error) => {
+            console.error(error);
+            console.log("Hiba történt!");
+        });
+
+        console.log("Elküldött adat:", adat);
 }
