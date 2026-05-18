@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Összes user:", userDB.leker());
 
         } else {
+            alert("Validáció nem sikerült!");
             console.log("Validáció nem ok");
         }
 
